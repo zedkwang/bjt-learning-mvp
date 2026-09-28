@@ -10,6 +10,7 @@ import csv
 import gzip
 import hashlib
 import json
+import math
 import os
 import re
 import sqlite3
@@ -25,10 +26,15 @@ DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 MANUAL_DIR = DATA_DIR / "manual"
 PROCESSED_DIR = DATA_DIR / "processed"
+GLOSS_REVIEW_DIR = MANUAL_DIR / "gloss_reviews"
 
 VALID_JLPT_LEVELS = {"N1", "N2", "N3", "N4", "N5"}
 VALID_ITEM_TYPES = {"word", "sentence"}
 VALID_READING_TYPES = {"onyomi", "kunyomi", "mixed", "compound", "sentence", "unknown"}
+VALID_REVIEW_STATUSES = {"unreviewed", "manual_approved", "ai_approved", "needs_review", "rejected"}
+VALID_GLOSS_REVIEW_STATUSES = {"ai_approved", "needs_review", "rejected"}
+VALID_LEGACY_CATEGORIES = {"transaction", "coordination", "relationship", "advanced"}
+AI_APPROVAL_MIN_CONFIDENCE = 0.85
 KANA_RE = re.compile(r"^[\u3041-\u3096ー]+$")
 KANJI_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 
@@ -179,6 +185,16 @@ def normalize_text_list(values: Any) -> list[str]:
     return result
 
 
+def normalize_confidence(value: Any) -> float | None:
+    if value in (None, ""):
+        return None
+    try:
+        confidence = float(value)
+    except (TypeError, ValueError):
+        return None
+    return confidence if math.isfinite(confidence) else None
+
+
 def normalize_record(raw: dict[str, Any], *, origin: str, index: int = 0) -> dict[str, Any]:
     expression = normalize_text(first_present(raw, "expression", "word", "display", "kanji", "term"))
     primary_reading = normalize_reading(first_present(raw, "primary_reading", "reading", "kana", "furigana"))
@@ -202,13 +218,24 @@ def normalize_record(raw: dict[str, Any], *, origin: str, index: int = 0) -> dic
     except (TypeError, ValueError):
         difficulty = -1
 
+    meaning_ko = normalize_text(first_present(raw, "meaning_ko", "korean_meaning", "ko_meaning"))
+    review_status = normalize_text(raw.get("review_status")).lower()
+    if not review_status:
+        review_status = "manual_approved" if origin == "manual" and meaning_ko else "unreviewed"
+    review_confidence = normalize_confidence(raw.get("review_confidence"))
+    if review_confidence is None and review_status == "manual_approved":
+        review_confidence = 1.0
+    reviewer = normalize_text(raw.get("reviewer"))
+    if not reviewer and review_status == "manual_approved":
+        reviewer = "manual_seed"
+
     source_reference = f"{origin} #{index + 1}" if origin else ""
     return {
         "stable_id": stable_id,
         "expression": expression,
         "primary_reading": primary_reading,
         "accepted_readings": accepted_readings,
-        "meaning_ko": normalize_text(first_present(raw, "meaning_ko", "korean_meaning", "ko_meaning")),
+        "meaning_ko": meaning_ko,
         "legacy_category": normalize_text(raw.get("legacy_category") or raw.get("category")) or None,
         "categories": normalize_categories(raw.get("categories")),
         "level": normalize_text(raw.get("level")) or "uncategorized",
@@ -230,6 +257,11 @@ def normalize_record(raw: dict[str, Any], *, origin: str, index: int = 0) -> dic
         "sources": source_list(raw.get("sources"), origin or "manual", source_reference),
         "is_active": bool(raw.get("is_active", True)),
         "inactive_reason": normalize_text(raw.get("inactive_reason")) or None,
+        "review_status": review_status,
+        "review_confidence": review_confidence,
+        "review_note": normalize_text(raw.get("review_note")) or None,
+        "reviewer": reviewer or None,
+        "reviewed_at": normalize_text(raw.get("reviewed_at")) or None,
         "dictionary_readings": [],
         "manual_readings_locked": origin == "manual",
         "origin": origin,
@@ -248,6 +280,157 @@ def load_manual_seed(path: Path = MANUAL_DIR / "business_seed.json") -> list[dic
             raise PipelineError(f"manual business_seed의 {index + 1}번째 항목이 객체가 아닙니다.")
         records.append(normalize_record(raw, origin="manual", index=index))
     return records
+
+
+def load_gloss_reviews(path: Path = GLOSS_REVIEW_DIR) -> tuple[list[dict[str, Any]], list[str]]:
+    """AI가 검수한 한국어 뜻 배치를 읽는다.
+
+    리뷰 원문은 별도 파일로 보관해 원본 어휘와 번역·검수 이력을 분리한다.
+    `ai_approved`만 활성 퀴즈 후보로 승격할 수 있으며, 애매한 항목은
+    `needs_review`로 남겨 카탈로그에 내보내지 않는다.
+    """
+    if not path.exists():
+        return [], []
+
+    reviews: list[dict[str, Any]] = []
+    notes: list[str] = []
+    seen_ids: set[str] = set()
+    for review_file in sorted(path.glob("*.json")):
+        payload = read_json(review_file)
+        if not isinstance(payload, dict):
+            raise PipelineError(f"한국어 뜻 검수 배치는 JSON 객체여야 합니다: {relative_path(review_file)}")
+        if payload.get("schema_version") != 1:
+            raise PipelineError(f"한국어 뜻 검수 배치 schema_version은 1이어야 합니다: {relative_path(review_file)}")
+        batch_id = normalize_text(payload.get("batch_id"))
+        reviewer = normalize_text(payload.get("reviewer"))
+        reviewed_at = normalize_text(payload.get("reviewed_at"))
+        items = payload.get("items")
+        if not batch_id or not reviewer or not reviewed_at or not isinstance(items, list) or not items:
+            raise PipelineError(
+                f"한국어 뜻 검수 배치에는 batch_id, reviewer, reviewed_at, 비어 있지 않은 items가 필요합니다: {relative_path(review_file)}"
+            )
+
+        approved_count = 0
+        for index, raw in enumerate(items):
+            if not isinstance(raw, dict):
+                raise PipelineError(f"{relative_path(review_file)} {index + 1}번째 items가 객체가 아닙니다")
+            stable_id = normalize_text(raw.get("stable_id"))
+            if not stable_id:
+                raise PipelineError(f"{relative_path(review_file)} {index + 1}번째 items에 stable_id가 없습니다")
+            if stable_id in seen_ids:
+                raise PipelineError(f"한국어 뜻 검수 배치에서 stable_id가 중복됩니다: {stable_id}")
+            seen_ids.add(stable_id)
+
+            review_status = normalize_text(raw.get("review_status")).lower()
+            raw_confidence = raw.get("review_confidence")
+            confidence = normalize_confidence(raw_confidence)
+            meaning_ko = normalize_text(raw.get("meaning_ko"))
+            review_note = normalize_text(raw.get("review_note"))
+            legacy_category = normalize_text(raw.get("legacy_category"))
+            raw_categories = raw.get("categories")
+            categories = normalize_categories(raw_categories)
+            raw_relevance = raw.get("business_relevance")
+            raw_related = raw.get("related")
+
+            if review_status not in VALID_GLOSS_REVIEW_STATUSES:
+                raise PipelineError(
+                    f"{relative_path(review_file)} {stable_id}: review_status가 허용값이 아닙니다 ({review_status or '비어 있음'})"
+                )
+            if isinstance(raw_confidence, bool) or not isinstance(raw_confidence, (int, float)) or confidence is None:
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: review_confidence는 0~1 숫자여야 합니다")
+            if not 0 <= confidence <= 1:
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: review_confidence는 0~1이어야 합니다")
+            if (
+                not isinstance(raw_categories, list)
+                or not categories
+                or any(not isinstance(category, str) or not normalize_text(category) for category in raw_categories)
+            ):
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: categories는 비어 있지 않은 문자열 배열이어야 합니다")
+            if legacy_category not in VALID_LEGACY_CATEGORIES:
+                raise PipelineError(
+                    f"{relative_path(review_file)} {stable_id}: legacy_category는 허용값이어야 합니다 "
+                    f"({', '.join(sorted(VALID_LEGACY_CATEGORIES))})"
+                )
+            if isinstance(raw_relevance, bool) or not isinstance(raw_relevance, int) or not 0 <= raw_relevance <= 5:
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: business_relevance는 0~5 정수여야 합니다")
+            if "related" in raw and not isinstance(raw_related, list):
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: related는 배열이어야 합니다")
+            if not review_note:
+                raise PipelineError(f"{relative_path(review_file)} {stable_id}: review_note가 필요합니다")
+            if review_status == "ai_approved":
+                if not meaning_ko:
+                    raise PipelineError(f"{relative_path(review_file)} {stable_id}: ai_approved에는 meaning_ko가 필요합니다")
+                if confidence < AI_APPROVAL_MIN_CONFIDENCE:
+                    raise PipelineError(
+                        f"{relative_path(review_file)} {stable_id}: ai_approved에는 {AI_APPROVAL_MIN_CONFIDENCE:.2f} 이상의 review_confidence가 필요합니다"
+                    )
+                approved_count += 1
+
+            reviews.append(
+                {
+                    "stable_id": stable_id,
+                    "meaning_ko": meaning_ko,
+                    "review_status": review_status,
+                    "review_confidence": confidence,
+                    "review_note": review_note,
+                    "legacy_category": legacy_category,
+                    "categories": categories,
+                    "business_relevance": raw_relevance,
+                    "related": normalize_text_list(raw_related),
+                    "has_related": "related" in raw,
+                    "reviewer": normalize_text(raw.get("reviewer")) or reviewer,
+                    "reviewed_at": normalize_text(raw.get("reviewed_at")) or reviewed_at,
+                    "source": {
+                        "name": "ai_gloss_review",
+                        "reference": relative_path(review_file),
+                        "version": batch_id,
+                    },
+                }
+            )
+        notes.append(f"AI 한국어 뜻 검수 배치 {batch_id}: 승인 {approved_count}/{len(items)}개를 읽었습니다.")
+    return reviews, notes
+
+
+def apply_gloss_reviews(records: list[dict[str, Any]], reviews: list[dict[str, Any]]) -> list[str]:
+    """검수 결과를 canonical record에 병합하고 활성화 정책을 적용한다."""
+    index = {record["stable_id"]: record for record in records}
+    status_counts: dict[str, int] = {}
+    for review in reviews:
+        stable_id = review["stable_id"]
+        record = index.get(stable_id)
+        if record is None:
+            raise PipelineError(f"한국어 뜻 검수 대상 stable_id가 canonical 후보에 없습니다: {stable_id}")
+        if record.get("origin") != "openjlpt" or record.get("review_status") != "unreviewed":
+            raise PipelineError(
+                f"한국어 뜻 검수 대상은 아직 검수되지 않은 OpenJLPT 후보여야 합니다: {stable_id}"
+            )
+
+        for field in ("meaning_ko", "review_note", "legacy_category", "reviewer", "reviewed_at"):
+            value = review.get(field)
+            if value not in (None, ""):
+                record[field] = value
+        if review.get("categories"):
+            record["categories"] = review["categories"]
+        if review.get("has_related"):
+            record["related"] = review["related"]
+        record["business_relevance"] = review["business_relevance"]
+
+        status = review["review_status"]
+        record["review_status"] = status
+        record["review_confidence"] = review["review_confidence"]
+        if status == "ai_approved":
+            record["is_active"] = True
+            record["inactive_reason"] = None
+        else:
+            record["is_active"] = False
+            record["inactive_reason"] = f"gloss_review_{status}"
+        record["sources"] = merge_sources(record["sources"], [review["source"]])
+        status_counts[status] = status_counts.get(status, 0) + 1
+
+    if not status_counts:
+        return []
+    labels = ", ".join(f"{status} {count}개" for status, count in sorted(status_counts.items()))
+    return [f"AI 한국어 뜻 검수 결과를 병합했습니다: {labels}."]
 
 
 def pick_openjlpt_input() -> Path | None:
@@ -463,9 +646,8 @@ def attach_jmdict(records: list[dict[str, Any]], matches: dict[str, dict[str, An
             continue
         dictionary_readings = dedupe(match["readings"])
         # JMdict의 `reb`에는 사전 표기용 물결표 등 실제 답안으로 입력할 수 없는
-        # 변형도 들어갈 수 있다. 원본 후보는 metadata로 보존하되, 학습 정답 후보는
-        # 정규화된 히라가나(+ 장음 기호)만 허용한다.
-        readings = [reading for reading in dictionary_readings if KANA_RE.fullmatch(reading)]
+        # 변형과 동일 표기의 별개 단어 읽기가 함께 들어갈 수 있다. 원본 후보는
+        # metadata로 보존하되, 학습 정답 후보는 OpenJLPT의 문제 읽기를 따른다.
         record["dictionary_readings"] = dictionary_readings
         record["sources"] = merge_sources(record["sources"], [match["source"]])
         if not record.get("part_of_speech") and match["part_of_speech"]:
@@ -473,10 +655,13 @@ def attach_jmdict(records: list[dict[str, Any]], matches: dict[str, dict[str, An
         record["priority_markers"] = list(
             dict.fromkeys([*record.get("priority_markers", []), *match["priority_markers"]])
         )
-        if not record.get("manual_readings_locked") and readings:
-            record["accepted_readings"] = readings
-            if record["primary_reading"] not in readings:
-                record["primary_reading"] = readings[0]
+        if not record.get("manual_readings_locked"):
+            # 동일 표기의 별개 단어가 JMdict에 함께 들어 있을 수 있다. OpenJLPT가
+            # 지정한 문제 읽기를 사전 전체 읽기로 넓히면 오답이 정답 처리될 수 있으므로,
+            # 사전 읽기는 metadata로만 보존하고 채점값은 원본 primary_reading으로 고정한다.
+            primary_reading = normalize_reading(record.get("primary_reading"))
+            if primary_reading:
+                record["accepted_readings"] = [primary_reading]
 
 
 def load_overrides(path: Path = MANUAL_DIR / "reading_overrides.json") -> dict[str, dict[str, Any]]:
@@ -637,6 +822,26 @@ def validate_records(records: list[dict[str, Any]], category_codes: set[str]) ->
         unknown_categories = [category for category in record.get("categories", []) if category not in category_codes]
         if unknown_categories:
             errors.append(f"{label}: 정의되지 않은 category가 있습니다 ({', '.join(unknown_categories)})")
+        review_status = record.get("review_status")
+        review_confidence = record.get("review_confidence")
+        if review_status not in VALID_REVIEW_STATUSES:
+            errors.append(f"{label}: review_status가 허용값이 아닙니다 ({review_status})")
+        if review_confidence is not None and (
+            isinstance(review_confidence, bool)
+            or not isinstance(review_confidence, (int, float))
+            or not math.isfinite(review_confidence)
+            or not 0 <= review_confidence <= 1
+        ):
+            errors.append(f"{label}: review_confidence는 0~1 숫자여야 합니다")
+        if review_status == "ai_approved":
+            if not isinstance(review_confidence, (int, float)) or review_confidence < AI_APPROVAL_MIN_CONFIDENCE:
+                errors.append(
+                    f"{label}: ai_approved에는 {AI_APPROVAL_MIN_CONFIDENCE:.2f} 이상의 review_confidence가 필요합니다"
+                )
+            if not record.get("reviewer") or not record.get("reviewed_at"):
+                errors.append(f"{label}: ai_approved에는 reviewer와 reviewed_at이 필요합니다")
+        if review_status in {"unreviewed", "needs_review", "rejected"} and record.get("is_active"):
+            errors.append(f"{label}: {review_status} 항목은 활성 퀴즈가 될 수 없습니다")
         if record.get("is_active"):
             if not record.get("meaning_ko"):
                 errors.append(f"{label}: 활성 퀴즈 항목에는 meaning_ko가 필요합니다")
@@ -749,6 +954,11 @@ def record_export(record: dict[str, Any]) -> dict[str, Any]:
         "sources",
         "is_active",
         "inactive_reason",
+        "review_status",
+        "review_confidence",
+        "review_note",
+        "reviewer",
+        "reviewed_at",
         "dictionary_readings",
     ]
     return {field: record.get(field) for field in fields}
@@ -774,6 +984,11 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                 expression TEXT NOT NULL,
                 primary_reading TEXT NOT NULL,
                 meaning_ko TEXT,
+                review_status TEXT NOT NULL DEFAULT 'unreviewed',
+                review_confidence REAL,
+                review_note TEXT,
+                reviewer TEXT,
+                reviewed_at TEXT,
                 jlpt_level TEXT,
                 jlpt_level_source TEXT,
                 jlpt_official INTEGER NOT NULL DEFAULT 0 CHECK (jlpt_official = 0),
@@ -861,26 +1076,36 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
         connection.executemany(
             "INSERT INTO build_metadata(key, value) VALUES (?, ?)",
             [
-                ("schema_version", "1"),
+                ("schema_version", "2"),
                 ("generated_at", generated_at),
                 ("quiz_meaning_policy", "active quiz catalog entries require meaning_ko; reveal after answer only"),
+                (
+                    "gloss_review_policy",
+                    f"ai_approved entries require confidence >= {AI_APPROVAL_MIN_CONFIDENCE:.2f}; needs_review and rejected entries stay inactive",
+                ),
             ],
         )
         for record in records:
             cursor = connection.execute(
                 """
                 INSERT INTO vocabulary(
-                    stable_id, expression, primary_reading, meaning_ko, jlpt_level, jlpt_level_source,
+                    stable_id, expression, primary_reading, meaning_ko, review_status, review_confidence,
+                    review_note, reviewer, reviewed_at, jlpt_level, jlpt_level_source,
                     jlpt_official, part_of_speech, reading_type, reading_difficulty, business_relevance,
                     frequency_score, frequency_source, learning_priority, item_type, legacy_category,
                     related_json, example, is_active, inactive_reason, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     record["stable_id"],
                     record["expression"],
                     record["primary_reading"],
                     record["meaning_ko"],
+                    record["review_status"],
+                    record["review_confidence"],
+                    record["review_note"],
+                    record["reviewer"],
+                    record["reviewed_at"],
                     record["jlpt_level"],
                     record["jlpt_level_source"],
                     record["part_of_speech"],
@@ -967,6 +1192,10 @@ def build_pipeline(
     )
     notes.extend(jmdict_notes)
     attach_jmdict(records, matches)
+    gloss_reviews, gloss_review_notes = load_gloss_reviews()
+    notes.extend(apply_gloss_reviews(records, gloss_reviews))
+    notes.extend(gloss_review_notes)
+    # 수동 override는 AI 검수 결과보다 마지막에 적용해 사람의 명시적 결정을 보존한다.
     override_notes = apply_overrides(records, load_overrides())
     excluded_ids, excluded_expressions = load_exclusions()
     excluded_count = apply_exclusions(records, excluded_ids, excluded_expressions)
@@ -982,7 +1211,7 @@ def build_pipeline(
     write_json(
         PROCESSED_DIR / "vocabulary.json",
         {
-            "schema_version": 1,
+            "schema_version": 2,
             "generated_at": generated_at,
             "records": [record_export(record) for record in records],
         },
@@ -995,6 +1224,8 @@ def build_pipeline(
         "manual_count": len(manual_records),
         "openjlpt_count": len(openjlpt_records),
         "jmdict_matched_count": len(matches),
+        "gloss_review_count": len(gloss_reviews),
+        "ai_approved_gloss_count": sum(1 for review in gloss_reviews if review["review_status"] == "ai_approved"),
         "quiz_count": quiz_count,
         "notes": notes,
         "warnings": warnings,

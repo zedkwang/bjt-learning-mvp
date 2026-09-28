@@ -47,6 +47,10 @@ def main() -> int:
     print(f"Manual demo seed: {result['manual_count']}")
     print(f"OpenJLPT N1 candidates: {result['openjlpt_count']}")
     print(f"JMdict expression matches: {result['jmdict_matched_count']}")
+    print(
+        "AI 한국어 뜻 검수: "
+        f"총 {result['gloss_review_count']}개 · 승인 {result['ai_approved_gloss_count']}개"
+    )
     print(f"Quiz catalog (meaning_ko required): {result['quiz_count']}")
     print("Validation errors: 0")
     for note in result["notes"]:

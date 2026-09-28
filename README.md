@@ -42,8 +42,9 @@ scripts/      import · 정규화 · 검증 · 생성 스크립트
 
 주요 입력은 다음과 같음.
 
-- `data/manual/business_seed.json`: 기존 33개 데모 문항을 옮긴 검수 대상 데이터. `stable_id`는 브라우저 학습 기록과 연결할 안정적인 식별자임.
-- `data/manual/reading_overrides.json`: 특정 표기에서 학습 정답으로 허용할 읽기를 제한하는 override. 수동으로 명시한 `accepted_readings`는 사전의 모든 읽기 후보보다 우선함.
+- `data/manual/business_seed.json`: 기존 33개 데모 문항을 옮긴 수동 승인 데이터. `stable_id`는 브라우저 학습 기록과 연결할 안정적인 식별자임.
+- `data/manual/gloss_reviews/`: OpenJLPT 후보의 한국어 뜻을 AI 2단계 검수한 배치. `ai_approved`이면서 신뢰도 0.85 이상인 항목만 활성 퀴즈가 됨.
+- `data/manual/reading_overrides.json`: 특정 표기에서 학습 정답으로 허용할 읽기를 제한하는 override. 명시한 `accepted_readings`는 원본의 문제 읽기보다 우선함.
 - `data/manual/excluded_words.json`: raw를 지우지 않고 결과에서만 제외하는 목록.
 - `data/raw/README.md`: OpenJLPT·JMdict 원본 파일명과 지원 형식.
 
@@ -64,9 +65,9 @@ python3 scripts/validate_vocabulary.py
 - `data/processed/vocabulary.sqlite`: source provenance, 복수 읽기, 카테고리, 한자 연결 정보를 가진 SQLite DB
 - `data/processed/catalog.js`: 브라우저 앱이 읽을 `window.BJT_CATALOG` 전역 데이터
 
-`catalog.js` 항목은 기존 UI 호환 필드(`id`, `display`, `reading`, `meaning`, `category`, `level`, `related`, `type`)와 canonical 필드(`expression`, `primary_reading`, `accepted_readings`, `meaning_ko`, `categories`)를 함께 제공함.
+`catalog.js` 항목은 기존 UI 호환 필드(`id`, `display`, `reading`, `meaning`, `category`, `level`, `related`, `type`)와 canonical 필드(`expression`, `primary_reading`, `accepted_readings`, `meaning_ko`, `categories`)를 함께 제공함. AI 검수 상태·신뢰도·검수 메모는 canonical JSON과 SQLite에 보관하며, 학습 화면에는 노출하지 않음.
 
-한국어 뜻은 문제를 보기 전 기본 노출하는 정보가 아니라 답안 제출 후 피드백에 쓰는 보조 필드임. 따라서 활성 퀴즈 항목은 반드시 `meaning_ko`를 가져야 하며, 뜻이 없는 OpenJLPT 후보는 canonical DB에는 보관하되 퀴즈 카탈로그에서는 제외됨.
+한국어 뜻은 문제를 보기 전 기본 노출하는 정보가 아니라 답안 제출 후 피드백에 쓰는 보조 필드임. 따라서 활성 퀴즈 항목은 반드시 `meaning_ko`와 승인 상태를 가져야 하며, 뜻이 없거나 `needs_review`/`rejected`인 OpenJLPT 후보는 canonical DB에는 보관하되 퀴즈 카탈로그에서는 제외됨. OpenJLPT가 지정한 `primary_reading`만 정답으로 허용하고, JMdict의 다른 읽기는 근거 metadata로만 보관함. 다른 읽기를 정답으로 허용해야 할 때만 `reading_overrides.json`에 명시함.
 
 원본 파일이 아직 없으면 기본 빌드는 수동 33개 문항만 생성하고, OpenJLPT·JMdict를 건너뛴다는 안내를 출력함. 운영용으로 원본이 반드시 있어야 할 때는 아래처럼 명시적으로 실패하게 만들 수 있음.
 
@@ -84,9 +85,10 @@ python3 scripts/import_jmdict.py
 ### 현재 범위와 한계
 
 - OpenJLPT N1 JSON과 JMdict `JMdict_e.gz`를 현재 `data/raw/`에 포함함. 이번 빌드에서는 한자→읽기 훈련 대상 3,183개를 OpenJLPT에서 가져와 canonical DB 총 3,207개 항목을 생성함.
-- JMdict는 표기·읽기·우선순위 태그 대조용이며, 수동 시드의 문맥상 허용 읽기를 자동으로 넓히지 않음.
+- JMdict는 표기·읽기·우선순위 태그 대조용이며, OpenJLPT 문제 읽기를 사전의 복수 읽기로 자동 확장하지 않음.
 - KANJIDIC2와 BCCWJ는 DB 스키마 확장 여지는 준비했지만 이 1차 빌드에서는 가져오지 않음. 특히 BCCWJ는 이용 조건 검토 전 비활성임.
-- Business Seed는 데모 33개만 이관했으며, 검수 없이 AI로 300~500개를 추가 생성하지 않음. 한국어 뜻이 검수된 33개만 현재 퀴즈 카탈로그에 노출하며, 뜻이 없는 N1 후보는 DB에 보관하고 비활성 상태로 둠.
+- Business Seed 33개와 AI 2단계 검수를 마친 초기 100개 후보를 함께 관리함. 2026-09-28 기준 초기 배치에서는 97개가 승인되어 퀴즈 카탈로그에 반영되고, 3개는 다의성 또는 추가 확인 사유로 비활성 보류함.
+- AI 검수는 인적 사전 편집 감수가 아니므로, 이후 외부 검수 근거가 생기면 해당 배치를 `needs_review`에서 다시 판정해야 함. 검수 근거·신뢰도·보류 사유는 `data/manual/gloss_reviews/`와 canonical DB에 남김.
 
 ## 다음 단계
 
