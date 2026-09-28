@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "stable_ids": [],
+  "expressions": [],
+  "notes": "원본 raw 데이터는 지우지 않고 processed 결과에서만 제외합니다."
+}

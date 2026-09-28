@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "overrides": {},
+  "notes": "키는 stable_id 또는 expression입니다. 명시한 accepted_readings는 JMdict 자동 후보보다 우선하며, 학습 문맥의 정답 범위를 제한합니다."
+}

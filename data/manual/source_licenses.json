@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "manual_demo_seed": {
+      "status": "project_owned",
+      "attribution": "기존 BJT ARC MVP 데모 문항에서 이관됨"
+    },
+    "OpenJLPT": {
+      "status": "included_2026-09-28",
+      "source_url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/main/data/json/vocab/n1.json",
+      "sha256": "e9662df1dba34c2f566a128f203c8a78296c1c2c1a337b8ef036ca516ea8430e",
+      "license": "CC BY-SA 4.0",
+      "attribution": "Upstream NOTICE: https://github.com/evanclan/OpenJLPT/blob/main/NOTICE.md"
+    },
+    "JMdict": {
+      "status": "included_2026-09-28",
+      "source_url": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+      "sha256": "07c9aa6d4c8b477096ca5c2a02f960b1e354b6d8f27626b478c54e8c95d3753a",
+      "license": "EDRDG Licence Statement",
+      "attribution": "https://www.edrdg.org/edrdg/licence.html"
+    },
+    "KANJIDIC2": {
+      "status": "verify_before_import",
+      "attribution": "EDRDG/KANJIDIC2 원본의 현재 라이선스 및 표시 요건을 수집 시점에 확인해야 함"
+    },
+    "BCCWJ": {
+      "status": "disabled_until_license_review",
+      "attribution": "이용 조건을 확인하기 전에는 가져오거나 배포하지 않음"
+    }
+  }
+}
