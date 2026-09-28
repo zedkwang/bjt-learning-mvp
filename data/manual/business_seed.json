@@ -480,6 +480,134 @@
     "sources": [{"name": "manual_demo_seed", "reference": "기존 MVP ITEMS 이관"}]
   },
   {
+    "stable_id": "estimate-document",
+    "expression": "見積書",
+    "primary_reading": "みつもりしょ",
+    "accepted_readings": ["みつもりしょ"],
+    "meaning_ko": "견적서",
+    "legacy_category": "transaction",
+    "categories": ["sales", "transaction"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "compound",
+    "reading_difficulty": 4,
+    "business_relevance": 5,
+    "related": ["見積　みつもり", "請求書　せいきゅうしょ"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "internal-company",
+    "expression": "社内",
+    "primary_reading": "しゃない",
+    "accepted_readings": ["しゃない"],
+    "meaning_ko": "사내",
+    "legacy_category": "relationship",
+    "categories": ["organization", "internal_process"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "onyomi",
+    "reading_difficulty": 2,
+    "business_relevance": 4,
+    "related": ["社外　しゃがい", "部署　ぶしょ"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "anew",
+    "expression": "改めて",
+    "primary_reading": "あらためて",
+    "accepted_readings": ["あらためて"],
+    "meaning_ko": "다시, 새롭게",
+    "legacy_category": "relationship",
+    "categories": ["communication", "internal_process"],
+    "level": "kunyomi",
+    "item_type": "word",
+    "reading_type": "kunyomi",
+    "reading_difficulty": 4,
+    "business_relevance": 4,
+    "related": ["改める　あらためる", "再度　さいど"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "response",
+    "expression": "回答",
+    "primary_reading": "かいとう",
+    "accepted_readings": ["かいとう"],
+    "meaning_ko": "답변",
+    "legacy_category": "relationship",
+    "categories": ["communication", "customer_support"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "onyomi",
+    "reading_difficulty": 3,
+    "business_relevance": 5,
+    "related": ["返答　へんとう", "回答する　かいとうする"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "current-status",
+    "expression": "現状",
+    "primary_reading": "げんじょう",
+    "accepted_readings": ["げんじょう"],
+    "meaning_ko": "현황",
+    "legacy_category": "coordination",
+    "categories": ["report", "project_management"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "compound",
+    "reading_difficulty": 3,
+    "business_relevance": 4,
+    "related": ["状況　じょうきょう", "実情　じつじょう"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "progress",
+    "expression": "進捗",
+    "primary_reading": "しんちょく",
+    "accepted_readings": ["しんちょく"],
+    "meaning_ko": "진척, 진행 상황",
+    "legacy_category": "coordination",
+    "categories": ["project_management", "schedule", "report"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "compound",
+    "reading_difficulty": 4,
+    "business_relevance": 5,
+    "related": ["進行　しんこう", "進捗確認　しんちょくかくにん"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "advance-schedule",
+    "expression": "前倒し",
+    "primary_reading": "まえだおし",
+    "accepted_readings": ["まえだおし"],
+    "meaning_ko": "일정을 앞당김",
+    "legacy_category": "coordination",
+    "categories": ["schedule", "project_management"],
+    "level": "kunyomi",
+    "item_type": "word",
+    "reading_type": "kunyomi",
+    "reading_difficulty": 4,
+    "business_relevance": 5,
+    "related": ["後倒し　あとだおし", "納期　のうき"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
+    "stable_id": "possible",
+    "expression": "可能",
+    "primary_reading": "かのう",
+    "accepted_readings": ["かのう"],
+    "meaning_ko": "가능",
+    "legacy_category": "coordination",
+    "categories": ["decision", "project_management"],
+    "level": "business_core",
+    "item_type": "word",
+    "reading_type": "onyomi",
+    "reading_difficulty": 2,
+    "business_relevance": 4,
+    "related": ["可能性　かのうせい", "不可能　ふかのう"],
+    "sources": [{"name": "manual_sentence_link", "reference": "문장 학습 연결용 수동 검수"}]
+  },
+  {
     "stable_id": "sentence-estimate",
     "expression": "見積書をご確認ください。",
     "primary_reading": "みつもりしょをごかくにんください",
@@ -493,6 +621,10 @@
     "reading_difficulty": 4,
     "business_relevance": 5,
     "related": ["見積書　みつもりしょ", "確認　かくにん"],
+    "word_links": [
+      {"word_id": "estimate-document", "surface": "見積書", "reading_in_sentence": "みつもりしょ"},
+      {"word_id": "confirmation", "surface": "ご確認", "reading_in_sentence": "ごかくにん"}
+    ],
     "sources": [{"name": "manual_demo_seed", "reference": "기존 MVP ITEMS 이관"}]
   },
   {
@@ -509,6 +641,12 @@
     "reading_difficulty": 4,
     "business_relevance": 5,
     "related": ["検討　けんとう", "回答　かいとう"],
+    "word_links": [
+      {"word_id": "internal-company", "surface": "社内", "reading_in_sentence": "しゃない"},
+      {"word_id": "consideration", "surface": "検討した", "reading_in_sentence": "けんとうした"},
+      {"word_id": "anew", "surface": "改めて", "reading_in_sentence": "あらためて"},
+      {"word_id": "response", "surface": "ご回答", "reading_in_sentence": "ごかいとう"}
+    ],
     "sources": [{"name": "manual_demo_seed", "reference": "기존 MVP ITEMS 이관"}]
   },
   {
@@ -525,6 +663,14 @@
     "reading_difficulty": 5,
     "business_relevance": 5,
     "related": ["進捗　しんちょく", "踏まえる　ふまえる", "見込む　みこむ"],
+    "word_links": [
+      {"word_id": "current-status", "surface": "現状", "reading_in_sentence": "げんじょう"},
+      {"word_id": "progress", "surface": "進捗", "reading_in_sentence": "しんちょく"},
+      {"word_id": "consider-based-on", "surface": "踏まえる", "reading_in_sentence": "ふまえる"},
+      {"word_id": "advance-schedule", "surface": "前倒し", "reading_in_sentence": "まえだおし"},
+      {"word_id": "possible", "surface": "可能", "reading_in_sentence": "かのう"},
+      {"word_id": "estimate-verb", "surface": "見込んで", "reading_in_sentence": "みこんで"}
+    ],
     "sources": [{"name": "manual_demo_seed", "reference": "기존 MVP ITEMS 이관"}]
   }
 ]

@@ -358,6 +358,13 @@
     const readingType = raw.reading_type || raw.readingType || raw.reading?.type || raw.level || "";
     const category = mapCatalogCategory(raw.category || raw.ui_category || raw.uiCategory, categories, readingType);
     const display = String(raw.display || raw.expression || "").trim();
+    const wordLinks = (Array.isArray(raw.word_links) ? raw.word_links : Array.isArray(raw.wordLinks) ? raw.wordLinks : [])
+      .map((link) => ({
+        wordId: String(link?.word_id || link?.wordId || "").trim(),
+        surface: String(link?.surface || "").trim(),
+        readingInSentence: String(link?.reading_in_sentence || link?.readingInSentence || "").trim(),
+      }))
+      .filter((link) => link.wordId && link.surface && link.readingInSentence);
 
     return {
       ...raw,
@@ -369,6 +376,7 @@
       category,
       level: raw.level || readingType || "business_core",
       related: Array.isArray(raw.related) ? raw.related : [],
+      wordLinks,
       type: raw.type || raw.item_type || "word",
       learningPriority: Number(raw.learning_priority ?? raw.learningPriority ?? 0),
     };
@@ -389,6 +397,7 @@
   }
 
   const ITEMS = loadCatalogItems();
+  const ITEM_BY_ID = new Map(ITEMS.map((item) => [item.id, item]));
 
   const ACHIEVEMENTS = [
     { id: "first-link", icon: "◌", title: "첫 연결", description: "정확히 1개 읽기", test: () => state.totalCorrect >= 1 },
@@ -406,10 +415,11 @@
   let activeSession = null;
   let timerFrame = null;
   let isComposing = false;
+  let activeReviewKind = "word";
 
   function defaultState() {
     return {
-      version: 2,
+      version: 3,
       xp: 0,
       totalCorrect: 0,
       totalAttempts: 0,
@@ -435,7 +445,7 @@
       const hydrated = {
         ...defaultState(),
         ...currentState,
-        version: 2,
+        version: 3,
         progress: parsed.progress || {},
         manualReview:
           parsed.manualReview && typeof parsed.manualReview === "object" && !Array.isArray(parsed.manualReview)
@@ -495,8 +505,18 @@
     return Boolean(state.manualReview[itemId]);
   }
 
-  function getManualReviewItems() {
-    return ITEMS.filter((item) => isInManualReview(item.id)).sort((first, second) => {
+  function isSentenceItem(item) {
+    return item?.type === "sentence";
+  }
+
+  function matchesStudyKind(item, kind = "all") {
+    if (kind === "word") return !isSentenceItem(item);
+    if (kind === "sentence") return isSentenceItem(item);
+    return true;
+  }
+
+  function getManualReviewItems(kind = "all") {
+    return ITEMS.filter((item) => isInManualReview(item.id) && matchesStudyKind(item, kind)).sort((first, second) => {
       const firstAddedAt = Number(state.manualReview[first.id]?.addedAt) || 0;
       const secondAddedAt = Number(state.manualReview[second.id]?.addedAt) || 0;
       return secondAddedAt - firstAddedAt;
@@ -517,10 +537,19 @@
     return true;
   }
 
-  function getUnseenItems() {
-    return ITEMS.filter((item) => !(state.progress[item.id] && state.progress[item.id].seen)).sort(
+  function getUnseenItems(kind = "all") {
+    return ITEMS.filter(
+      (item) => matchesStudyKind(item, kind) && !(state.progress[item.id] && state.progress[item.id].seen)
+    ).sort(
       (first, second) => (second.learningPriority || 0) - (first.learningPriority || 0)
     );
+  }
+
+  function getSentenceWordLinks(item) {
+    if (!isSentenceItem(item)) return [];
+    return (item.wordLinks || [])
+      .map((link) => ({ ...link, word: ITEM_BY_ID.get(link.wordId) }))
+      .filter((link) => link.word && !isSentenceItem(link.word));
   }
 
   function escapeHTML(value) {
@@ -730,16 +759,61 @@
   }
 
   function categoryMastery(category) {
-    const categoryItems = ITEMS.filter((item) => item.category === category);
+    const categoryItems = ITEMS.filter((item) => !isSentenceItem(item) && item.category === category);
+    if (!categoryItems.length) return 0;
     const total = categoryItems.reduce((sum, item) => sum + itemMastery(item), 0);
     return Math.round(total / categoryItems.length);
+  }
+
+  function isReviewSession(mode) {
+    return mode === "review-word" || mode === "review-sentence";
+  }
+
+  function sessionStudyKind(mode) {
+    if (mode === "learn-word" || mode === "review-word") return "word";
+    if (mode === "learn-sentence" || mode === "review-sentence") return "sentence";
+    return "all";
+  }
+
+  function studyKindLabel(kind) {
+    return kind === "sentence" ? "문장" : "단어";
   }
 
   function currentSessionLabel() {
     if (!activeSession) return null;
     if (activeSession.mode === "boss") return "주간 실전 라운드";
-    if (activeSession.mode === "review") return "복습 보관함";
-    return "새 표현 흐름";
+    if (activeSession.mode === "review-word") return "단어 복습";
+    if (activeSession.mode === "review-sentence") return "문장 복습";
+    if (activeSession.mode === "learn-sentence") return "문장 학습";
+    return "단어 학습";
+  }
+
+  function studyModeCard(kind) {
+    const label = studyKindLabel(kind);
+    const unseen = getUnseenItems(kind);
+    const review = getManualReviewItems(kind);
+    const total = ITEMS.filter((item) => matchesStudyKind(item, kind)).length;
+    const sessionMode = `learn-${kind}`;
+    const continuing = activeSession && !activeSession.finalized && activeSession.mode === sessionMode;
+    const isSentence = kind === "sentence";
+    return `
+      <section class="panel study-mode-card ${isSentence ? "is-sentence" : ""}">
+        <p class="eyebrow">${isSentence ? "SENTENCE READING" : "WORD READING"}</p>
+        <h2>${label} 학습</h2>
+        <p>${
+          isSentence
+            ? "문장 전체를 읽고, 막힌 핵심 단어만 단어 복습으로 따로 보냅니다."
+            : "단어와 복합어만 읽습니다. 문장은 문장 학습에서 별도로 연습합니다."
+        }</p>
+        <div class="mode-counts">
+          <span>새 ${label} <b>${unseen.length}</b> / ${total}</span>
+          <span>${label} 복습 <b>${review.length}</b></span>
+        </div>
+        <button class="primary-button" type="button" data-start-kind="${kind}" ${unseen.length || continuing ? "" : "disabled"}>
+          ${continuing ? `${label} 학습 이어하기` : unseen.length ? `${label} 학습 시작` : `새 ${label} 완료`} <span aria-hidden="true">&nbsp;→</span>
+        </button>
+      </section>
+    `;
   }
 
   function renderDashboard() {
@@ -748,14 +822,8 @@
     updateRankUI();
     setActiveNav(activeView);
 
-    const unseen = getUnseenItems();
-    const manualReview = getManualReviewItems();
-    const learnedCount = ITEMS.length - unseen.length;
-    const accuracy = state.unhintedAttempts
-      ? Math.round((state.totalCorrect / state.unhintedAttempts) * 100)
-      : 0;
-    const responseTime = averageResponseTime();
-    const continueSession = activeSession && !activeSession.finalized && activeSession.mode === "learn";
+    const wordTotal = ITEMS.filter((item) => matchesStudyKind(item, "word")).length;
+    const sentenceTotal = ITEMS.filter((item) => matchesStudyKind(item, "sentence")).length;
     const categoryRows = Object.entries(CATEGORY_LABELS)
       .map(([key, label]) => {
         const percentage = categoryMastery(key);
@@ -784,50 +852,21 @@
       <header class="page-header">
         <div>
           <p class="eyebrow">FLEXIBLE READING FLOW</p>
-          <h1 class="page-title">시간 날 때, 원하는 만큼<br />업무 일본어를 읽습니다.</h1>
-          <p class="page-lede">하루 목표나 대기 시간 없이, 보이는 한자에서 소리를 바로 꺼내는 흐름입니다.</p>
+          <h1 class="page-title">단어는 단어대로,<br />문장은 문장대로 읽습니다.</h1>
+          <p class="page-lede">문장에서 걸린 핵심 단어만 단어 복습으로 옮겨, 다시 문장으로 돌아오는 흐름입니다.</p>
         </div>
-        <span class="date-chip">연결함 ${learnedCount} / ${ITEMS.length}</span>
+        <span class="date-chip">단어 ${wordTotal} · 문장 ${sentenceTotal}</span>
       </header>
 
-      <div class="dashboard-grid">
-        <section class="panel mission-panel" aria-labelledby="mission-title">
-          <div class="mission-head"><span class="status-dot" aria-hidden="true"></span><p class="eyebrow">OPEN PRACTICE</p></div>
-          <h2 id="mission-title">새 표현 <b>${unseen.length}</b>개,<br />원하는 만큼 계속 읽어 보세요.</h2>
-          <p class="page-lede">자동 종료나 일일 한도는 없습니다. 멈추고 싶을 때만 학습을 마치면 됩니다.</p>
-          <div class="mission-progress" aria-label="학습 흐름 현황">
-            <div><span>새 표현 남음</span><strong>${unseen.length}개</strong></div>
-            <div><span>직접 고른 복습</span><strong>${manualReview.length}개</strong></div>
-            <div><span>누적 무힌트 정답</span><strong>${state.totalCorrect}개</strong></div>
-          </div>
-          <button class="primary-button" id="start-learning" type="button" ${unseen.length || continueSession ? "" : "disabled"}>
-            ${continueSession ? "학습 이어하기" : unseen.length ? "새 표현 시작" : "새 표현 완료"} <span aria-hidden="true">&nbsp;→</span>
-          </button>
-        </section>
-
-        <section class="quick-stats" aria-label="학습 현황">
-          <article class="panel stat-panel">
-            <p>READING XP</p>
-            <strong>${state.xp.toLocaleString("ko-KR")}</strong>
-            <small>${rankForXP(state.xp).name}</small>
-          </article>
-          <article class="panel stat-panel">
-            <p>무힌트 정확도</p>
-            <strong>${state.unhintedAttempts ? accuracy + "%" : "—"}</strong>
-            <small>뜻 보기 제외</small>
-          </article>
-          <article class="panel stat-panel">
-            <p>무힌트 평균 반응</p>
-            <strong>${responseTime ? formatSeconds(responseTime) : "—"}</strong>
-            <small>탭 이탈 시간 제외</small>
-          </article>
-        </section>
+      <div class="study-mode-grid">
+        ${studyModeCard("word")}
+        ${studyModeCard("sentence")}
       </div>
 
       <div class="section-grid">
         <section class="panel section-panel" aria-labelledby="map-title">
           <div class="section-heading">
-            <div><h2 id="map-title">업무 언어 역량 맵</h2><p>정확도와 누적 연결 기록이 함께 반영됩니다.</p></div>
+            <div><h2 id="map-title">단어 읽기 역량 맵</h2><p>단어·복합어의 정확도와 누적 연결 기록이 반영됩니다.</p></div>
             <button class="ghost-button" type="button" data-view="review">복습 보관함 보기</button>
           </div>
           <div class="category-list">${categoryRows}</div>
@@ -841,9 +880,92 @@
       </div>
     `;
 
-    document.getElementById("start-learning")?.addEventListener("click", () => {
-      if (!activeSession || activeSession.finalized || activeSession.mode !== "learn") {
-        startSession("learn");
+    viewRoot.querySelectorAll("[data-start-kind]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const kind = button.dataset.startKind;
+        const sessionMode = `learn-${kind}`;
+        if (!activeSession || activeSession.finalized || activeSession.mode !== sessionMode) {
+          startSession(sessionMode);
+        } else {
+          renderQuiz();
+        }
+      });
+    });
+    viewRoot.querySelector('[data-view="review"]')?.addEventListener("click", renderReview);
+  }
+
+  function renderStudyMode(kind) {
+    stopTimer();
+    activeView = kind === "sentence" ? "sentences" : "words";
+    updateRankUI();
+    setActiveNav(activeView);
+
+    const label = studyKindLabel(kind);
+    const unseen = getUnseenItems(kind);
+    const manualReview = getManualReviewItems(kind);
+    const total = ITEMS.filter((item) => matchesStudyKind(item, kind)).length;
+    const learned = total - unseen.length;
+    const sessionMode = `learn-${kind}`;
+    const continuing = activeSession && !activeSession.finalized && activeSession.mode === sessionMode;
+    const isSentence = kind === "sentence";
+
+    viewRoot.innerHTML = `
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">${isSentence ? "SENTENCE READING" : "WORD READING"}</p>
+          <h1 class="page-title">${label} 학습</h1>
+          <p class="page-lede">${
+            isSentence
+              ? "문장 전체의 읽기를 확인한 뒤, 막힌 핵심 단어만 단어 복습으로 선택합니다."
+              : "한자 단어와 복합어의 읽기만 집중합니다. 문장 문제는 섞이지 않습니다."
+          }</p>
+        </div>
+        <span class="date-chip">새 ${label} ${unseen.length}개</span>
+      </header>
+
+      <div class="dashboard-grid">
+        <section class="panel mission-panel" aria-labelledby="study-title">
+          <div class="mission-head"><span class="status-dot" aria-hidden="true"></span><p class="eyebrow">OPEN PRACTICE</p></div>
+          <h2 id="study-title">${isSentence ? "문장을 읽고,<br />모르는 단어만 골라내세요." : "단어를 먼저,<br />원하는 만큼 이어서 읽으세요."}</h2>
+          <p class="page-lede">자동 종료와 일일 한도는 없습니다. 멈추고 싶을 때만 학습을 마치면 됩니다.</p>
+          <div class="mission-progress" aria-label="${label} 학습 현황">
+            <div><span>새 ${label} 남음</span><strong>${unseen.length}개</strong></div>
+            <div><span>${label} 복습</span><strong>${manualReview.length}개</strong></div>
+            <div><span>학습한 ${label}</span><strong>${learned}개</strong></div>
+          </div>
+          <button class="primary-button" id="start-study" type="button" ${unseen.length || continuing ? "" : "disabled"}>
+            ${continuing ? `${label} 학습 이어하기` : unseen.length ? `${label} 학습 시작` : `새 ${label} 완료`} <span aria-hidden="true">&nbsp;→</span>
+          </button>
+        </section>
+        <section class="quick-stats" aria-label="${label} 학습 안내">
+          <article class="panel stat-panel"><p>새 ${label}</p><strong>${unseen.length}</strong><small>원하는 만큼 계속</small></article>
+          <article class="panel stat-panel"><p>${label} 보관함</p><strong>${manualReview.length}</strong><small>직접 선택한 표현</small></article>
+          <article class="panel stat-panel"><p>READING XP</p><strong>${state.xp.toLocaleString("ko-KR")}</strong><small>${rankForXP(state.xp).name}</small></article>
+        </section>
+      </div>
+
+      <div class="section-grid">
+        <section class="panel section-panel">
+          <p class="eyebrow">${isSentence ? "SENTENCE TO WORD" : "WORD FIRST"}</p>
+          <h2>${isSentence ? "문장을 멈추지 않고,<br />단어만 따로 되짚기" : "문장과 분리해,<br />읽기 반응부터 만들기"}</h2>
+          <p class="page-lede">${
+            isSentence
+              ? "답안을 확인한 뒤 문장 안의 핵심 단어마다 단어 복습에 넣을 수 있습니다. 문장 자체도 별도로 보관할 수 있습니다."
+              : "문장 안에서 막힌 단어는 문장 학습 피드백에서 단어 복습으로 보낼 수 있습니다."
+          }</p>
+        </section>
+        <section class="panel section-panel">
+          <p class="eyebrow">REVIEW PRINCIPLE</p>
+          <h2>필요할 때 꺼내고,<br />확실해지면 비우기</h2>
+          <p class="page-lede">정답·오답과 관계없이 직접 넣고 뺍니다. 자동 재출제나 시간 대기는 없습니다.</p>
+          <button class="ghost-button" type="button" data-view="review">복습 보관함 보기</button>
+        </section>
+      </div>
+    `;
+
+    document.getElementById("start-study")?.addEventListener("click", () => {
+      if (!activeSession || activeSession.finalized || activeSession.mode !== sessionMode) {
+        startSession(sessionMode);
       } else {
         renderQuiz();
       }
@@ -856,14 +978,18 @@
     activeView = "review";
     updateRankUI();
     setActiveNav(activeView);
-    const manualReview = getManualReviewItems();
+    const wordReview = getManualReviewItems("word");
+    const sentenceReview = getManualReviewItems("sentence");
+    const kind = activeReviewKind;
+    const label = studyKindLabel(kind);
+    const manualReview = kind === "sentence" ? sentenceReview : wordReview;
     const rows = manualReview
       .map((item) => {
         const progress = state.progress[item.id] || {};
         const retryCount = (progress.wrong || 0) + (progress.soft || 0) + (progress.hinted || 0);
         return `
           <article class="review-row">
-            <div><b>${escapeHTML(item.display)}</b><p>${CATEGORY_LABELS[item.category]} · ${item.type === "sentence" ? "문장 읽기" : "단어 읽기"}</p></div>
+            <div><b>${escapeHTML(item.display)}</b><p>${CATEGORY_LABELS[item.category]} · ${kind === "sentence" ? "문장 읽기" : "단어 읽기"}</p></div>
             <div><p>최근 기록</p><strong>정답 ${progress.correct || 0} · 헷갈림 ${retryCount}</strong></div>
             <div class="review-actions"><span class="pill">직접 선택</span><button class="ghost-button review-remove" type="button" data-remove-review="${escapeHTML(item.id)}">빼기</button></div>
           </article>
@@ -876,26 +1002,34 @@
         <div>
           <p class="eyebrow">REVIEW INBOX</p>
           <h1 class="page-title">내가 다시 읽고 싶은 표현</h1>
-          <p class="page-lede">틀렸거나 헷갈렸던 표현만 직접 골라, 원할 때 다시 읽습니다.</p>
+          <p class="page-lede">단어와 문장을 분리해, 필요할 때 원하는 보관함만 다시 읽습니다.</p>
         </div>
-        <span class="date-chip">보관 ${manualReview.length}개</span>
+        <span class="date-chip">단어 ${wordReview.length} · 문장 ${sentenceReview.length}</span>
       </header>
       <div class="review-grid">
         <section class="panel section-panel">
-          <div class="section-heading">
-            <div><h2>내 복습 목록</h2><p>시간 제한 없이, 직접 넣은 표현만 다시 출제합니다.</p></div>
-            <button class="primary-button" id="start-review" type="button" ${manualReview.length ? "" : "disabled"}>복습 시작</button>
+          <div class="section-heading review-heading">
+            <div><h2>${label} 복습 목록</h2><p>시간 제한 없이, 직접 넣은 ${label}만 다시 출제합니다.</p></div>
+            <button class="primary-button" id="start-review" type="button" ${manualReview.length ? "" : "disabled"}>${label} 복습 시작</button>
+          </div>
+          <div class="review-filter-tabs" role="group" aria-label="복습 유형 선택">
+            <button class="ghost-button ${kind === "word" ? "is-active" : ""}" type="button" data-review-kind="word" aria-pressed="${kind === "word"}">단어 ${wordReview.length}</button>
+            <button class="ghost-button ${kind === "sentence" ? "is-active" : ""}" type="button" data-review-kind="sentence" aria-pressed="${kind === "sentence"}">문장 ${sentenceReview.length}</button>
           </div>
           ${manualReview.length ? `<div class="review-list">${rows}</div>` : `
             <div class="empty-state">
-              <div><strong>아직 직접 넣은 표현이 없습니다</strong>답을 제출한 뒤 헷갈린 표현을 복습 보관함에 넣어 보세요.</div>
+              <div><strong>아직 직접 넣은 ${label}이 없습니다</strong>${
+                kind === "sentence"
+                  ? "문장 답안을 확인한 뒤, 문장 자체를 복습 보관함에 넣어 보세요."
+                  : "문장 답안을 확인한 뒤, 익히고 싶은 핵심 단어를 단어 복습에 넣어 보세요."
+              }</div>
             </div>
           `}
         </section>
         <aside class="panel section-panel">
           <p class="eyebrow">REVIEW PRINCIPLE</p>
-          <h2>필요할 때 꺼내고,<br />확실해지면 비우기</h2>
-          <p class="page-lede">복습을 마쳐도 자동으로 지우지 않습니다. 충분히 익숙해졌을 때 직접 보관함에서 빼면 됩니다.</p>
+          <h2>단어는 단어대로,<br />문장은 문장대로</h2>
+          <p class="page-lede">문장에서 고른 단어는 단어 보관함으로, 문장 자체는 문장 보관함으로 들어갑니다.</p>
           <div class="mission-mini-list">
             <div class="mission-mini"><span>완료한 복습</span><b>${state.reviewCorrect}개</b></div>
             <div class="mission-mini"><span>보관함 기준</span><b>내가 선택</b></div>
@@ -904,11 +1038,16 @@
       </div>
     `;
 
-    const startReview = document.getElementById("start-review");
-    if (startReview) startReview.addEventListener("click", () => startSession("review"));
+    document.getElementById("start-review")?.addEventListener("click", () => startSession(`review-${kind}`));
+    viewRoot.querySelectorAll("[data-review-kind]").forEach((button) => {
+      button.addEventListener("click", () => {
+        activeReviewKind = button.dataset.reviewKind === "sentence" ? "sentence" : "word";
+        renderReview();
+      });
+    });
     viewRoot.querySelectorAll("[data-remove-review]").forEach((button) => {
       button.addEventListener("click", () => {
-        const item = ITEMS.find((candidate) => candidate.id === button.dataset.removeReview);
+        const item = ITEM_BY_ID.get(button.dataset.removeReview);
         if (!item) return;
         toggleManualReview(item);
         renderReview();
@@ -953,8 +1092,6 @@
   }
 
   function buildSessionEntries(mode) {
-    const unseen = getUnseenItems();
-
     if (mode === "boss") {
       const ids = [
         "delivery-date",
@@ -970,20 +1107,22 @@
           item,
           source: "boss",
           hintUsed: false,
-        }));
+      }));
     }
 
-    if (mode === "review") {
-      return getManualReviewItems().map((item) => ({
+    if (isReviewSession(mode)) {
+      const kind = sessionStudyKind(mode);
+      return getManualReviewItems(kind).map((item) => ({
         item,
-        source: "manual-review",
+        source: `${kind}-review`,
         hintUsed: false,
       }));
     }
 
-    return unseen.map((item) => ({
+    const kind = sessionStudyKind(mode);
+    return getUnseenItems(kind).map((item) => ({
       item,
-      source: "new",
+      source: `new-${kind}`,
       hintUsed: false,
     }));
   }
@@ -1092,6 +1231,7 @@
     const isHintedCorrect = grade.kind === "correct" && hintViewed;
     const isExact = grade.kind === "correct" && !hintViewed;
     const isFirstEncounter = progress.firstAttemptCorrect === null;
+    const isManualReview = entry.source === "word-review" || entry.source === "sentence-review";
 
     progress.seen += 1;
     progress.lastSeen = Date.now();
@@ -1104,7 +1244,7 @@
       progress.correct += 1;
       progress.stage = Math.min(progress.stage + 1, MAX_MASTERY_STAGE);
       state.totalCorrect += 1;
-      if (entry.source === "manual-review") state.reviewCorrect += 1;
+      if (isManualReview) state.reviewCorrect += 1;
       if (!focusLost && Number.isFinite(seconds)) {
         progress.bestTime = Number.isFinite(previousBest) ? Math.min(previousBest, seconds) : seconds;
       }
@@ -1125,19 +1265,23 @@
       focusLost,
       hintUsed: Boolean(hintViewed),
       at: Date.now(),
-      isReview: entry.source === "manual-review",
+      isReview: isManualReview,
     });
     state.logs = state.logs.slice(0, 180);
     return previousBest;
   }
 
   function feedbackFor(grade, item, seconds, previousBest, focusLost, xp, hintUsed) {
+    const reviewTarget = isSentenceItem(item) ? "문장" : "단어";
+    const sentenceLinkGuide = isSentenceItem(item)
+      ? " 아래의 핵심 단어는 단어 복습으로 따로 넣을 수 있습니다."
+      : "";
     if (grade.kind === "correct" && hintUsed) {
       return {
         className: "is-hint",
         statusClass: "is-hint",
         label: "뜻 확인 후 정답",
-        copy: "힌트 정답은 +2 XP로 기록되며, 콤보와 자동화 숙련도에는 반영하지 않습니다. 헷갈렸다면 아래에서 복습 보관함에 직접 넣어 보세요.",
+        copy: `힌트 정답은 +2 XP로 기록되며, 콤보와 자동화 숙련도에는 반영하지 않습니다. 헷갈렸다면 아래에서 ${reviewTarget} 복습에 직접 넣어 보세요.${sentenceLinkGuide}`,
         xp,
       };
     }
@@ -1154,7 +1298,7 @@
           ? `이전 최고 기록보다 ${(previousBest - seconds).toFixed(1)}초 빨랐습니다. 자동화 단계에 가까워졌습니다.`
           : focusLost
             ? "탭 이탈 시간은 기록에서 제외했습니다. 다음에도 정확하게 연결해 보세요."
-            : "정확한 연결을 기록했습니다. 필요하면 이 표현을 직접 복습 보관함에 넣을 수 있습니다.",
+            : `정확한 연결을 기록했습니다. 필요하면 이 ${reviewTarget}을 직접 복습 보관함에 넣을 수 있습니다.${sentenceLinkGuide}`,
         xp,
       };
     }
@@ -1163,7 +1307,7 @@
         className: "is-wrong",
         statusClass: "is-wrong",
         label: "표기 주의",
-        copy: "한 글자 또는 장음·촉음 차이를 확인해 주세요. 필요하면 복습 보관함에 직접 넣어 다시 연습할 수 있습니다.",
+        copy: `한 글자 또는 장음·촉음 차이를 확인해 주세요. 필요하면 ${reviewTarget} 복습에 직접 넣어 다시 연습할 수 있습니다.${sentenceLinkGuide}`,
         xp,
       };
     }
@@ -1171,7 +1315,7 @@
       className: "is-wrong",
       statusClass: "is-wrong",
       label: "다시 연결하기",
-      copy: "정답과 뜻을 확인했습니다. 같은 표현은 자동으로 다시 나오지 않습니다. 필요하면 복습 보관함에 직접 넣어 주세요.",
+      copy: `정답과 뜻을 확인했습니다. 같은 표현은 자동으로 다시 나오지 않습니다. 필요하면 ${reviewTarget} 복습에 직접 넣어 주세요.${sentenceLinkGuide}`,
       xp,
     };
   }
@@ -1263,6 +1407,14 @@
     const item = entry.item;
     const feedback = session.feedback;
     const isSentence = item.type === "sentence";
+    const sessionKind = sessionStudyKind(session.mode);
+    const sessionLabel = studyKindLabel(sessionKind);
+    const sessionScope =
+      session.mode === "boss"
+        ? "실전 5문항"
+        : isReviewSession(session.mode)
+          ? `직접 고른 ${sessionLabel} 복습`
+          : `새 ${sessionLabel} 흐름`;
     const hintViewed = Boolean(entry.hintUsed);
     const meaningMarkup = hintViewed
       ? `<p class="input-help">뜻: ${escapeHTML(item.meaning)}</p>`
@@ -1306,7 +1458,7 @@
           <h1 class="page-title">${currentSessionLabel()}</h1>
           <p class="page-lede">뜻을 떠올리지 말고, 보이는 한자에서 소리를 바로 꺼내 보세요.</p>
         </div>
-        <span class="date-chip">${session.mode === "boss" ? "실전 5문항" : session.mode === "review" ? "직접 고른 복습" : "새 표현 흐름"}</span>
+        <span class="date-chip">${sessionScope}</span>
       </header>
 
       <div class="quiz-layout">
@@ -1334,7 +1486,7 @@
             <p class="eyebrow">SESSION FLOW</p>
             <div class="mission-mini-list">
               <div class="mission-mini"><span>현재 위치</span><b>${session.index + 1} / ${session.entries.length}</b></div>
-              <div class="mission-mini"><span>${session.mode === "review" ? "보관한 표현" : session.mode === "boss" ? "실전 문항" : "새 표현"}</span><b>${session.entries.length}개</b></div>
+              <div class="mission-mini"><span>${isReviewSession(session.mode) ? `보관한 ${sessionLabel}` : session.mode === "boss" ? "실전 문항" : `새 ${sessionLabel}`}</span><b>${session.entries.length}개</b></div>
               <div class="mission-mini"><span>이번 세션 정답</span><b>${session.exact}개</b></div>
             </div>
             ${session.mode === "boss" ? "" : '<button class="ghost-button session-finish" id="finish-session" type="button">학습 마치기</button>'}
@@ -1377,10 +1529,22 @@
       const nextButton = document.getElementById("next-question");
       nextButton?.addEventListener("click", goToNextQuestion);
       document.getElementById("toggle-manual-review")?.addEventListener("click", () => {
-        const addedFrom = feedback.hintUsed ? "hinted" : feedback.grade.kind;
+        const addedFrom = isSentence ? "sentence-self" : feedback.hintUsed ? "hinted" : feedback.grade.kind;
         toggleManualReview(item, addedFrom);
         renderQuiz();
         window.setTimeout(() => document.getElementById("toggle-manual-review")?.focus(), 0);
+      });
+      viewRoot.querySelectorAll("[data-toggle-linked-word]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const wordId = button.dataset.toggleLinkedWord;
+          const word = ITEM_BY_ID.get(wordId);
+          if (!word) return;
+          toggleManualReview(word, `sentence:${item.id}`);
+          renderQuiz();
+          window.setTimeout(() => {
+            viewRoot.querySelector(`[data-toggle-linked-word="${wordId}"]`)?.focus();
+          }, 0);
+        });
       });
       window.setTimeout(() => nextButton?.focus(), 30);
     }
@@ -1479,7 +1643,11 @@
         ? "세션 결과 보기"
         : "다음 표현";
     const inManualReview = isInManualReview(item.id);
-    const manualReviewText = inManualReview ? "복습에서 빼기" : "복습에 넣기";
+    const reviewTarget = isSentenceItem(item) ? "문장" : "단어";
+    const manualReviewText = inManualReview
+      ? `${reviewTarget} 복습에서 빼기`
+      : `${reviewTarget} 복습에 넣기`;
+    const sentenceWordLinks = sentenceWordLinksMarkup(item);
     return `
       <section class="feedback-card ${feedback.className}">
         <div class="feedback-meta">
@@ -1491,6 +1659,7 @@
         <p class="feedback-copy">${feedback.copy}</p>
         ${diffMarkup}
         <div class="related-words">${related}</div>
+        ${sentenceWordLinks}
         <div class="feedback-footer">
           <div class="feedback-actions">
             <span class="xp-gain">${feedback.xp ? "+" + feedback.xp + " XP" : "XP 없음"}</span>
@@ -1498,6 +1667,35 @@
           </div>
           <button class="primary-button" id="next-question" type="button">${retryText} <span aria-hidden="true">&nbsp;→</span></button>
         </div>
+      </section>
+    `;
+  }
+
+  function sentenceWordLinksMarkup(item) {
+    const links = getSentenceWordLinks(item);
+    if (!links.length) return "";
+    const rows = links
+      .map((link) => {
+        const inManualReview = isInManualReview(link.word.id);
+        const buttonText = inManualReview ? "단어 복습에서 빼기" : "단어 복습에 넣기";
+        return `
+          <article class="sentence-word-link">
+            <div>
+              <p class="sentence-word-surface" lang="ja">${escapeHTML(link.surface)} <span>${escapeHTML(link.readingInSentence)}</span></p>
+              <p class="sentence-word-meaning">${escapeHTML(link.word.meaning)}</p>
+            </div>
+            <button class="ghost-button review-toggle ${inManualReview ? "is-active" : ""}" type="button" data-toggle-linked-word="${escapeHTML(link.word.id)}" aria-pressed="${inManualReview}">${buttonText}</button>
+          </article>
+        `;
+      })
+      .join("");
+    return `
+      <section class="sentence-word-links" aria-label="문장 속 핵심 단어">
+        <div class="sentence-word-links-heading">
+          <div><p class="eyebrow">SENTENCE TO WORD</p><h3>문장 속 핵심 단어</h3></div>
+          <p>필요한 단어만 단어 복습으로 보냅니다.</p>
+        </div>
+        <div class="sentence-word-link-list">${rows}</div>
       </section>
     `;
   }
@@ -1550,9 +1748,9 @@
         ? accuracy >= 60
           ? "이번 주 실전 라운드를 통과했습니다."
           : "실전 라운드 기록을 남겼습니다."
-        : session.mode === "review"
-          ? "복습 기록을 남겼습니다."
-          : "학습 흐름을 마쳤습니다.";
+        : isReviewSession(session.mode)
+          ? `${studyKindLabel(sessionStudyKind(session.mode))} 복습 기록을 남겼습니다.`
+          : `${studyKindLabel(sessionStudyKind(session.mode))} 학습 흐름을 마쳤습니다.`;
     const lede =
       accuracy >= 80
         ? "정확한 연결이 쌓이고 있습니다. 원할 때 다시 이어서 반응 시간을 더 줄여 보세요."
@@ -1572,7 +1770,7 @@
         </div>
         ${session.bonusXP ? `<p class="xp-gain">주간 라운드 보너스 +${session.bonusXP} XP가 반영되었습니다.</p>` : ""}
         <div class="result-actions">
-          <button class="primary-button" id="go-dashboard" type="button">학습 흐름으로 돌아가기</button>
+          <button class="primary-button" id="go-dashboard" type="button">학습 선택으로 돌아가기</button>
           <button class="secondary-button" id="go-review" type="button">복습 보관함 보기</button>
         </div>
       </section>
@@ -1583,6 +1781,8 @@
 
   function navigate(view) {
     if (view === "dashboard") renderDashboard();
+    if (view === "words") renderStudyMode("word");
+    if (view === "sentences") renderStudyMode("sentence");
     if (view === "review") renderReview();
     if (view === "boss") renderBoss();
   }

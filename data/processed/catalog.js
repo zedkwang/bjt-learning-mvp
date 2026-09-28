@@ -1,7 +1,7 @@
 /* 생성 파일: scripts/build_database.py로 다시 만드세요. */
 window.BJT_CATALOG = Object.freeze({
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T06:36:30Z",
+  "generatedAt": "2026-09-28T08:53:38Z",
   "quizPolicy": {
     "meaningVisibility": "after_answer_only",
     "requiresMeaningKo": true,
@@ -892,6 +892,239 @@ window.BJT_CATALOG = Object.freeze({
       ]
     },
     {
+      "id": "estimate-document",
+      "display": "見積書",
+      "reading": "みつもりしょ",
+      "meaning": "견적서",
+      "category": "transaction",
+      "level": "business_core",
+      "related": [
+        "見積 みつもり",
+        "請求書 せいきゅうしょ"
+      ],
+      "expression": "見積書",
+      "primary_reading": "みつもりしょ",
+      "accepted_readings": [
+        "みつもりしょ"
+      ],
+      "meaning_ko": "견적서",
+      "categories": [
+        "sales",
+        "transaction"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 71.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "internal-company",
+      "display": "社内",
+      "reading": "しゃない",
+      "meaning": "사내",
+      "category": "relationship",
+      "level": "business_core",
+      "related": [
+        "社外 しゃがい",
+        "部署 ぶしょ"
+      ],
+      "expression": "社内",
+      "primary_reading": "しゃない",
+      "accepted_readings": [
+        "しゃない"
+      ],
+      "meaning_ko": "사내",
+      "categories": [
+        "organization",
+        "internal_process"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 60.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "anew",
+      "display": "改めて",
+      "reading": "あらためて",
+      "meaning": "다시, 새롭게",
+      "category": "relationship",
+      "level": "kunyomi",
+      "related": [
+        "改める あらためる",
+        "再度 さいど"
+      ],
+      "expression": "改めて",
+      "primary_reading": "あらためて",
+      "accepted_readings": [
+        "あらためて"
+      ],
+      "meaning_ko": "다시, 새롭게",
+      "categories": [
+        "communication",
+        "internal_process"
+      ],
+      "item_type": "word",
+      "reading_type": "kunyomi",
+      "learning_priority": 70.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "response",
+      "display": "回答",
+      "reading": "かいとう",
+      "meaning": "답변",
+      "category": "relationship",
+      "level": "business_core",
+      "related": [
+        "返答 へんとう",
+        "回答する かいとうする"
+      ],
+      "expression": "回答",
+      "primary_reading": "かいとう",
+      "accepted_readings": [
+        "かいとう"
+      ],
+      "meaning_ko": "답변",
+      "categories": [
+        "communication",
+        "customer_support"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 73.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "current-status",
+      "display": "現状",
+      "reading": "げんじょう",
+      "meaning": "현황",
+      "category": "coordination",
+      "level": "business_core",
+      "related": [
+        "状況 じょうきょう",
+        "実情 じつじょう"
+      ],
+      "expression": "現状",
+      "primary_reading": "げんじょう",
+      "accepted_readings": [
+        "げんじょう"
+      ],
+      "meaning_ko": "현황",
+      "categories": [
+        "report",
+        "project_management"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 65.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "progress",
+      "display": "進捗",
+      "reading": "しんちょく",
+      "meaning": "진척, 진행 상황",
+      "category": "coordination",
+      "level": "business_core",
+      "related": [
+        "進行 しんこう",
+        "進捗確認 しんちょくかくにん"
+      ],
+      "expression": "進捗",
+      "primary_reading": "しんちょく",
+      "accepted_readings": [
+        "しんちょく"
+      ],
+      "meaning_ko": "진척, 진행 상황",
+      "categories": [
+        "project_management",
+        "schedule",
+        "report"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 78.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "advance-schedule",
+      "display": "前倒し",
+      "reading": "まえだおし",
+      "meaning": "일정을 앞당김",
+      "category": "coordination",
+      "level": "kunyomi",
+      "related": [
+        "後倒し あとだおし",
+        "納期 のうき"
+      ],
+      "expression": "前倒し",
+      "primary_reading": "まえだおし",
+      "accepted_readings": [
+        "まえだおし"
+      ],
+      "meaning_ko": "일정을 앞당김",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "item_type": "word",
+      "reading_type": "kunyomi",
+      "learning_priority": 78.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "possible",
+      "display": "可能",
+      "reading": "かのう",
+      "meaning": "가능",
+      "category": "coordination",
+      "level": "business_core",
+      "related": [
+        "可能性 かのうせい",
+        "不可能 ふかのう"
+      ],
+      "expression": "可能",
+      "primary_reading": "かのう",
+      "accepted_readings": [
+        "かのう"
+      ],
+      "meaning_ko": "가능",
+      "categories": [
+        "decision",
+        "project_management"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 60.0,
+      "sources": [
+        "manual_sentence_link",
+        "JMdict"
+      ]
+    },
+    {
       "id": "sentence-estimate",
       "display": "見積書をご確認ください。",
       "reading": "みつもりしょをごかくにんください",
@@ -919,7 +1152,19 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "manual_demo_seed"
       ],
-      "type": "sentence"
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "estimate-document",
+          "surface": "見積書",
+          "reading_in_sentence": "みつもりしょ"
+        },
+        {
+          "word_id": "confirmation",
+          "surface": "ご確認",
+          "reading_in_sentence": "ごかくにん"
+        }
+      ]
     },
     {
       "id": "sentence-review",
@@ -948,7 +1193,29 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "manual_demo_seed"
       ],
-      "type": "sentence"
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "internal-company",
+          "surface": "社内",
+          "reading_in_sentence": "しゃない"
+        },
+        {
+          "word_id": "consideration",
+          "surface": "検討した",
+          "reading_in_sentence": "けんとうした"
+        },
+        {
+          "word_id": "anew",
+          "surface": "改めて",
+          "reading_in_sentence": "あらためて"
+        },
+        {
+          "word_id": "response",
+          "surface": "ご回答",
+          "reading_in_sentence": "ごかいとう"
+        }
+      ]
     },
     {
       "id": "sentence-schedule",
@@ -979,7 +1246,39 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "manual_demo_seed"
       ],
-      "type": "sentence"
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "current-status",
+          "surface": "現状",
+          "reading_in_sentence": "げんじょう"
+        },
+        {
+          "word_id": "progress",
+          "surface": "進捗",
+          "reading_in_sentence": "しんちょく"
+        },
+        {
+          "word_id": "consider-based-on",
+          "surface": "踏まえる",
+          "reading_in_sentence": "ふまえる"
+        },
+        {
+          "word_id": "advance-schedule",
+          "surface": "前倒し",
+          "reading_in_sentence": "まえだおし"
+        },
+        {
+          "word_id": "possible",
+          "surface": "可能",
+          "reading_in_sentence": "かのう"
+        },
+        {
+          "word_id": "estimate-verb",
+          "surface": "見込んで",
+          "reading_in_sentence": "みこんで"
+        }
+      ]
     },
     {
       "id": "auto-186c98a90fd7bc",

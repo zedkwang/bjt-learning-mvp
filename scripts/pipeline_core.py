@@ -185,6 +185,27 @@ def normalize_text_list(values: Any) -> list[str]:
     return result
 
 
+def normalize_word_links(values: Any) -> list[dict[str, str]]:
+    """문장 안의 수동 검수 단어 연결을 브라우저·DB 공통 형식으로 정규화한다."""
+    if not isinstance(values, list):
+        return []
+    result: list[dict[str, str]] = []
+    for value in values:
+        if not isinstance(value, dict):
+            result.append({"word_id": "", "surface": "", "reading_in_sentence": ""})
+            continue
+        result.append(
+            {
+                "word_id": normalize_text(value.get("word_id") or value.get("wordId")),
+                "surface": normalize_text(value.get("surface")),
+                "reading_in_sentence": normalize_reading(
+                    value.get("reading_in_sentence") or value.get("readingInSentence")
+                ),
+            }
+        )
+    return result
+
+
 def normalize_confidence(value: Any) -> float | None:
     if value in (None, ""):
         return None
@@ -252,6 +273,7 @@ def normalize_record(raw: dict[str, Any], *, origin: str, index: int = 0) -> dic
         "jlpt_official": False,
         "part_of_speech": normalize_text(raw.get("part_of_speech")) or None,
         "related": normalize_text_list(raw.get("related")),
+        "word_links": normalize_word_links(raw.get("word_links") or raw.get("wordLinks")),
         "aliases": normalize_text_list(raw.get("aliases")),
         "example": normalize_text(raw.get("example")) or None,
         "sources": source_list(raw.get("sources"), origin or "manual", source_reference),
@@ -849,6 +871,42 @@ def validate_records(records: list[dict[str, Any]], category_codes: set[str]) ->
                 errors.append(f"{label}: 활성 퀴즈 항목에는 legacy_category가 필요합니다")
         elif not record.get("meaning_ko"):
             inactive_without_meaning += 1
+
+    records_by_id = {record.get("stable_id"): record for record in records if record.get("stable_id")}
+    for record in records:
+        label = record.get("stable_id") or "(stable_id 없음)"
+        word_links = record.get("word_links", [])
+        if word_links and record.get("item_type") != "sentence":
+            errors.append(f"{label}: word_links는 sentence 항목에서만 사용할 수 있습니다")
+        if record.get("item_type") == "sentence" and record.get("is_active") and not word_links:
+            errors.append(f"{label}: 활성 sentence 항목에는 최소 1개의 word_links가 필요합니다")
+
+        linked_ids: set[str] = set()
+        for link in word_links:
+            word_id = link.get("word_id") if isinstance(link, dict) else ""
+            surface = link.get("surface") if isinstance(link, dict) else ""
+            reading_in_sentence = link.get("reading_in_sentence") if isinstance(link, dict) else ""
+            if not word_id:
+                errors.append(f"{label}: word_links.word_id가 비어 있습니다")
+                continue
+            if word_id in linked_ids:
+                errors.append(f"{label}: word_links에 중복 word_id가 있습니다 ({word_id})")
+            linked_ids.add(word_id)
+            target = records_by_id.get(word_id)
+            if not target:
+                errors.append(f"{label}: word_links가 존재하지 않는 word_id를 가리킵니다 ({word_id})")
+            elif target.get("item_type") != "word" or not target.get("is_active"):
+                errors.append(f"{label}: word_links 대상은 활성 word 항목이어야 합니다 ({word_id})")
+            if not surface:
+                errors.append(f"{label}: word_links.surface가 비어 있습니다 ({word_id})")
+            elif surface not in record.get("expression", ""):
+                errors.append(f"{label}: word_links.surface가 문장 표기에 없습니다 ({surface})")
+            if not reading_in_sentence:
+                errors.append(f"{label}: word_links.reading_in_sentence이 비어 있습니다 ({word_id})")
+            elif not KANA_RE.fullmatch(reading_in_sentence):
+                errors.append(
+                    f"{label}: word_links.reading_in_sentence은 정규화된 히라가나여야 합니다 ({reading_in_sentence})"
+                )
     if inactive_without_meaning:
         warnings.append(
             f"한국어 뜻이 없는 비활성 후보 {inactive_without_meaning}개는 퀴즈 카탈로그에 내보내지 않았습니다."
@@ -898,6 +956,7 @@ def client_items(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
         }
         if record["item_type"] == "sentence":
             item["type"] = "sentence"
+            item["word_links"] = record["word_links"]
         items.append(item)
     return items
 
@@ -949,6 +1008,7 @@ def record_export(record: dict[str, Any]) -> dict[str, Any]:
         "jlpt_official",
         "part_of_speech",
         "related",
+        "word_links",
         "aliases",
         "example",
         "sources",
@@ -1002,6 +1062,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                 item_type TEXT NOT NULL,
                 legacy_category TEXT,
                 related_json TEXT NOT NULL DEFAULT '[]',
+                word_links_json TEXT NOT NULL DEFAULT '[]',
                 example TEXT,
                 is_active INTEGER NOT NULL DEFAULT 1,
                 inactive_reason TEXT,
@@ -1076,7 +1137,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
         connection.executemany(
             "INSERT INTO build_metadata(key, value) VALUES (?, ?)",
             [
-                ("schema_version", "2"),
+                ("schema_version", "3"),
                 ("generated_at", generated_at),
                 ("quiz_meaning_policy", "active quiz catalog entries require meaning_ko; reveal after answer only"),
                 (
@@ -1093,8 +1154,8 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                     review_note, reviewer, reviewed_at, jlpt_level, jlpt_level_source,
                     jlpt_official, part_of_speech, reading_type, reading_difficulty, business_relevance,
                     frequency_score, frequency_source, learning_priority, item_type, legacy_category,
-                    related_json, example, is_active, inactive_reason, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    related_json, word_links_json, example, is_active, inactive_reason, created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     record["stable_id"],
@@ -1118,6 +1179,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                     record["item_type"],
                     record["legacy_category"],
                     json.dumps(record["related"], ensure_ascii=False),
+                    json.dumps(record["word_links"], ensure_ascii=False),
                     record["example"],
                     int(bool(record["is_active"])),
                     record["inactive_reason"],
@@ -1211,7 +1273,7 @@ def build_pipeline(
     write_json(
         PROCESSED_DIR / "vocabulary.json",
         {
-            "schema_version": 2,
+            "schema_version": 3,
             "generated_at": generated_at,
             "records": [record_export(record) for record in records],
         },
