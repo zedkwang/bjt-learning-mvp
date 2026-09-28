@@ -774,6 +774,11 @@ main {
   line-height: 1.55;
 }
 
+.session-finish {
+  width: 100%;
+  margin-top: 17px;
+}
+
 .mission-mini-list {
   display: grid;
   gap: 10px;
@@ -1010,6 +1015,19 @@ main {
   margin-top: 22px;
 }
 
+.feedback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+.review-toggle.is-active {
+  color: #ffe3aa;
+  background: rgba(255, 200, 107, 0.1);
+  border-color: rgba(255, 200, 107, 0.28);
+}
+
 .xp-gain {
   color: var(--accent);
   font-size: 13px;
@@ -1069,6 +1087,18 @@ main {
   color: var(--warning);
   background: rgba(255, 200, 107, 0.09);
   border-color: rgba(255, 200, 107, 0.18);
+}
+
+.review-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.review-remove {
+  min-height: 31px;
+  padding: 6px 9px;
 }
 
 .empty-state {
@@ -1447,6 +1477,16 @@ main {
   .review-row .pill {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  .review-row .review-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .review-row .review-actions .pill {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .result-stats {

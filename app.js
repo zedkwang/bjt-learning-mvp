@@ -3,8 +3,7 @@
 
   const STORAGE_KEY = "bjt-arc-learning-state-v1";
   const DAY_MS = 24 * 60 * 60 * 1000;
-  const REVIEW_INTERVALS = [1, 3, 7, 14, 30, 30];
-  const DAILY_GOALS = { newItems: 6, totalItems: 10, combo: 3 };
+  const MAX_MASTERY_STAGE = 5;
 
   const CATEGORY_LABELS = {
     transaction: "거래·문서",
@@ -408,19 +407,9 @@
   let timerFrame = null;
   let isComposing = false;
 
-  function defaultDaily() {
-    return {
-      date: dateKey(),
-      newDone: 0,
-      totalDone: 0,
-      bestCombo: 0,
-      missionAwarded: false,
-    };
-  }
-
   function defaultState() {
     return {
-      version: 1,
+      version: 2,
       xp: 0,
       totalCorrect: 0,
       totalAttempts: 0,
@@ -428,8 +417,8 @@
       hintedCorrect: 0,
       reviewCorrect: 0,
       longestCombo: 0,
-      daily: defaultDaily(),
       progress: {},
+      manualReview: {},
       logs: [],
       achievements: [],
       boss: { completedWeek: null },
@@ -441,11 +430,17 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return defaultState();
       const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return defaultState();
+      const { daily: _legacyDaily, ...currentState } = parsed;
       const hydrated = {
         ...defaultState(),
-        ...parsed,
-        daily: { ...defaultDaily(), ...(parsed.daily || {}) },
+        ...currentState,
+        version: 2,
         progress: parsed.progress || {},
+        manualReview:
+          parsed.manualReview && typeof parsed.manualReview === "object" && !Array.isArray(parsed.manualReview)
+            ? parsed.manualReview
+            : {},
         logs: Array.isArray(parsed.logs) ? parsed.logs : [],
         achievements: Array.isArray(parsed.achievements) ? parsed.achievements : [],
         boss: { completedWeek: null, ...(parsed.boss || {}) },
@@ -471,25 +466,10 @@
     }
   }
 
-  function dateKey(date = new Date()) {
-    try {
-      return new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(date);
-    } catch (error) {
-      return date.toISOString().slice(0, 10);
-    }
-  }
-
   function getWeekKey(date = new Date()) {
     const yearStart = new Date(date.getFullYear(), 0, 1);
     const day = Math.floor((date - yearStart) / DAY_MS) + 1;
     return `${date.getFullYear()}-W${String(Math.ceil(day / 7)).padStart(2, "0")}`;
-  }
-
-  function ensureDaily() {
-    if (state.daily.date !== dateKey()) {
-      state.daily = defaultDaily();
-      saveState();
-    }
   }
 
   function getProgress(itemId) {
@@ -501,7 +481,6 @@
         wrong: 0,
         soft: 0,
         stage: 0,
-        nextReview: null,
         firstAttemptCorrect: null,
         bestTime: null,
         lastSeen: null,
@@ -512,27 +491,36 @@
     return progress;
   }
 
-  function getDueItems() {
+  function isInManualReview(itemId) {
+    return Boolean(state.manualReview[itemId]);
+  }
+
+  function getManualReviewItems() {
+    return ITEMS.filter((item) => isInManualReview(item.id)).sort((first, second) => {
+      const firstAddedAt = Number(state.manualReview[first.id]?.addedAt) || 0;
+      const secondAddedAt = Number(state.manualReview[second.id]?.addedAt) || 0;
+      return secondAddedAt - firstAddedAt;
+    });
+  }
+
+  function toggleManualReview(item, addedFrom = "manual") {
+    if (isInManualReview(item.id)) {
+      delete state.manualReview[item.id];
+      saveState();
+      showToast("복습 보관함에서 뺐습니다.");
+      return false;
+    }
     const now = Date.now();
-    return ITEMS.filter((item) => {
-      const progress = state.progress[item.id];
-      return progress && progress.nextReview && progress.nextReview <= now;
-    }).sort((a, b) => state.progress[a.id].nextReview - state.progress[b.id].nextReview);
+    state.manualReview[item.id] = { addedAt: now, addedFrom, updatedAt: now };
+    saveState();
+    showToast("복습 보관함에 넣었습니다.");
+    return true;
   }
 
   function getUnseenItems() {
     return ITEMS.filter((item) => !(state.progress[item.id] && state.progress[item.id].seen)).sort(
       (first, second) => (second.learningPriority || 0) - (first.learningPriority || 0)
     );
-  }
-
-  function shuffle(list) {
-    const copy = [...list];
-    for (let index = copy.length - 1; index > 0; index -= 1) {
-      const randomIndex = Math.floor(Math.random() * (index + 1));
-      [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
-    }
-    return copy;
   }
 
   function escapeHTML(value) {
@@ -542,15 +530,6 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
-  }
-
-  function formatDate() {
-    return new Intl.DateTimeFormat("ko-KR", {
-      month: "long",
-      day: "numeric",
-      weekday: "short",
-      timeZone: "Asia/Seoul",
-    }).format(new Date());
   }
 
   function formatSeconds(seconds) {
@@ -724,28 +703,6 @@
     });
   }
 
-  function missionStatus() {
-    ensureDaily();
-    return {
-      newItems: Math.min(state.daily.newDone, DAILY_GOALS.newItems),
-      totalItems: Math.min(state.daily.totalDone, DAILY_GOALS.totalItems),
-      combo: Math.min(state.daily.bestCombo, DAILY_GOALS.combo),
-      complete:
-        state.daily.newDone >= DAILY_GOALS.newItems &&
-        state.daily.totalDone >= DAILY_GOALS.totalItems &&
-        state.daily.bestCombo >= DAILY_GOALS.combo,
-    };
-  }
-
-  function awardDailyMissionIfReady() {
-    const mission = missionStatus();
-    if (mission.complete && !state.daily.missionAwarded) {
-      state.daily.missionAwarded = true;
-      state.xp += 30;
-      showToast("오늘의 미션 완료 · 보너스 30 XP");
-    }
-  }
-
   function evaluateAchievements() {
     ACHIEVEMENTS.forEach((achievement) => {
       if (!state.achievements.includes(achievement.id) && achievement.test()) {
@@ -768,7 +725,7 @@
     const progress = state.progress[item.id];
     if (!progress || !progress.seen) return 0;
     const precision = progress.correct / progress.seen;
-    const stageWeight = Math.min(progress.stage / 5, 1);
+    const stageWeight = Math.min(progress.stage / MAX_MASTERY_STAGE, 1);
     return Math.round(Math.min(100, precision * 66 + stageWeight * 34));
   }
 
@@ -782,24 +739,23 @@
     if (!activeSession) return null;
     if (activeSession.mode === "boss") return "주간 실전 라운드";
     if (activeSession.mode === "review") return "복습 보관함";
-    return "오늘의 학습";
+    return "새 표현 흐름";
   }
 
   function renderDashboard() {
     stopTimer();
     activeView = "dashboard";
-    ensureDaily();
     updateRankUI();
     setActiveNav(activeView);
 
-    const mission = missionStatus();
-    const due = getDueItems();
     const unseen = getUnseenItems();
+    const manualReview = getManualReviewItems();
+    const learnedCount = ITEMS.length - unseen.length;
     const accuracy = state.unhintedAttempts
       ? Math.round((state.totalCorrect / state.unhintedAttempts) * 100)
       : 0;
     const responseTime = averageResponseTime();
-    const continueSession = activeSession && !activeSession.finalized;
+    const continueSession = activeSession && !activeSession.finalized && activeSession.mode === "learn";
     const categoryRows = Object.entries(CATEGORY_LABELS)
       .map(([key, label]) => {
         const percentage = categoryMastery(key);
@@ -827,25 +783,25 @@
     viewRoot.innerHTML = `
       <header class="page-header">
         <div>
-          <p class="eyebrow">TODAY'S READING BRIEF</p>
-          <h1 class="page-title">읽는 순간, 소리가 나오는<br />업무 일본어를 만듭니다.</h1>
-          <p class="page-lede">뜻을 거치지 않고 한자에서 일본어 발음으로 바로 연결하는 훈련입니다.</p>
+          <p class="eyebrow">FLEXIBLE READING FLOW</p>
+          <h1 class="page-title">시간 날 때, 원하는 만큼<br />업무 일본어를 읽습니다.</h1>
+          <p class="page-lede">하루 목표나 대기 시간 없이, 보이는 한자에서 소리를 바로 꺼내는 흐름입니다.</p>
         </div>
-        <span class="date-chip">${formatDate()}</span>
+        <span class="date-chip">연결함 ${learnedCount} / ${ITEMS.length}</span>
       </header>
 
       <div class="dashboard-grid">
         <section class="panel mission-panel" aria-labelledby="mission-title">
-          <div class="mission-head"><span class="status-dot" aria-hidden="true"></span><p class="eyebrow">DAILY MISSION</p></div>
-          <h2 id="mission-title">오늘 무힌트 정답 <b>${mission.totalItems}</b> / ${DAILY_GOALS.totalItems}개,<br />리듬을 다시 연결하세요.</h2>
-          <p class="page-lede">복습 대기 ${due.length}개 · 신규 표현 ${unseen.length}개 준비됨</p>
-          <div class="mission-progress" aria-label="오늘의 미션 진행 현황">
-            <div><span>신규 표현</span><strong>${mission.newItems} / ${DAILY_GOALS.newItems}</strong></div>
-            <div><span>무힌트 정답</span><strong>${mission.totalItems} / ${DAILY_GOALS.totalItems}</strong></div>
-            <div><span>집중 콤보</span><strong>${mission.combo} / ${DAILY_GOALS.combo}</strong></div>
+          <div class="mission-head"><span class="status-dot" aria-hidden="true"></span><p class="eyebrow">OPEN PRACTICE</p></div>
+          <h2 id="mission-title">새 표현 <b>${unseen.length}</b>개,<br />원하는 만큼 계속 읽어 보세요.</h2>
+          <p class="page-lede">자동 종료나 일일 한도는 없습니다. 멈추고 싶을 때만 학습을 마치면 됩니다.</p>
+          <div class="mission-progress" aria-label="학습 흐름 현황">
+            <div><span>새 표현 남음</span><strong>${unseen.length}개</strong></div>
+            <div><span>직접 고른 복습</span><strong>${manualReview.length}개</strong></div>
+            <div><span>누적 무힌트 정답</span><strong>${state.totalCorrect}개</strong></div>
           </div>
-          <button class="primary-button" id="start-daily" type="button">
-            ${continueSession ? "학습 이어하기" : "오늘의 세션 시작"} <span aria-hidden="true">&nbsp;→</span>
+          <button class="primary-button" id="start-learning" type="button" ${unseen.length || continueSession ? "" : "disabled"}>
+            ${continueSession ? "학습 이어하기" : unseen.length ? "새 표현 시작" : "새 표현 완료"} <span aria-hidden="true">&nbsp;→</span>
           </button>
         </section>
 
@@ -871,7 +827,7 @@
       <div class="section-grid">
         <section class="panel section-panel" aria-labelledby="map-title">
           <div class="section-heading">
-            <div><h2 id="map-title">업무 언어 역량 맵</h2><p>정확도와 복습 단계가 함께 반영됩니다.</p></div>
+            <div><h2 id="map-title">업무 언어 역량 맵</h2><p>정확도와 누적 연결 기록이 함께 반영됩니다.</p></div>
             <button class="ghost-button" type="button" data-view="review">복습 보관함 보기</button>
           </div>
           <div class="category-list">${categoryRows}</div>
@@ -885,9 +841,9 @@
       </div>
     `;
 
-    document.getElementById("start-daily").addEventListener("click", () => {
-      if (!activeSession || activeSession.finalized) {
-        startSession("daily");
+    document.getElementById("start-learning")?.addEventListener("click", () => {
+      if (!activeSession || activeSession.finalized || activeSession.mode !== "learn") {
+        startSession("learn");
       } else {
         renderQuiz();
       }
@@ -900,17 +856,16 @@
     activeView = "review";
     updateRankUI();
     setActiveNav(activeView);
-    const due = getDueItems();
-    const rows = due
-      .slice(0, 10)
+    const manualReview = getManualReviewItems();
+    const rows = manualReview
       .map((item) => {
-        const progress = getProgress(item.id);
-        const issue = progress.soft ? "표기 주의" : "다시 연결";
+        const progress = state.progress[item.id] || {};
+        const retryCount = (progress.wrong || 0) + (progress.soft || 0) + (progress.hinted || 0);
         return `
           <article class="review-row">
             <div><b>${escapeHTML(item.display)}</b><p>${CATEGORY_LABELS[item.category]} · ${item.type === "sentence" ? "문장 읽기" : "단어 읽기"}</p></div>
-            <div><p>최근 기록</p><strong>정답 ${progress.correct} · 재확인 ${progress.wrong + progress.soft}</strong></div>
-            <span class="pill">${issue}</span>
+            <div><p>최근 기록</p><strong>정답 ${progress.correct || 0} · 헷갈림 ${retryCount}</strong></div>
+            <div class="review-actions"><span class="pill">직접 선택</span><button class="ghost-button review-remove" type="button" data-remove-review="${escapeHTML(item.id)}">빼기</button></div>
           </article>
         `;
       })
@@ -920,30 +875,30 @@
       <header class="page-header">
         <div>
           <p class="eyebrow">REVIEW INBOX</p>
-          <h1 class="page-title">다시 읽어야 할 표현</h1>
-          <p class="page-lede">오답은 감점이 아니라, 연결을 한 번 더 단단하게 만드는 신호입니다.</p>
+          <h1 class="page-title">내가 다시 읽고 싶은 표현</h1>
+          <p class="page-lede">틀렸거나 헷갈렸던 표현만 직접 골라, 원할 때 다시 읽습니다.</p>
         </div>
-        <span class="date-chip">대기 ${due.length}개</span>
+        <span class="date-chip">보관 ${manualReview.length}개</span>
       </header>
       <div class="review-grid">
         <section class="panel section-panel">
           <div class="section-heading">
-            <div><h2>오늘 재확인할 표현</h2><p>기한이 지난 항목부터 먼저 제시합니다.</p></div>
-            <button class="primary-button" id="start-review" type="button" ${due.length ? "" : "disabled"}>복습 시작</button>
+            <div><h2>내 복습 목록</h2><p>시간 제한 없이, 직접 넣은 표현만 다시 출제합니다.</p></div>
+            <button class="primary-button" id="start-review" type="button" ${manualReview.length ? "" : "disabled"}>복습 시작</button>
           </div>
-          ${due.length ? `<div class="review-list">${rows}</div>` : `
+          ${manualReview.length ? `<div class="review-list">${rows}</div>` : `
             <div class="empty-state">
-              <div><strong>지금은 복습 대기 없음</strong>오늘의 신규 표현을 풀면, 필요한 항목만 다음 복습에 들어옵니다.</div>
+              <div><strong>아직 직접 넣은 표현이 없습니다</strong>답을 제출한 뒤 헷갈린 표현을 복습 보관함에 넣어 보세요.</div>
             </div>
           `}
         </section>
         <aside class="panel section-panel">
           <p class="eyebrow">REVIEW PRINCIPLE</p>
-          <h2>정확하게 읽고,<br />다시 더 빨리 읽기</h2>
-          <p class="page-lede">주의 정답은 완전 정답과 분리해 다음날 다시 제시합니다. 콤보는 끊기지만, 누적 기록은 잃지 않습니다.</p>
+          <h2>필요할 때 꺼내고,<br />확실해지면 비우기</h2>
+          <p class="page-lede">복습을 마쳐도 자동으로 지우지 않습니다. 충분히 익숙해졌을 때 직접 보관함에서 빼면 됩니다.</p>
           <div class="mission-mini-list">
             <div class="mission-mini"><span>완료한 복습</span><b>${state.reviewCorrect}개</b></div>
-            <div class="mission-mini"><span>다음 간격</span><b>1 · 3 · 7 · 14 · 30일</b></div>
+            <div class="mission-mini"><span>보관함 기준</span><b>내가 선택</b></div>
           </div>
         </aside>
       </div>
@@ -951,6 +906,14 @@
 
     const startReview = document.getElementById("start-review");
     if (startReview) startReview.addEventListener("click", () => startSession("review"));
+    viewRoot.querySelectorAll("[data-remove-review]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = ITEMS.find((candidate) => candidate.id === button.dataset.removeReview);
+        if (!item) return;
+        toggleManualReview(item);
+        renderReview();
+      });
+    });
   }
 
   function renderBoss() {
@@ -990,7 +953,6 @@
   }
 
   function buildSessionEntries(mode) {
-    const due = getDueItems();
     const unseen = getUnseenItems();
 
     if (mode === "boss") {
@@ -1006,46 +968,27 @@
         .filter(Boolean)
         .map((item) => ({
           item,
-          isReview: Boolean(state.progress[item.id]?.seen),
-          phase: "initial",
+          source: "boss",
           hintUsed: false,
         }));
     }
 
     if (mode === "review") {
-      return due.slice(0, 10).map((item) => ({
+      return getManualReviewItems().map((item) => ({
         item,
-        isReview: true,
-        phase: "initial",
+        source: "manual-review",
         hintUsed: false,
       }));
     }
 
-    const entries = [];
-    due.slice(0, 4).forEach((item) =>
-      entries.push({ item, isReview: true, phase: "initial", hintUsed: false })
-    );
-    unseen.slice(0, 10 - entries.length).forEach((item) => {
-      entries.push({ item, isReview: false, phase: "initial", hintUsed: false });
-    });
-
-    if (entries.length < 10) {
-      const used = new Set(entries.map((entry) => entry.item.id));
-      const fallback = shuffle(ITEMS.filter((item) => !used.has(item.id))).slice(0, 10 - entries.length);
-      fallback.forEach((item) => {
-        entries.push({
-          item,
-          isReview: Boolean(state.progress[item.id]?.seen),
-          phase: "initial",
-          hintUsed: false,
-        });
-      });
-    }
-    return entries;
+    return unseen.map((item) => ({
+      item,
+      source: "new",
+      hintUsed: false,
+    }));
   }
 
   function startSession(mode) {
-    ensureDaily();
     if (mode === "boss" && state.boss.completedWeek === getWeekKey()) {
       showToast("이번 주 실전 라운드는 이미 완료했습니다.");
       return;
@@ -1131,23 +1074,6 @@
     timerFrame = window.requestAnimationFrame(tick);
   }
 
-  function enqueueRetry(entry) {
-    if (entry.phase === "retry") return;
-    activeSession.entries.push({
-      item: entry.item,
-      isReview: true,
-      phase: "retry",
-      hintUsed: false,
-    });
-  }
-
-  function nextReviewDate(stage) {
-    const interval = REVIEW_INTERVALS[
-      Math.max(0, Math.min(stage - 1, REVIEW_INTERVALS.length - 1))
-    ];
-    return Date.now() + interval * DAY_MS;
-  }
-
   function calculateXP(entry, grade, seconds, previousBest, focusLost, hintUsed) {
     if (grade.kind === "correct" && hintUsed) return 2;
     if (grade.kind === "wrong") return 0;
@@ -1176,23 +1102,20 @@
 
     if (isExact) {
       progress.correct += 1;
-      progress.stage = Math.min(progress.stage + 1, REVIEW_INTERVALS.length - 1);
-      progress.nextReview = nextReviewDate(progress.stage);
+      progress.stage = Math.min(progress.stage + 1, MAX_MASTERY_STAGE);
       state.totalCorrect += 1;
-      if (entry.isReview) state.reviewCorrect += 1;
+      if (entry.source === "manual-review") state.reviewCorrect += 1;
       if (!focusLost && Number.isFinite(seconds)) {
         progress.bestTime = Number.isFinite(previousBest) ? Math.min(previousBest, seconds) : seconds;
       }
     } else if (isHintedCorrect) {
       progress.hinted += 1;
       progress.stage = 0;
-      progress.nextReview = Date.now() + DAY_MS;
       state.hintedCorrect += 1;
     } else {
       if (grade.kind === "soft") progress.soft += 1;
       else progress.wrong += 1;
       progress.stage = 0;
-      progress.nextReview = Date.now() + DAY_MS;
     }
 
     state.logs.unshift({
@@ -1202,7 +1125,7 @@
       focusLost,
       hintUsed: Boolean(hintViewed),
       at: Date.now(),
-      isReview: entry.isReview,
+      isReview: entry.source === "manual-review",
     });
     state.logs = state.logs.slice(0, 180);
     return previousBest;
@@ -1214,7 +1137,7 @@
         className: "is-hint",
         statusClass: "is-hint",
         label: "뜻 확인 후 정답",
-        copy: "힌트 정답은 +2 XP로 기록되며, 콤보와 자동화 숙련도에는 반영하지 않습니다. 내일 다시 연결해 보세요.",
+        copy: "힌트 정답은 +2 XP로 기록되며, 콤보와 자동화 숙련도에는 반영하지 않습니다. 헷갈렸다면 아래에서 복습 보관함에 직접 넣어 보세요.",
         xp,
       };
     }
@@ -1231,7 +1154,7 @@
           ? `이전 최고 기록보다 ${(previousBest - seconds).toFixed(1)}초 빨랐습니다. 자동화 단계에 가까워졌습니다.`
           : focusLost
             ? "탭 이탈 시간은 기록에서 제외했습니다. 다음에도 정확하게 연결해 보세요."
-            : "정확한 연결을 기록했습니다. 다음 복습 간격이 늘어납니다.",
+            : "정확한 연결을 기록했습니다. 필요하면 이 표현을 직접 복습 보관함에 넣을 수 있습니다.",
         xp,
       };
     }
@@ -1240,7 +1163,7 @@
         className: "is-wrong",
         statusClass: "is-wrong",
         label: "표기 주의",
-        copy: "한 글자 또는 장음·촉음 차이를 확인해 주세요. 완전 정답과 분리해 내일 다시 제시합니다.",
+        copy: "한 글자 또는 장음·촉음 차이를 확인해 주세요. 필요하면 복습 보관함에 직접 넣어 다시 연습할 수 있습니다.",
         xp,
       };
     }
@@ -1248,7 +1171,7 @@
       className: "is-wrong",
       statusClass: "is-wrong",
       label: "다시 연결하기",
-      copy: "정답을 확인한 뒤, 이번 세션 마지막에 한 번 더 읽어 봅니다. 누적 기록은 유지됩니다.",
+      copy: "정답과 뜻을 확인했습니다. 같은 표현은 자동으로 다시 나오지 않습니다. 필요하면 복습 보관함에 직접 넣어 주세요.",
       xp,
     };
   }
@@ -1277,13 +1200,11 @@
       activeSession.exact += 1;
       activeSession.highestCombo = Math.max(activeSession.highestCombo, activeSession.combo);
       state.longestCombo = Math.max(state.longestCombo, activeSession.highestCombo);
-      state.daily.bestCombo = Math.max(state.daily.bestCombo, activeSession.combo);
     } else if (isHintedCorrect) {
       activeSession.hinted += 1;
     } else {
       activeSession.combo = 0;
       activeSession[grade.kind] += 1;
-      enqueueRetry(entry);
     }
 
     const progressBefore = getProgress(entry.item.id);
@@ -1298,12 +1219,6 @@
       activeSession.seconds.push(seconds);
     }
 
-    if (entry.phase === "initial" && grade.kind === "correct" && !hintViewed) {
-      state.daily.totalDone += 1;
-      if (!entry.isReview) state.daily.newDone += 1;
-    }
-
-    awardDailyMissionIfReady();
     evaluateAchievements();
     saveState();
 
@@ -1346,7 +1261,6 @@
     const session = activeSession;
     const entry = session.entries[session.index];
     const item = entry.item;
-    const mission = missionStatus();
     const feedback = session.feedback;
     const isSentence = item.type === "sentence";
     const hintViewed = Boolean(entry.hintUsed);
@@ -1392,13 +1306,13 @@
           <h1 class="page-title">${currentSessionLabel()}</h1>
           <p class="page-lede">뜻을 떠올리지 말고, 보이는 한자에서 소리를 바로 꺼내 보세요.</p>
         </div>
-        <span class="date-chip">${session.mode === "boss" ? "실전 5문항" : "개인 학습 기록"}</span>
+        <span class="date-chip">${session.mode === "boss" ? "실전 5문항" : session.mode === "review" ? "직접 고른 복습" : "새 표현 흐름"}</span>
       </header>
 
       <div class="quiz-layout">
         <section class="panel quiz-panel">
           <div class="quiz-topline">
-            <span class="question-count">${session.index + 1} / ${session.entries.length} ${entry.phase === "retry" ? "· 다시 보기" : ""}</span>
+            <span class="question-count">${session.index + 1} / ${session.entries.length}</span>
             <span class="timer" data-timer>0.0초</span>
           </div>
           <div class="question-body">
@@ -1417,21 +1331,24 @@
             <p>콤보는 보너스만 더합니다. 끊겨도 누적 기록은 사라지지 않습니다.</p>
           </section>
           <section class="panel rail-card">
-            <p class="eyebrow">TODAY'S MISSION</p>
+            <p class="eyebrow">SESSION FLOW</p>
             <div class="mission-mini-list">
-              <div class="mission-mini ${mission.newItems >= DAILY_GOALS.newItems ? "is-done" : ""}"><span>신규 표현</span><b>${mission.newItems}/${DAILY_GOALS.newItems}</b></div>
-              <div class="mission-mini ${mission.totalItems >= DAILY_GOALS.totalItems ? "is-done" : ""}"><span>오늘 처리</span><b>${mission.totalItems}/${DAILY_GOALS.totalItems}</b></div>
-              <div class="mission-mini ${mission.combo >= DAILY_GOALS.combo ? "is-done" : ""}"><span>집중 콤보</span><b>${mission.combo}/${DAILY_GOALS.combo}</b></div>
+              <div class="mission-mini"><span>현재 위치</span><b>${session.index + 1} / ${session.entries.length}</b></div>
+              <div class="mission-mini"><span>${session.mode === "review" ? "보관한 표현" : session.mode === "boss" ? "실전 문항" : "새 표현"}</span><b>${session.entries.length}개</b></div>
+              <div class="mission-mini"><span>이번 세션 정답</span><b>${session.exact}개</b></div>
             </div>
+            ${session.mode === "boss" ? "" : '<button class="ghost-button session-finish" id="finish-session" type="button">학습 마치기</button>'}
           </section>
           <section class="panel rail-card">
             <p class="eyebrow">REVIEW RULE</p>
-            <h3>무힌트 정답 우선</h3>
-            <p>뜻 확인 후 정답은 +2 XP만 기록되며, 자동화 숙련도 대신 다음날 복습으로 연결됩니다.</p>
+            <h3>직접 고른 표현만 복습</h3>
+            <p>틀렸거나 헷갈린 표현은 답을 확인한 뒤 직접 보관함에 넣습니다. 정답이어도 직접 선택할 수 있습니다.</p>
           </section>
         </aside>
       </div>
     `;
+
+    document.getElementById("finish-session")?.addEventListener("click", finalizeSession);
 
     if (!feedback) {
       beginQuestionTimer();
@@ -1459,6 +1376,12 @@
     } else {
       const nextButton = document.getElementById("next-question");
       nextButton?.addEventListener("click", goToNextQuestion);
+      document.getElementById("toggle-manual-review")?.addEventListener("click", () => {
+        const addedFrom = feedback.hintUsed ? "hinted" : feedback.grade.kind;
+        toggleManualReview(item, addedFrom);
+        renderQuiz();
+        window.setTimeout(() => document.getElementById("toggle-manual-review")?.focus(), 0);
+      });
       window.setTimeout(() => nextButton?.focus(), 30);
     }
   }
@@ -1555,6 +1478,8 @@
       activeSession.index + 1 >= activeSession.entries.length
         ? "세션 결과 보기"
         : "다음 표현";
+    const inManualReview = isInManualReview(item.id);
+    const manualReviewText = inManualReview ? "복습에서 빼기" : "복습에 넣기";
     return `
       <section class="feedback-card ${feedback.className}">
         <div class="feedback-meta">
@@ -1567,7 +1492,10 @@
         ${diffMarkup}
         <div class="related-words">${related}</div>
         <div class="feedback-footer">
-          <span class="xp-gain">${feedback.xp ? "+" + feedback.xp + " XP" : "다음 복습에 반영됨"}</span>
+          <div class="feedback-actions">
+            <span class="xp-gain">${feedback.xp ? "+" + feedback.xp + " XP" : "XP 없음"}</span>
+            <button class="ghost-button review-toggle ${inManualReview ? "is-active" : ""}" id="toggle-manual-review" type="button" aria-pressed="${inManualReview}">${manualReviewText}</button>
+          </div>
           <button class="primary-button" id="next-question" type="button">${retryText} <span aria-hidden="true">&nbsp;→</span></button>
         </div>
       </section>
@@ -1595,7 +1523,6 @@
       }
     }
 
-    awardDailyMissionIfReady();
     evaluateAchievements();
     saveState();
     updateRankUI();
@@ -1623,11 +1550,13 @@
         ? accuracy >= 60
           ? "이번 주 실전 라운드를 통과했습니다."
           : "실전 라운드 기록을 남겼습니다."
-        : "오늘의 처리 리포트";
+        : session.mode === "review"
+          ? "복습 기록을 남겼습니다."
+          : "학습 흐름을 마쳤습니다.";
     const lede =
       accuracy >= 80
-        ? "정확한 연결이 쌓이고 있습니다. 다음 복습에서 반응 시간을 더 줄여 보세요."
-        : "틀린 표현은 내일 다시 제시됩니다. 지금의 기록이 다음 자동화의 출발점입니다.";
+        ? "정확한 연결이 쌓이고 있습니다. 원할 때 다시 이어서 반응 시간을 더 줄여 보세요."
+        : "틀린 표현은 자동으로 다시 나오지 않습니다. 다시 보고 싶은 표현은 답안 확인 뒤 직접 복습 보관함에 넣을 수 있습니다.";
 
     viewRoot.innerHTML = `
       <section class="panel result-panel">
@@ -1643,7 +1572,7 @@
         </div>
         ${session.bonusXP ? `<p class="xp-gain">주간 라운드 보너스 +${session.bonusXP} XP가 반영되었습니다.</p>` : ""}
         <div class="result-actions">
-          <button class="primary-button" id="go-dashboard" type="button">오늘 학습 마치기</button>
+          <button class="primary-button" id="go-dashboard" type="button">학습 흐름으로 돌아가기</button>
           <button class="secondary-button" id="go-review" type="button">복습 보관함 보기</button>
         </div>
       </section>
