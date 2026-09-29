@@ -552,6 +552,55 @@
       .filter((link) => link.word && !isSentenceItem(link.word));
   }
 
+  function itemKanjiSet(item) {
+    return new Set(String(item?.display || "").match(/\p{Script=Han}/gu) || []);
+  }
+
+  function sharedKanjiCount(firstItem, secondItem) {
+    const firstKanji = itemKanjiSet(firstItem);
+    const secondKanji = itemKanjiSet(secondItem);
+    let count = 0;
+    firstKanji.forEach((character) => {
+      if (secondKanji.has(character)) count += 1;
+    });
+    return count;
+  }
+
+  function diversifiedShuffle(items) {
+    const pool = [...items];
+    const ordered = [];
+    const highestPriority = pool.reduce(
+      (highest, item) => Math.max(highest, Number(item.learningPriority) || 0),
+      0
+    );
+
+    while (pool.length) {
+      const recent = ordered.slice(-3);
+      const scored = pool.map((item, index) => {
+        let penalty = Math.random() * 4;
+        const priority = Number(item.learningPriority) || 0;
+        penalty += Math.max(0, highestPriority - priority) / 20;
+
+        recent.forEach((previousItem, recentIndex) => {
+          const distance = recent.length - recentIndex;
+          const sharedKanji = sharedKanjiCount(item, previousItem);
+          const kanjiWeight = distance === 1 ? 40 : distance === 2 ? 12 : 4;
+          const categoryWeight = distance === 1 ? 5 : distance === 2 ? 2 : 1;
+          penalty += sharedKanji * kanjiWeight;
+          if (item.category === previousItem.category) penalty += categoryWeight;
+        });
+
+        return { index, penalty };
+      });
+      const selected = scored.reduce((best, candidate) =>
+        candidate.penalty < best.penalty ? candidate : best
+      );
+      ordered.push(pool.splice(selected.index, 1)[0]);
+    }
+
+    return ordered;
+  }
+
   function escapeHTML(value) {
     return String(value)
       .replace(/&/g, "&amp;")
@@ -595,6 +644,7 @@
   }
 
   function gradeAnswer(item, rawAnswer) {
+    const raw = String(rawAnswer || "").trim();
     const answer = normalizeAnswer(rawAnswer);
     const primaryExpected = normalizeAnswer(item.reading);
     const accepted = Array.from(
@@ -605,9 +655,9 @@
       )
     );
     const expected = primaryExpected || accepted[0] || "";
-    if (!answer) return { kind: "empty", answer, expected, accepted };
+    if (!answer) return { kind: "empty", rawAnswer: raw, answer, expected, accepted };
     if (accepted.includes(answer)) {
-      return { kind: "correct", answer, expected, accepted, matchedReading: answer };
+      return { kind: "correct", rawAnswer: raw, answer, expected, accepted, matchedReading: answer };
     }
 
     const closest = accepted.reduce(
@@ -618,9 +668,9 @@
       null
     );
     if (closest && closest.distance <= 1) {
-      return { kind: "soft", answer, expected: closest.candidate, primaryExpected: expected, accepted };
+      return { kind: "soft", rawAnswer: raw, answer, expected: closest.candidate, primaryExpected: expected, accepted };
     }
-    return { kind: "wrong", answer, expected, accepted };
+    return { kind: "wrong", rawAnswer: raw, answer, expected, accepted };
   }
 
   function buildReadingDiff(expectedValue, answerValue) {
@@ -673,6 +723,44 @@
       }
     }
     return steps;
+  }
+
+  function buildReadingDiffGroups(steps) {
+    const groups = [];
+    let index = 0;
+
+    while (index < steps.length) {
+      if (steps[index].type === "match") {
+        index += 1;
+        continue;
+      }
+
+      const start = index;
+      while (index < steps.length && steps[index].type !== "match") index += 1;
+      const end = index;
+      const changes = steps.slice(start, end);
+      const before = steps
+        .slice(Math.max(0, start - 3), start)
+        .map((step) => step.actual || step.expected)
+        .join("");
+      const after = steps
+        .slice(end, Math.min(steps.length, end + 3))
+        .map((step) => step.actual || step.expected)
+        .join("");
+      const actual = changes.map((step) => step.actual).join("");
+      const expected = changes.map((step) => step.expected).join("");
+      const onlyMissing = changes.every((step) => step.type === "missing");
+      const onlyExtra = changes.every((step) => step.type === "extra");
+      const message = onlyMissing
+        ? `‘${expected}’가 빠졌어요`
+        : onlyExtra
+          ? `‘${actual}’는 빼 주세요`
+          : `‘${actual}’를 ‘${expected}’로 바꿔 주세요`;
+
+      groups.push({ before, actual, expected, after, message });
+    }
+
+    return groups;
   }
 
   function describeReadingDiff(steps) {
@@ -1112,7 +1200,7 @@
 
     if (isReviewSession(mode)) {
       const kind = sessionStudyKind(mode);
-      return getManualReviewItems(kind).map((item) => ({
+      return diversifiedShuffle(getManualReviewItems(kind)).map((item) => ({
         item,
         source: `${kind}-review`,
         hintUsed: false,
@@ -1120,7 +1208,7 @@
     }
 
     const kind = sessionStudyKind(mode);
-    return getUnseenItems(kind).map((item) => ({
+    return diversifiedShuffle(getUnseenItems(kind)).map((item) => ({
       item,
       source: `new-${kind}`,
       hintUsed: false,
@@ -1552,6 +1640,26 @@
 
   function readingDiffMarkup(grade) {
     const steps = buildReadingDiff(grade.expected, grade.answer);
+    const groups = buildReadingDiffGroups(steps);
+    const groupRows = groups
+      .map((group, index) => {
+        const actualChange = group.actual
+          ? escapeHTML(group.actual)
+          : '<span class="correction-empty">빠짐</span>';
+        const expectedChange = group.expected
+          ? escapeHTML(group.expected)
+          : '<span class="correction-empty">삭제</span>';
+        return `
+          <article class="correction-row">
+            <p><span>${index + 1}</span>${escapeHTML(group.message)}</p>
+            <div class="correction-values">
+              <div><span>수정 전</span><code lang="ja">${escapeHTML(group.before)}<mark class="is-input">${actualChange}</mark>${escapeHTML(group.after)}</code></div>
+              <div><span>수정 후</span><code lang="ja">${escapeHTML(group.before)}<mark class="is-answer">${expectedChange}</mark>${escapeHTML(group.after)}</code></div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
     const inputCharacters = steps
       .map((step) => {
         const className =
@@ -1603,25 +1711,45 @@
       })
       .join("");
     const description = describeReadingDiff(steps);
+    const submittedAnswer = String(grade.rawAnswer || grade.answer || "").trim() || "입력 없음";
 
     return `
-      <section class="reading-diff" role="group" aria-label="입력 차이: ${escapeHTML(description)}">
-        <p class="diff-heading">어디를 고치면 될까요?</p>
-        <div class="diff-row">
-          <span class="diff-label">내 입력</span>
-          <span class="diff-value" lang="ja" aria-hidden="true">${inputCharacters}</span>
+      <section class="answer-comparison" aria-label="내 입력과 정답 비교">
+        <div class="answer-comparison-row is-input">
+          <span>내 입력</span>
+          <p lang="ja">${escapeHTML(submittedAnswer)}</p>
         </div>
-        <div class="diff-row">
-          <span class="diff-label">정답 기준</span>
-          <span class="diff-value" lang="ja" aria-hidden="true">${expectedCharacters}</span>
+        <div class="answer-comparison-row is-answer">
+          <span>정답</span>
+          <p lang="ja">${escapeHTML(grade.expected)}</p>
         </div>
-        <p class="sr-only" role="status">입력 차이: ${escapeHTML(description)}</p>
-        <p class="diff-legend">
-          <span><i class="diff-swatch is-match" aria-hidden="true"></i>일치</span>
-          <span><i class="diff-swatch is-wrong" aria-hidden="true"></i>입력 차이</span>
-          <span><i class="diff-swatch is-correction" aria-hidden="true"></i>정답에서 보완</span>
-        </p>
       </section>
+      <section class="correction-summary" aria-labelledby="correction-summary-title">
+        <div class="correction-summary-heading">
+          <div><p class="eyebrow">CORRECTION POINTS</p><h3 id="correction-summary-title">${groups.length}곳을 수정해 주세요</h3></div>
+          <p>다른 부분만 문맥과 함께 묶었습니다.</p>
+        </div>
+        <div class="correction-list">${groupRows}</div>
+      </section>
+      <details class="reading-diff">
+        <summary>글자별 상세 비교 보기</summary>
+        <div class="reading-diff-body" role="group" aria-label="입력 차이: ${escapeHTML(description)}">
+          <div class="diff-row">
+            <span class="diff-label">내 입력</span>
+            <span class="diff-value" lang="ja" aria-hidden="true">${inputCharacters}</span>
+          </div>
+          <div class="diff-row">
+            <span class="diff-label">정답 기준</span>
+            <span class="diff-value" lang="ja" aria-hidden="true">${expectedCharacters}</span>
+          </div>
+          <p class="sr-only" role="status">입력 차이: ${escapeHTML(description)}</p>
+          <p class="diff-legend">
+            <span><i class="diff-swatch is-match" aria-hidden="true"></i>일치</span>
+            <span><i class="diff-swatch is-wrong" aria-hidden="true"></i>입력 차이</span>
+            <span><i class="diff-swatch is-correction" aria-hidden="true"></i>정답에서 보완</span>
+          </p>
+        </div>
+      </details>
     `;
   }
 
@@ -1654,6 +1782,7 @@
           <span class="feedback-status ${feedback.statusClass}">${feedback.label}</span>
           <span class="answer-tag">${formatSeconds(feedback.seconds)}</span>
         </div>
+        <p class="feedback-reading-label">정답 읽기</p>
         <p class="feedback-reading">${escapeHTML(item.reading)}</p>
         ${meaningMarkup}
         <p class="feedback-copy">${feedback.copy}</p>
