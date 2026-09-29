@@ -36,7 +36,7 @@ index.html을 최신 브라우저에서 열면 됨. 별도 설치나 외부 API�
 
 ## 데이터 파이프라인
 
-현재 41개 수동 승인 문항은 앱 코드에만 의존하지 않으며, 검수 가능한 수동 시드로 관리됨.
+현재 수동 시드 41개와 AI·공개 사전 교차 검수 문항은 앱 코드에만 의존하지 않으며, 재현 가능한 원본·검수 배치로 관리됨.
 
 ```text
 data/
@@ -49,12 +49,12 @@ scripts/      import · 정규화 · 검증 · 생성 스크립트
 주요 입력은 다음과 같음.
 
 - `data/manual/business_seed.json`: 기존 33개 데모 문항과 문장 연결용 핵심 단어 8개를 관리하는 수동 승인 데이터. `stable_id`는 브라우저 학습 기록과 연결할 안정적인 식별자임. 문장 레코드의 `word_links`는 문장 속 표기·읽기와 실제 단어 문항 ID를 연결함.
-- `data/manual/gloss_reviews/`: OpenJLPT 후보의 한국어 뜻을 AI 2단계 검수한 배치. `ai_approved`이면서 신뢰도 0.85 이상인 항목만 활성 퀴즈가 됨.
+- `data/manual/gloss_reviews/`: OpenJLPT 후보의 한국어 뜻을 검수한 배치. 초기 AI 교차 검수와 표준국어대사전 한자 대응어·OpenJLPT 영어 뜻·JMdict 메타데이터 교차 검수를 함께 기록함. `ai_approved`이면서 신뢰도 0.85 이상인 항목만 활성 퀴즈가 됨.
 - `data/manual/reading_overrides.json`: 특정 표기에서 학습 정답으로 허용할 읽기를 제한하는 override. 명시한 `accepted_readings`는 원본의 문제 읽기보다 우선함.
 - `data/manual/excluded_words.json`: raw를 지우지 않고 결과에서만 제외하는 목록.
-- `data/raw/README.md`: OpenJLPT·JMdict 원본 파일명과 지원 형식.
+- `data/raw/README.md`: OpenJLPT·JMdict·표준국어대사전 원본 파일명과 지원 형식.
 
-외부 원본은 빌드 과정에서 자동 다운로드하지 않음. 현재 저장소에는 2026-09-28에 확인·수집한 OpenJLPT N1 JSON과 JMdict 원본이 포함되어 있으며, URL·SHA-256·표기 사항은 [NOTICE.md](NOTICE.md)에 기록함. 이후 원본을 갱신할 때도 현재 라이선스·표시 조건을 재확인해야 함. OpenJLPT의 레벨은 `openjlpt` 출처의 학습 레벨로만 저장하며, 공식 JLPT 출제 목록으로 표현하지 않음.
+외부 원본은 빌드 과정에서 자동 다운로드하지 않음. 현재 저장소에는 OpenJLPT N1 JSON, JMdict 원본과 표준국어대사전 정규화 TSV가 포함되어 있으며, URL·SHA-256·표기 사항은 [NOTICE.md](NOTICE.md)에 기록함. 이후 원본을 갱신할 때도 현재 라이선스·표시 조건을 재확인해야 함. OpenJLPT의 레벨은 `openjlpt` 출처의 학습 레벨로만 저장하며, 공식 JLPT 출제 목록으로 표현하지 않음.
 
 ### 빌드와 검증
 
@@ -63,6 +63,12 @@ scripts/      import · 정규화 · 검증 · 생성 스크립트
 ```bash
 python3 scripts/build_database.py
 python3 scripts/validate_vocabulary.py
+```
+
+활성 단어 수를 다시 1,000개로 재생성할 때는 다음 명령을 사용함. 기존 확장 배치를 덮어쓰지 않으므로 재생성 전에는 배치 관리 정책을 먼저 확인해야 함.
+
+```bash
+python3 scripts/expand_gloss_reviews.py --target 1000
 ```
 
 빌드하면 아래 생성물이 함께 갱신됨.
@@ -93,8 +99,8 @@ python3 scripts/import_jmdict.py
 - OpenJLPT N1 JSON과 JMdict `JMdict_e.gz`를 현재 `data/raw/`에 포함함. 이번 빌드에서는 한자→읽기 훈련 대상 3,183개를 OpenJLPT에서 가져와 canonical DB 총 3,215개 항목을 생성함.
 - JMdict는 표기·읽기·우선순위 태그 대조용이며, OpenJLPT 문제 읽기를 사전의 복수 읽기로 자동 확장하지 않음.
 - KANJIDIC2와 BCCWJ는 DB 스키마 확장 여지는 준비했지만 이 1차 빌드에서는 가져오지 않음. 특히 BCCWJ는 이용 조건 검토 전 비활성임.
-- Business Seed 41개와 AI 2단계 검수를 마친 초기 100개 후보를 함께 관리함. 2026-09-28 기준 활성 퀴즈는 단어 135개·문장 3개이며, 초기 AI 검수 배치 3개는 다의성 또는 추가 확인 사유로 비활성 보류함.
-- AI 검수는 인적 사전 편집 감수가 아니므로, 이후 외부 검수 근거가 생기면 해당 배치를 `needs_review`에서 다시 판정해야 함. 검수 근거·신뢰도·보류 사유는 `data/manual/gloss_reviews/`와 canonical DB에 남김.
+- Business Seed 41개, 초기 AI 검수 후보 100개, 공개 사전 기반 확장 후보 865개를 함께 관리함. 2026-09-29 기준 활성 퀴즈는 단어 1,000개·문장 3개이며, 초기 AI 검수 배치 3개는 다의성 또는 추가 확인 사유로 비활성 보류함.
+- 공개 사전 기반 확장은 표준국어대사전과 한자 표기가 정확히 일치하는 2자 이상 단어만 사용하고, 대표적인 한일 동형이의어는 제외하거나 한국어 뜻을 직접 보정함. AI 검수는 전문 사전 편집자의 인적 감수를 대체하지 않으므로, 사용자 학습 중 발견되는 다의성·어색한 뜻은 배치 단위로 다시 판정해야 함.
 
 ## 다음 단계
 

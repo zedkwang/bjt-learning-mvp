@@ -21,5 +21,6 @@
   {"code": "service", "name_ko": "서비스"},
   {"code": "compliance", "name_ko": "컴플라이언스"},
   {"code": "policy", "name_ko": "정책"},
-  {"code": "decision", "name_ko": "의사결정"}
+  {"code": "decision", "name_ko": "의사결정"},
+  {"code": "general_vocabulary", "name_ko": "일반 업무 어휘"}
 ]

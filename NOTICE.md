@@ -29,6 +29,24 @@ candidate. It must not be presented as an official JLPT vocabulary list.
 JMdict is used for spelling, reading, reading restriction, part-of-speech, and
 priority-marker validation. It is not presented as project-owned dictionary data.
 
+## Standard Korean Language Dictionary
+
+- Source: `data/raw/stdict/stdict.tsv`
+- Original data: National Institute of Korean Language, Standard Korean Language Dictionary
+- Normalized snapshot: https://github.com/dahlia/gukhanmun/blob/main/crates/gukhanmun-stdict/data/stdict.tsv
+- Snapshot: `전체 내려받기_표준국어대사전_JSON_20260606.zip`
+- Included: 2026-09-29
+- SHA-256: `4e3796dfc85a16345b7c4395d89f68e23a5606fd03f62da5d197c77dc75c438a`
+- Data license: CC BY-SA 2.0 KR
+- Copyright policy: https://stdict.korean.go.kr/join/copyrightPolicy.do
+
+The normalized Hanja-to-Hangul table is used to cross-check Korean glosses.
+Exact Hanja matches are further reviewed against OpenJLPT meanings and JMdict
+metadata; known Japanese-Korean false friends are excluded or corrected.
+The redistributed normalized table and Korean glosses derived from it remain
+available under CC BY-SA 2.0 KR; project-authored corrections are distributed
+under the same terms when included in those derived review batches.
+
 ## Project-authored data
 
 `data/manual/business_seed.json` and the Korean post-answer glosses in this

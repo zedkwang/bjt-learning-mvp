@@ -19,6 +19,14 @@
       "license": "EDRDG Licence Statement",
       "attribution": "https://www.edrdg.org/edrdg/licence.html"
     },
+    "Standard_Korean_Language_Dictionary": {
+      "status": "included_2026-09-29",
+      "source_url": "https://github.com/dahlia/gukhanmun/blob/main/crates/gukhanmun-stdict/data/stdict.tsv",
+      "sha256": "4e3796dfc85a16345b7c4395d89f68e23a5606fd03f62da5d197c77dc75c438a",
+      "snapshot": "전체 내려받기_표준국어대사전_JSON_20260606.zip",
+      "license": "CC BY-SA 2.0 KR",
+      "attribution": "국립국어원 표준국어대사전 데이터를 Gukhanmun 프로젝트가 정규화한 TSV 스냅샷"
+    },
     "KANJIDIC2": {
       "status": "verify_before_import",
       "attribution": "EDRDG/KANJIDIC2 원본의 현재 라이선스 및 표시 요건을 수집 시점에 확인해야 함"

@@ -1,0 +1,2295 @@
+{
+  "schema_version": 1,
+  "batch_id": "expansion-1000-003",
+  "reviewer": "ai_open_dictionary_crosscheck",
+  "reviewed_at": "2026-09-29",
+  "method": "Exact Hanja match in Standard Korean Language Dictionary, cross-checked with OpenJLPT English gloss and JMdict metadata",
+  "items": [
+    {
+      "stable_id": "auto-d81636d0ad39f7",
+      "meaning_ko": "극단",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d2a10a2edb9415",
+      "meaning_ko": "자주",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ad57a5cd48529c",
+      "meaning_ko": "진흥",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2fb86b7b7a8cb5",
+      "meaning_ko": "대폭",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2b89ee9ab04fa4",
+      "meaning_ko": "음색",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "coordination",
+      "categories": [
+        "product",
+        "project_management"
+      ],
+      "business_relevance": 4,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c241006d05c9f9",
+      "meaning_ko": "궤도",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-73c88a43452da3",
+      "meaning_ko": "박해",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9e5b238a083a71",
+      "meaning_ko": "논리",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-858eccc516ea41",
+      "meaning_ko": "동기",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-fce6aae883c54e",
+      "meaning_ko": "미련",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ee92767cd2642a",
+      "meaning_ko": "승진",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f76124fb657dfc",
+      "meaning_ko": "냉담",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-10c234c815929d",
+      "meaning_ko": "도상",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-90acccb1acf132",
+      "meaning_ko": "무선",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ce551757a1c318",
+      "meaning_ko": "기일",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-3f13fb2adfd377",
+      "meaning_ko": "부진",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d6530a3df8d92d",
+      "meaning_ko": "부동산",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-beeedf9134b893",
+      "meaning_ko": "쓰나미",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2b4f1463f49db8",
+      "meaning_ko": "제재",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-48cc762a44c609",
+      "meaning_ko": "토론",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "coordination",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "business_relevance": 4,
+      "related": []
+    },
+    {
+      "stable_id": "auto-12a3ddb8085d4b",
+      "meaning_ko": "완구",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a7b9128d2c1a11",
+      "meaning_ko": "진로",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9ffa3bcf67d0cf",
+      "meaning_ko": "가축",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a03e43edf3bf8e",
+      "meaning_ko": "소박",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9e863f6a87a7f1",
+      "meaning_ko": "교부",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a020f125631a0f",
+      "meaning_ko": "배경",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-fb36ba8152ee26",
+      "meaning_ko": "부패",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5e1f3612374d0f",
+      "meaning_ko": "유행",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4044950c1b5894",
+      "meaning_ko": "경우",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-47bbe0306b6f50",
+      "meaning_ko": "문화재",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2c600699f92eec",
+      "meaning_ko": "도중",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b68a23d1dbafc2",
+      "meaning_ko": "혁명",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-72d23636b75733",
+      "meaning_ko": "한정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-23dc0234bcb343",
+      "meaning_ko": "합창",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-194de3c6eb81b8",
+      "meaning_ko": "상륙",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f49c858dc0e3db",
+      "meaning_ko": "대체로·대부분",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f03b6668cf5062",
+      "meaning_ko": "영역",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ea85717577cee6",
+      "meaning_ko": "편의",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ed3041d77151ff",
+      "meaning_ko": "분열",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-7ce23b97d292fd",
+      "meaning_ko": "통상",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f2d290f37ed28d",
+      "meaning_ko": "완고",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5bd29c5cf1f8eb",
+      "meaning_ko": "일면",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d6247a63211706",
+      "meaning_ko": "숙명",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6eb5314455df74",
+      "meaning_ko": "돌파",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c0c24d8d700589",
+      "meaning_ko": "정의",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b5ae1a40edb1d0",
+      "meaning_ko": "흥분",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d82ce278cbccc7",
+      "meaning_ko": "항의",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ba90d66c5b51c3",
+      "meaning_ko": "품종",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f275ba7faa3f0d",
+      "meaning_ko": "말기",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d08a22c8f15729",
+      "meaning_ko": "조리",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a18224439f3146",
+      "meaning_ko": "진행",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-11062159b7fbaf",
+      "meaning_ko": "밀집",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-616f4c2a6df652",
+      "meaning_ko": "진료",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9aaa6e62d5f68a",
+      "meaning_ko": "동향",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-0f002ccd09e150",
+      "meaning_ko": "낙하",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f3112e3024c839",
+      "meaning_ko": "병사",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-239f7246c181e9",
+      "meaning_ko": "확립",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ad28d072ca04d0",
+      "meaning_ko": "단가",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9a1855b386b23d",
+      "meaning_ko": "간이",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-89eb2828a3c149",
+      "meaning_ko": "감염",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d1ea7077aa20f4",
+      "meaning_ko": "중요함·중대한 일",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4be862678763e9",
+      "meaning_ko": "규정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-21d13c1e748c40",
+      "meaning_ko": "현지",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a80ea70ddbd675",
+      "meaning_ko": "궁극",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-01a3abdf222b51",
+      "meaning_ko": "불황",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-9834eadefabd02",
+      "meaning_ko": "비난",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4b09cbaba2859d",
+      "meaning_ko": "비등",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-1c2f68e0f1e41b",
+      "meaning_ko": "신사",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f2d1cc0361244c",
+      "meaning_ko": "저축",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c9fc5d2357fcc4",
+      "meaning_ko": "약간",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4a01befd2b8d94",
+      "meaning_ko": "재건",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-0a6821521f002b",
+      "meaning_ko": "혼혈",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c71404f2366b44",
+      "meaning_ko": "주임",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b946a34132895b",
+      "meaning_ko": "신인",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-844beaa93655ba",
+      "meaning_ko": "각본",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b1968354f2e781",
+      "meaning_ko": "조화",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4426fd3ff0b40b",
+      "meaning_ko": "번식",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ed6b3f346aa48a",
+      "meaning_ko": "인질",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2c050017e5ae1d",
+      "meaning_ko": "동맹",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-006a8fbad9e567",
+      "meaning_ko": "입법",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6ae4c36479b5d8",
+      "meaning_ko": "한편·다른 쪽",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-3b5502e30ceb13",
+      "meaning_ko": "보관",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-88d1d15876d946",
+      "meaning_ko": "지휘",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-eba65d2ee5d55b",
+      "meaning_ko": "백과사전",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b81feaef5f6232",
+      "meaning_ko": "적성",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a87923ed68b701",
+      "meaning_ko": "부양",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "business_relevance": 4,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d84635d5f1137a",
+      "meaning_ko": "동력",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-113defd6eb2eba",
+      "meaning_ko": "동거",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-dea14f941c8874",
+      "meaning_ko": "여전히",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a4d366635879bc",
+      "meaning_ko": "본질",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b09ba256907fed",
+      "meaning_ko": "중복",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-741ebffa312de3",
+      "meaning_ko": "암살",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-db28f68d966b5d",
+      "meaning_ko": "도기",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-4f8e308d808244",
+      "meaning_ko": "파열",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ef6bff2c6a0342",
+      "meaning_ko": "비율",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-aad7a78be9bc89",
+      "meaning_ko": "급식",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-e7623b595482ea",
+      "meaning_ko": "도달",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-fcc70fc1fc4a0d",
+      "meaning_ko": "불순",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-47068c0ba01cca",
+      "meaning_ko": "이해·알겠음",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-04ddef2b511b8f",
+      "meaning_ko": "거부",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b0634b51b17889",
+      "meaning_ko": "명부",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-27fa1ea71f3d4f",
+      "meaning_ko": "이민",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d71938482e62a5",
+      "meaning_ko": "공인",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-7654d934a5adf0",
+      "meaning_ko": "색채",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d17de0ff5c78cb",
+      "meaning_ko": "추락",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6b4ffe95a8b4c7",
+      "meaning_ko": "자아",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d171b4b3c8b048",
+      "meaning_ko": "거리",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-74f8b60e884a16",
+      "meaning_ko": "유력",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-29774002a63505",
+      "meaning_ko": "간행",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-04733b56edd239",
+      "meaning_ko": "복지",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-0fdd5a33c1dee2",
+      "meaning_ko": "적자",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-78d99b932dc3e0",
+      "meaning_ko": "협박",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-1b7d6662c03a1a",
+      "meaning_ko": "심판",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a3add321a3263a",
+      "meaning_ko": "조정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b4adfdd5b0df3e",
+      "meaning_ko": "소녀",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-3771fc996296e2",
+      "meaning_ko": "정열",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b676f1de7812b5",
+      "meaning_ko": "사고",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-80c9446aef461d",
+      "meaning_ko": "일절",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-07ae0b6d823c02",
+      "meaning_ko": "소모",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c4572e658588fa",
+      "meaning_ko": "배율",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a71097d371a792",
+      "meaning_ko": "추방",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-1b6e49c5906060",
+      "meaning_ko": "법정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6d84c547f384f2",
+      "meaning_ko": "노골적",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5bed1364c473e3",
+      "meaning_ko": "정식 메뉴",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-0687a02b701210",
+      "meaning_ko": "결정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-bd064644e777a8",
+      "meaning_ko": "진화",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a64d0514e82dab",
+      "meaning_ko": "해부",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-cf07a13f271b02",
+      "meaning_ko": "계급",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-645e6b038add8b",
+      "meaning_ko": "창조",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ee8b44f00855d6",
+      "meaning_ko": "모형",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-fe30789bdd45a6",
+      "meaning_ko": "어원",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ec64c634291a4e",
+      "meaning_ko": "오차",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c1b8798031ab5b",
+      "meaning_ko": "세포",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-532b04627adc93",
+      "meaning_ko": "착륙",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5f1af78fe57fca",
+      "meaning_ko": "공립",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ff3e56f790c1a1",
+      "meaning_ko": "현장",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5b09bcb0b66610",
+      "meaning_ko": "기원",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-542d3bb85557ab",
+      "meaning_ko": "논",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-07b887f0a00443",
+      "meaning_ko": "개척",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-d6ea75a3b9d4d9",
+      "meaning_ko": "천재",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-25f4aa93ecf614",
+      "meaning_ko": "남의 시선",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6ad1abd000fe62",
+      "meaning_ko": "기능",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-687bafa0a25834",
+      "meaning_ko": "규범",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b3bae00082b138",
+      "meaning_ko": "주제",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6332563ea48ee1",
+      "meaning_ko": "현상",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6a3abbd663c373",
+      "meaning_ko": "전선",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-57d248537dcfd9",
+      "meaning_ko": "성과",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-5495cf17d0dc55",
+      "meaning_ko": "보호",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-68fc1ac0f2bf82",
+      "meaning_ko": "지성",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-645579ebb9f270",
+      "meaning_ko": "명랑",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-dbf574ad0b1677",
+      "meaning_ko": "금물",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a52fd4a4337fe7",
+      "meaning_ko": "자산",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f11247700e5f76",
+      "meaning_ko": "동원",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-866f419e07868a",
+      "meaning_ko": "언론",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "coordination",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "business_relevance": 4,
+      "related": []
+    },
+    {
+      "stable_id": "auto-6b5478f20168fe",
+      "meaning_ko": "상공",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-f4e3675c1eeca4",
+      "meaning_ko": "폭력",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-3a5095cf6cdb64",
+      "meaning_ko": "화폐",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-72a3551c2264e0",
+      "meaning_ko": "퇴치",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-dcce10177b48e5",
+      "meaning_ko": "강행",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-83c21d6907f6fa",
+      "meaning_ko": "인재",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c93da954b16c13",
+      "meaning_ko": "정정",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-1e6b5c873e3bbf",
+      "meaning_ko": "우세",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-2b1d0a83e827a5",
+      "meaning_ko": "지적",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-e85daff18ab335",
+      "meaning_ko": "성숙",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-0f4c3f91a6f3a6",
+      "meaning_ko": "고대·기대",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c38a7ba9c4cca6",
+      "meaning_ko": "단기대학·전문대",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-c86716ab3077b3",
+      "meaning_ko": "영웅",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-b3880001be8057",
+      "meaning_ko": "세대",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-092d12bb0ea1e6",
+      "meaning_ko": "사법",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "transaction",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "business_relevance": 5,
+      "related": []
+    },
+    {
+      "stable_id": "auto-66ccc93deac90e",
+      "meaning_ko": "보충",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-320d65a52af59d",
+      "meaning_ko": "희극",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-ac4638559e170f",
+      "meaning_ko": "보수",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-71de98f7eba727",
+      "meaning_ko": "일본 중의원",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "relationship",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-17b052af905fc3",
+      "meaning_ko": "완화",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    },
+    {
+      "stable_id": "auto-a9be657281be36",
+      "meaning_ko": "심의",
+      "review_status": "ai_approved",
+      "review_confidence": 0.92,
+      "review_note": "표준국어대사전 한자 표기가 일치하는 한국어 대응어를 확인하고 OpenJLPT 영어 뜻과 JMdict 표기·읽기·품사를 교차 검수함.",
+      "legacy_category": "advanced",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "business_relevance": 3,
+      "related": []
+    }
+  ]
+}
