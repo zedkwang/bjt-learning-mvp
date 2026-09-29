@@ -355,6 +355,11 @@
       : Array.isArray(raw.business?.categories)
         ? raw.business.categories
         : [];
+    const studyTracks = Array.isArray(raw.study_tracks)
+      ? raw.study_tracks
+      : Array.isArray(raw.studyTracks)
+        ? raw.studyTracks
+        : [];
     const readingType = raw.reading_type || raw.readingType || raw.reading?.type || raw.level || "";
     const category = mapCatalogCategory(raw.category || raw.ui_category || raw.uiCategory, categories, readingType);
     const display = String(raw.display || raw.expression || "").trim();
@@ -374,6 +379,8 @@
       acceptedReadings,
       meaning: String(raw.meaning_ko || raw.meaning || "").trim(),
       category,
+      categories,
+      studyTracks,
       level: raw.level || readingType || "business_core",
       related: Array.isArray(raw.related) ? raw.related : [],
       wordLinks,
@@ -416,6 +423,7 @@
   let timerFrame = null;
   let isComposing = false;
   let activeReviewKind = "word";
+  let wordbookState = { query: "", track: "all", status: "all", showMeaning: false, limit: 100 };
 
   function defaultState() {
     return {
@@ -509,8 +517,19 @@
     return item?.type === "sentence";
   }
 
+  function isGeneralN1Item(item) {
+    return !isSentenceItem(item) && item?.studyTracks?.includes("general_n1");
+  }
+
   function matchesStudyKind(item, kind = "all") {
     if (kind === "word") return !isSentenceItem(item);
+    if (kind === "sentence") return isSentenceItem(item);
+    return true;
+  }
+
+  function matchesLearningTrack(item, kind = "all") {
+    if (kind === "word") return !isSentenceItem(item) && !isGeneralN1Item(item);
+    if (kind === "n1") return isGeneralN1Item(item);
     if (kind === "sentence") return isSentenceItem(item);
     return true;
   }
@@ -539,7 +558,7 @@
 
   function getUnseenItems(kind = "all") {
     return ITEMS.filter(
-      (item) => matchesStudyKind(item, kind) && !(state.progress[item.id] && state.progress[item.id].seen)
+      (item) => matchesLearningTrack(item, kind) && !(state.progress[item.id] && state.progress[item.id].seen)
     ).sort(
       (first, second) => (second.learningPriority || 0) - (first.learningPriority || 0)
     );
@@ -655,7 +674,7 @@
       )
     );
     const expected = primaryExpected || accepted[0] || "";
-    if (!answer) return { kind: "empty", rawAnswer: raw, answer, expected, accepted };
+    if (!answer) return { kind: "wrong", unknown: true, rawAnswer: raw, answer, expected, accepted };
     if (accepted.includes(answer)) {
       return { kind: "correct", rawAnswer: raw, answer, expected, accepted, matchedReading: answer };
     }
@@ -859,12 +878,15 @@
 
   function sessionStudyKind(mode) {
     if (mode === "learn-word" || mode === "review-word") return "word";
+    if (mode === "learn-n1") return "n1";
     if (mode === "learn-sentence" || mode === "review-sentence") return "sentence";
     return "all";
   }
 
   function studyKindLabel(kind) {
-    return kind === "sentence" ? "문장" : "단어";
+    if (kind === "sentence") return "문장";
+    if (kind === "n1") return "일반 N1";
+    return "단어";
   }
 
   function currentSessionLabel() {
@@ -873,25 +895,31 @@
     if (activeSession.mode === "review-word") return "단어 복습";
     if (activeSession.mode === "review-sentence") return "문장 복습";
     if (activeSession.mode === "learn-sentence") return "문장 학습";
+    if (activeSession.mode === "learn-n1") return "일반 N1 학습";
     return "단어 학습";
   }
 
   function studyModeCard(kind) {
     const label = studyKindLabel(kind);
     const unseen = getUnseenItems(kind);
-    const review = getManualReviewItems(kind);
-    const total = ITEMS.filter((item) => matchesStudyKind(item, kind)).length;
+    const review = getManualReviewItems(kind === "sentence" ? "sentence" : "word").filter(
+      (item) => kind === "n1" ? isGeneralN1Item(item) : kind === "word" ? !isGeneralN1Item(item) : true
+    );
+    const total = ITEMS.filter((item) => matchesLearningTrack(item, kind)).length;
     const sessionMode = `learn-${kind}`;
     const continuing = activeSession && !activeSession.finalized && activeSession.mode === sessionMode;
     const isSentence = kind === "sentence";
+    const isN1 = kind === "n1";
     return `
-      <section class="panel study-mode-card ${isSentence ? "is-sentence" : ""}">
-        <p class="eyebrow">${isSentence ? "SENTENCE READING" : "WORD READING"}</p>
+      <section class="panel study-mode-card ${isSentence ? "is-sentence" : isN1 ? "is-n1" : ""}">
+        <p class="eyebrow">${isSentence ? "SENTENCE READING" : isN1 ? "GENERAL N1" : "BUSINESS WORDS"}</p>
         <h2>${label} 학습</h2>
         <p>${
           isSentence
             ? "문장 전체를 읽고, 막힌 핵심 단어만 단어 복습으로 따로 보냅니다."
-            : "단어와 복합어만 읽습니다. 문장은 문장 학습에서 별도로 연습합니다."
+            : isN1
+              ? "비즈니스 문맥 밖에서도 자주 만나는 N1 핵심 어휘를 별도 트랙으로 연습합니다."
+              : "비즈니스 단어와 복합어만 읽습니다. 일반 N1은 별도 트랙에서 연습합니다."
         }</p>
         <div class="mode-counts">
           <span>새 ${label} <b>${unseen.length}</b> / ${total}</span>
@@ -910,7 +938,8 @@
     updateRankUI();
     setActiveNav(activeView);
 
-    const wordTotal = ITEMS.filter((item) => matchesStudyKind(item, "word")).length;
+    const wordTotal = ITEMS.filter((item) => matchesLearningTrack(item, "word")).length;
+    const n1Total = ITEMS.filter((item) => matchesLearningTrack(item, "n1")).length;
     const sentenceTotal = ITEMS.filter((item) => matchesStudyKind(item, "sentence")).length;
     const categoryRows = Object.entries(CATEGORY_LABELS)
       .map(([key, label]) => {
@@ -943,11 +972,12 @@
           <h1 class="page-title">단어는 단어대로,<br />문장은 문장대로 읽습니다.</h1>
           <p class="page-lede">문장에서 걸린 핵심 단어만 단어 복습으로 옮겨, 다시 문장으로 돌아오는 흐름입니다.</p>
         </div>
-        <span class="date-chip">단어 ${wordTotal} · 문장 ${sentenceTotal}</span>
+        <span class="date-chip">비즈니스 ${wordTotal} · N1 ${n1Total} · 문장 ${sentenceTotal}</span>
       </header>
 
       <div class="study-mode-grid">
         ${studyModeCard("word")}
+        ${studyModeCard("n1")}
         ${studyModeCard("sentence")}
       </div>
 
@@ -984,28 +1014,33 @@
 
   function renderStudyMode(kind) {
     stopTimer();
-    activeView = kind === "sentence" ? "sentences" : "words";
+    activeView = kind === "sentence" ? "sentences" : kind === "n1" ? "n1" : "words";
     updateRankUI();
     setActiveNav(activeView);
 
     const label = studyKindLabel(kind);
     const unseen = getUnseenItems(kind);
-    const manualReview = getManualReviewItems(kind);
-    const total = ITEMS.filter((item) => matchesStudyKind(item, kind)).length;
+    const manualReview = getManualReviewItems(kind === "sentence" ? "sentence" : "word").filter(
+      (item) => kind === "n1" ? isGeneralN1Item(item) : kind === "word" ? !isGeneralN1Item(item) : true
+    );
+    const total = ITEMS.filter((item) => matchesLearningTrack(item, kind)).length;
     const learned = total - unseen.length;
     const sessionMode = `learn-${kind}`;
     const continuing = activeSession && !activeSession.finalized && activeSession.mode === sessionMode;
     const isSentence = kind === "sentence";
+    const isN1 = kind === "n1";
 
     viewRoot.innerHTML = `
       <header class="page-header">
         <div>
-          <p class="eyebrow">${isSentence ? "SENTENCE READING" : "WORD READING"}</p>
+          <p class="eyebrow">${isSentence ? "SENTENCE READING" : isN1 ? "GENERAL N1" : "BUSINESS WORDS"}</p>
           <h1 class="page-title">${label} 학습</h1>
           <p class="page-lede">${
             isSentence
               ? "문장 전체의 읽기를 확인한 뒤, 막힌 핵심 단어만 단어 복습으로 선택합니다."
-              : "한자 단어와 복합어의 읽기만 집중합니다. 문장 문제는 섞이지 않습니다."
+              : isN1
+                ? "일반 N1 핵심 어휘만 집중합니다. 비즈니스 단어와 문장은 섞이지 않습니다."
+                : "비즈니스 한자 단어와 복합어만 집중합니다. 일반 N1과 문장은 섞이지 않습니다."
           }</p>
         </div>
         <span class="date-chip">새 ${label} ${unseen.length}개</span>
@@ -1014,7 +1049,7 @@
       <div class="dashboard-grid">
         <section class="panel mission-panel" aria-labelledby="study-title">
           <div class="mission-head"><span class="status-dot" aria-hidden="true"></span><p class="eyebrow">OPEN PRACTICE</p></div>
-          <h2 id="study-title">${isSentence ? "문장을 읽고,<br />모르는 단어만 골라내세요." : "단어를 먼저,<br />원하는 만큼 이어서 읽으세요."}</h2>
+          <h2 id="study-title">${isSentence ? "문장을 읽고,<br />모르는 단어만 골라내세요." : isN1 ? "N1 어휘를,<br />별도 흐름으로 이어서 읽으세요." : "비즈니스 단어를,<br />원하는 만큼 이어서 읽으세요."}</h2>
           <p class="page-lede">자동 종료와 일일 한도는 없습니다. 멈추고 싶을 때만 학습을 마치면 됩니다.</p>
           <div class="mission-progress" aria-label="${label} 학습 현황">
             <div><span>새 ${label} 남음</span><strong>${unseen.length}개</strong></div>
@@ -1034,12 +1069,14 @@
 
       <div class="section-grid">
         <section class="panel section-panel">
-          <p class="eyebrow">${isSentence ? "SENTENCE TO WORD" : "WORD FIRST"}</p>
-          <h2>${isSentence ? "문장을 멈추지 않고,<br />단어만 따로 되짚기" : "문장과 분리해,<br />읽기 반응부터 만들기"}</h2>
+          <p class="eyebrow">${isSentence ? "SENTENCE TO WORD" : isN1 ? "N1 FOUNDATION" : "WORD FIRST"}</p>
+          <h2>${isSentence ? "문장을 멈추지 않고,<br />단어만 따로 되짚기" : isN1 ? "일반 어휘와 업무 어휘를,<br />서로 섞지 않고 연습하기" : "문장과 분리해,<br />읽기 반응부터 만들기"}</h2>
           <p class="page-lede">${
             isSentence
               ? "답안을 확인한 뒤 문장 안의 핵심 단어마다 단어 복습에 넣을 수 있습니다. 문장 자체도 별도로 보관할 수 있습니다."
-              : "문장 안에서 막힌 단어는 문장 학습 피드백에서 단어 복습으로 보낼 수 있습니다."
+              : isN1
+                ? "N1 트랙에서 헷갈린 표현도 같은 단어 복습 보관함에 직접 넣을 수 있습니다."
+                : "문장 안에서 막힌 단어는 문장 학습 피드백에서 단어 복습으로 보낼 수 있습니다."
           }</p>
         </section>
         <section class="panel section-panel">
@@ -1059,6 +1096,144 @@
       }
     });
     viewRoot.querySelector('[data-view="review"]')?.addEventListener("click", renderReview);
+  }
+
+  function wordbookTrackMatches(item, track) {
+    if (track === "word") return matchesLearningTrack(item, "word");
+    if (track === "n1") return isGeneralN1Item(item);
+    if (track === "sentence") return isSentenceItem(item);
+    return true;
+  }
+
+  function wordbookStatusMatches(item, status) {
+    const seen = Boolean(state.progress[item.id]?.seen);
+    if (status === "new") return !seen;
+    if (status === "learned") return seen;
+    if (status === "review") return isInManualReview(item.id);
+    return true;
+  }
+
+  function renderWordbook() {
+    stopTimer();
+    activeView = "wordbook";
+    updateRankUI();
+    setActiveNav(activeView);
+
+    const query = wordbookState.query.trim().toLocaleLowerCase("ko-KR");
+    const filtered = ITEMS.filter((item) => {
+      if (!wordbookTrackMatches(item, wordbookState.track)) return false;
+      if (!wordbookStatusMatches(item, wordbookState.status)) return false;
+      if (!query) return true;
+      return [item.display, item.reading, item.meaning]
+        .some((value) => String(value || "").toLocaleLowerCase("ko-KR").includes(query));
+    }).sort((first, second) => {
+      if (isSentenceItem(first) !== isSentenceItem(second)) return isSentenceItem(first) ? 1 : -1;
+      return first.display.localeCompare(second.display, "ja");
+    });
+    const visible = filtered.slice(0, wordbookState.limit);
+    const rows = visible.map((item) => {
+      const progress = state.progress[item.id];
+      const seen = progress?.seen || 0;
+      const correct = progress?.correct || 0;
+      const accuracy = seen ? Math.round((correct / seen) * 100) : null;
+      const track = isSentenceItem(item) ? "문장" : isGeneralN1Item(item) ? "일반 N1" : "비즈니스";
+      const inReview = isInManualReview(item.id);
+      return `
+        <article class="wordbook-row">
+          <div class="wordbook-expression">
+            <span class="pill">${track}</span>
+            <b lang="ja">${escapeHTML(item.display)}</b>
+          </div>
+          <div class="wordbook-reading" lang="ja">${escapeHTML(item.reading)}</div>
+          <div class="wordbook-meaning ${wordbookState.showMeaning ? "" : "is-hidden"}">
+            ${wordbookState.showMeaning ? escapeHTML(item.meaning) : "뜻 가림"}
+          </div>
+          <div class="wordbook-progress">
+            <b>${seen ? `${accuracy}%` : "미학습"}</b>
+            <small>${seen ? `${seen}회 시도` : "기록 없음"}</small>
+          </div>
+          <button class="ghost-button wordbook-review-toggle ${inReview ? "is-active" : ""}" type="button" data-book-review="${escapeHTML(item.id)}" aria-pressed="${inReview}">
+            ${inReview ? "복습에서 빼기" : "복습에 넣기"}
+          </button>
+        </article>
+      `;
+    }).join("");
+
+    viewRoot.innerHTML = `
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">VOCABULARY INDEX</p>
+          <h1 class="page-title">단어장</h1>
+          <p class="page-lede">표기·읽기·한국어 뜻으로 찾고, 헷갈리는 표현은 바로 복습 보관함에 넣을 수 있습니다.</p>
+        </div>
+        <span class="date-chip">검색 결과 ${filtered.length}개</span>
+      </header>
+      <section class="panel wordbook-panel">
+        <div class="wordbook-toolbar">
+          <label class="wordbook-search">
+            <span>검색</span>
+            <input id="wordbook-search" type="search" value="${escapeHTML(wordbookState.query)}" placeholder="표기, 읽기, 뜻 검색" autocomplete="off" />
+          </label>
+          <label><span>학습 종류</span><select id="wordbook-track">
+            <option value="all" ${wordbookState.track === "all" ? "selected" : ""}>전체</option>
+            <option value="word" ${wordbookState.track === "word" ? "selected" : ""}>비즈니스 단어</option>
+            <option value="n1" ${wordbookState.track === "n1" ? "selected" : ""}>일반 N1</option>
+            <option value="sentence" ${wordbookState.track === "sentence" ? "selected" : ""}>문장</option>
+          </select></label>
+          <label><span>학습 상태</span><select id="wordbook-status">
+            <option value="all" ${wordbookState.status === "all" ? "selected" : ""}>전체</option>
+            <option value="new" ${wordbookState.status === "new" ? "selected" : ""}>미학습</option>
+            <option value="learned" ${wordbookState.status === "learned" ? "selected" : ""}>학습함</option>
+            <option value="review" ${wordbookState.status === "review" ? "selected" : ""}>복습 보관함</option>
+          </select></label>
+          <label class="meaning-switch"><input id="wordbook-meaning" type="checkbox" ${wordbookState.showMeaning ? "checked" : ""} /><span>뜻 보기</span></label>
+        </div>
+        <div class="wordbook-list">${rows || `<div class="empty-state"><b>조건에 맞는 표현이 없습니다.</b><p>검색어나 필터를 바꿔 보세요.</p></div>`}</div>
+        ${visible.length < filtered.length ? `<button class="secondary-button wordbook-more" id="wordbook-more" type="button">100개 더 보기</button>` : ""}
+      </section>
+    `;
+
+    const wordbookSearch = document.getElementById("wordbook-search");
+    wordbookSearch?.addEventListener("input", (event) => {
+      wordbookState.query = event.target.value;
+      if (event.isComposing) return;
+      wordbookState.limit = 100;
+      renderWordbook();
+      const input = document.getElementById("wordbook-search");
+      input?.focus();
+      input?.setSelectionRange(input.value.length, input.value.length);
+    });
+    wordbookSearch?.addEventListener("compositionend", (event) => {
+      wordbookState.query = event.target.value;
+      wordbookState.limit = 100;
+      renderWordbook();
+    });
+    document.getElementById("wordbook-track")?.addEventListener("change", (event) => {
+      wordbookState.track = event.target.value;
+      wordbookState.limit = 100;
+      renderWordbook();
+    });
+    document.getElementById("wordbook-status")?.addEventListener("change", (event) => {
+      wordbookState.status = event.target.value;
+      wordbookState.limit = 100;
+      renderWordbook();
+    });
+    document.getElementById("wordbook-meaning")?.addEventListener("change", (event) => {
+      wordbookState.showMeaning = event.target.checked;
+      renderWordbook();
+    });
+    document.querySelectorAll("[data-book-review]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = ITEM_BY_ID.get(button.dataset.bookReview);
+        if (!item) return;
+        toggleManualReview(item, "wordbook");
+        renderWordbook();
+      });
+    });
+    document.getElementById("wordbook-more")?.addEventListener("click", () => {
+      wordbookState.limit += 100;
+      renderWordbook();
+    });
   }
 
   function renderReview() {
@@ -1361,9 +1536,19 @@
 
   function feedbackFor(grade, item, seconds, previousBest, focusLost, xp, hintUsed) {
     const reviewTarget = isSentenceItem(item) ? "문장" : "단어";
-    const sentenceLinkGuide = isSentenceItem(item)
+    const reviewObject = isSentenceItem(item) ? "문장을" : "단어를";
+    const sentenceLinkGuide = getSentenceWordLinks(item).length
       ? " 아래의 핵심 단어는 단어 복습으로 따로 넣을 수 있습니다."
       : "";
+    if (grade.unknown) {
+      return {
+        className: "is-wrong",
+        statusClass: "is-wrong",
+        label: "모름",
+        copy: `입력 없이 확인해 정답과 뜻을 바로 공개했습니다. XP는 오르지 않으며, 필요하면 이 ${reviewObject} 복습 보관함에 넣어 주세요.${sentenceLinkGuide}`,
+        xp: 0,
+      };
+    }
     if (grade.kind === "correct" && hintUsed) {
       return {
         className: "is-hint",
@@ -1386,7 +1571,7 @@
           ? `이전 최고 기록보다 ${(previousBest - seconds).toFixed(1)}초 빨랐습니다. 자동화 단계에 가까워졌습니다.`
           : focusLost
             ? "탭 이탈 시간은 기록에서 제외했습니다. 다음에도 정확하게 연결해 보세요."
-            : `정확한 연결을 기록했습니다. 필요하면 이 ${reviewTarget}을 직접 복습 보관함에 넣을 수 있습니다.${sentenceLinkGuide}`,
+            : `정확한 연결을 기록했습니다. 필요하면 이 ${reviewObject} 직접 복습 보관함에 넣을 수 있습니다.${sentenceLinkGuide}`,
         xp,
       };
     }
@@ -1412,11 +1597,6 @@
     if (!activeSession || activeSession.feedback || activeSession.submitting) return;
     const input = document.getElementById("answer-input");
     const answer = input?.value || "";
-    if (!normalizeAnswer(answer)) {
-      showToast("읽은 히라가나를 입력해 주세요.");
-      input?.focus();
-      return;
-    }
 
     activeSession.submitting = true;
     const entry = activeSession.entries[activeSession.index];
@@ -1531,7 +1711,7 @@
             <button class="primary-button submit-button" type="submit">확인</button>
           </div>
           <div class="hint-row">
-            <p class="input-help">공백·문장부호는 무시합니다.</p>
+            <p class="input-help">공백·문장부호는 무시합니다. 모르면 비운 채 Enter를 누르세요.</p>
             <button class="ghost-button" id="toggle-meaning" type="button" ${hintViewed ? "disabled" : ""}>${hintViewed ? "뜻 확인함" : "뜻 보기"}</button>
           </div>
           ${meaningMarkup}
@@ -1765,7 +1945,7 @@
       </p>
     `;
     const diffMarkup =
-      feedback.grade.kind === "correct" ? "" : readingDiffMarkup(feedback.grade);
+      feedback.grade.kind === "correct" || feedback.grade.unknown ? "" : readingDiffMarkup(feedback.grade);
     const retryText =
       activeSession.index + 1 >= activeSession.entries.length
         ? "세션 결과 보기"
@@ -1911,7 +2091,9 @@
   function navigate(view) {
     if (view === "dashboard") renderDashboard();
     if (view === "words") renderStudyMode("word");
+    if (view === "n1") renderStudyMode("n1");
     if (view === "sentences") renderStudyMode("sentence");
+    if (view === "wordbook") renderWordbook();
     if (view === "review") renderReview();
     if (view === "boss") renderBoss();
   }
@@ -1946,6 +2128,19 @@
       });
     });
     document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key !== "Enter" ||
+        event.isComposing ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey ||
+        activeView !== "quiz" ||
+        !activeSession?.feedback
+      ) return;
+      event.preventDefault();
+      goToNextQuestion();
+    });
     window.addEventListener("storage", (event) => {
       if (event.key !== STORAGE_KEY || !event.newValue) return;
       state = loadState();

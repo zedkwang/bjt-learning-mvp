@@ -5,6 +5,12 @@
       "status": "project_owned",
       "attribution": "기존 BJT ARC MVP 데모 문항에서 이관됨"
     },
+    "claude_bjt": {
+      "status": "project_owned_cross_repo",
+      "source_url": "https://github.com/zedkwang/claude_bjt",
+      "included": "2026-09-29",
+      "attribution": "동일 사용자의 별도 학습 프로젝트에서 N1 어휘와 문장 데이터를 이관함"
+    },
     "OpenJLPT": {
       "status": "included_2026-09-28",
       "source_url": "https://raw.githubusercontent.com/evanclan/OpenJLPT/main/data/json/vocab/n1.json",

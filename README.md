@@ -4,7 +4,9 @@ JLPT N1 학습자가 한자 표기를 보고 일본어 발음을 바로 입력�
 
 ## 포함 기능
 
-- 단어 학습과 문장 학습을 분리한 읽기 퀴즈 및 히라가나 답안 입력
+- 비즈니스 단어·일반 N1·문장 학습을 분리한 읽기 퀴즈 및 히라가나 답안 입력
+- 표기·읽기·한국어 뜻 검색과 학습 상태 필터를 제공하는 단어장
+- 모를 때 입력 없이 Enter를 눌러 정답과 뜻을 바로 확인하는 `모름` 처리
 - 답안을 제출한 뒤 정답 읽기와 한국어 뜻을 피드백으로 표시
 - 공백·전각 공백·일부 문장부호를 무시하는 답안 정규화
 - 완전 정답 / 표기 주의(한 글자, 장음·촉음 등) / 재확인 분리
@@ -53,6 +55,7 @@ scripts/      import · 정규화 · 검증 · 생성 스크립트
 - `data/manual/reading_overrides.json`: 특정 표기에서 학습 정답으로 허용할 읽기를 제한하는 override. 명시한 `accepted_readings`는 원본의 문제 읽기보다 우선함.
 - `data/manual/excluded_words.json`: raw를 지우지 않고 결과에서만 제외하는 목록.
 - `data/raw/README.md`: OpenJLPT·JMdict·표준국어대사전 원본 파일명과 지원 형식.
+- `data/raw/claude_bjt/`: 별도 프로젝트에서 이관한 일반 N1 어휘 200개와 문장 100개의 원본 및 체크섬.
 
 외부 원본은 빌드 과정에서 자동 다운로드하지 않음. 현재 저장소에는 OpenJLPT N1 JSON, JMdict 원본과 표준국어대사전 정규화 TSV가 포함되어 있으며, URL·SHA-256·표기 사항은 [NOTICE.md](NOTICE.md)에 기록함. 이후 원본을 갱신할 때도 현재 라이선스·표시 조건을 재확인해야 함. OpenJLPT의 레벨은 `openjlpt` 출처의 학습 레벨로만 저장하며, 공식 JLPT 출제 목록으로 표현하지 않음.
 
@@ -77,11 +80,11 @@ python3 scripts/expand_gloss_reviews.py --target 1000
 - `data/processed/vocabulary.sqlite`: source provenance, 복수 읽기, 카테고리, 한자 연결 정보를 가진 SQLite DB
 - `data/processed/catalog.js`: 브라우저 앱이 읽을 `window.BJT_CATALOG` 전역 데이터
 
-`catalog.js` 항목은 기존 UI 호환 필드(`id`, `display`, `reading`, `meaning`, `category`, `level`, `related`, `type`)와 canonical 필드(`expression`, `primary_reading`, `accepted_readings`, `meaning_ko`, `categories`)를 함께 제공함. 문장에는 검수된 `word_links`도 포함되어 문장 피드백에서 실제 단어 문항을 복습에 넣을 수 있음. AI 검수 상태·신뢰도·검수 메모는 canonical JSON과 SQLite에 보관하며, 학습 화면에는 노출하지 않음.
+`catalog.js` 항목은 기존 UI 호환 필드(`id`, `display`, `reading`, `meaning`, `category`, `level`, `related`, `type`)와 canonical 필드(`expression`, `primary_reading`, `accepted_readings`, `meaning_ko`, `categories`, `study_tracks`)를 함께 제공함. `general_n1` 트랙은 기존 비즈니스 단어와 분리해 출제됨. 문장에는 연결 가능한 활성 단어가 있을 때 `word_links`가 포함되어 문장 피드백에서 실제 단어 문항을 복습에 넣을 수 있음. AI 검수 상태·신뢰도·검수 메모는 canonical JSON과 SQLite에 보관하며, 학습 화면에는 노출하지 않음.
 
 한국어 뜻은 문제를 보기 전 기본 노출하는 정보가 아니라 답안 제출 후 피드백에 쓰는 보조 필드임. 따라서 활성 퀴즈 항목은 반드시 `meaning_ko`와 승인 상태를 가져야 하며, 뜻이 없거나 `needs_review`/`rejected`인 OpenJLPT 후보는 canonical DB에는 보관하되 퀴즈 카탈로그에서는 제외됨. OpenJLPT가 지정한 `primary_reading`만 정답으로 허용하고, JMdict의 다른 읽기는 근거 metadata로만 보관함. 다른 읽기를 정답으로 허용해야 할 때만 `reading_overrides.json`에 명시함.
 
-원본 파일이 아직 없으면 기본 빌드는 수동 41개 문항만 생성하고, OpenJLPT·JMdict를 건너뛴다는 안내를 출력함. 운영용으로 원본이 반드시 있어야 할 때는 아래처럼 명시적으로 실패하게 만들 수 있음.
+OpenJLPT·JMdict 원본이 없으면 기본 빌드는 수동 시드와 `claude_bjt` 이관 데이터만 사용하고, 빠진 외부 원본을 안내함. 운영용으로 OpenJLPT·JMdict가 반드시 있어야 할 때는 아래처럼 명시적으로 실패하게 만들 수 있음.
 
 ```bash
 python3 scripts/build_database.py --require-openjlpt --require-jmdict
@@ -96,10 +99,10 @@ python3 scripts/import_jmdict.py
 
 ### 현재 범위와 한계
 
-- OpenJLPT N1 JSON과 JMdict `JMdict_e.gz`를 현재 `data/raw/`에 포함함. 이번 빌드에서는 한자→읽기 훈련 대상 3,183개를 OpenJLPT에서 가져와 canonical DB 총 3,215개 항목을 생성함.
+- OpenJLPT N1 JSON과 JMdict `JMdict_e.gz`를 현재 `data/raw/`에 포함함. 이번 빌드에서는 한자→읽기 훈련 대상 3,183개를 OpenJLPT에서 가져와 canonical DB 총 3,475개 항목을 생성함.
 - JMdict는 표기·읽기·우선순위 태그 대조용이며, OpenJLPT 문제 읽기를 사전의 복수 읽기로 자동 확장하지 않음.
 - KANJIDIC2와 BCCWJ는 DB 스키마 확장 여지는 준비했지만 이 1차 빌드에서는 가져오지 않음. 특히 BCCWJ는 이용 조건 검토 전 비활성임.
-- Business Seed 41개, 초기 AI 검수 후보 100개, 공개 사전 기반 확장 후보 865개를 함께 관리함. 2026-09-29 기준 활성 퀴즈는 단어 1,000개·문장 3개이며, 초기 AI 검수 배치 3개는 다의성 또는 추가 확인 사유로 비활성 보류함.
+- Business Seed 41개, OpenJLPT·사전 교차 검수 데이터, `claude_bjt` 이관 데이터를 함께 관리함. 2026-09-29 기준 활성 퀴즈는 비즈니스 단어 975개·일반 N1 200개·문장 102개임. 문장 102개 중 67개는 활성 단어와 직접 연결되며, 나머지는 문장 전체 복습만 제공함.
 - 공개 사전 기반 확장은 표준국어대사전과 한자 표기가 정확히 일치하는 2자 이상 단어만 사용하고, 대표적인 한일 동형이의어는 제외하거나 한국어 뜻을 직접 보정함. AI 검수는 전문 사전 편집자의 인적 감수를 대체하지 않으므로, 사용자 학습 중 발견되는 다의성·어색한 뜻은 배치 단위로 다시 판정해야 함.
 
 ## 다음 단계

@@ -52,3 +52,8 @@ under the same terms when included in those derived review batches.
 `data/manual/business_seed.json` and the Korean post-answer glosses in this
 repository are project-authored learning data. They remain separate from the
 upstream raw data and are recorded with their own provenance in the build output.
+
+The files under `data/raw/claude_bjt/` were copied from the same owner's
+`https://github.com/zedkwang/claude_bjt` repository on 2026-09-29. They contain
+200 general N1 vocabulary entries and 100 sentences. Their checksums and merge
+rules are recorded in `data/raw/claude_bjt/README.md`.

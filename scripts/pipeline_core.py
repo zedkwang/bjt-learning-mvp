@@ -27,6 +27,7 @@ RAW_DIR = DATA_DIR / "raw"
 MANUAL_DIR = DATA_DIR / "manual"
 PROCESSED_DIR = DATA_DIR / "processed"
 GLOSS_REVIEW_DIR = MANUAL_DIR / "gloss_reviews"
+CLAUDE_BJT_DIR = RAW_DIR / "claude_bjt"
 
 VALID_JLPT_LEVELS = {"N1", "N2", "N3", "N4", "N5"}
 VALID_ITEM_TYPES = {"word", "sentence"}
@@ -34,6 +35,7 @@ VALID_READING_TYPES = {"onyomi", "kunyomi", "mixed", "compound", "sentence", "un
 VALID_REVIEW_STATUSES = {"unreviewed", "manual_approved", "ai_approved", "needs_review", "rejected"}
 VALID_GLOSS_REVIEW_STATUSES = {"ai_approved", "needs_review", "rejected"}
 VALID_LEGACY_CATEGORIES = {"transaction", "coordination", "relationship", "advanced"}
+VALID_STUDY_TRACKS = {"general_n1"}
 AI_APPROVAL_MIN_CONFIDENCE = 0.85
 KANA_RE = re.compile(r"^[\u3041-\u3096ー]+$")
 KANJI_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
@@ -259,6 +261,7 @@ def normalize_record(raw: dict[str, Any], *, origin: str, index: int = 0) -> dic
         "meaning_ko": meaning_ko,
         "legacy_category": normalize_text(raw.get("legacy_category") or raw.get("category")) or None,
         "categories": normalize_categories(raw.get("categories")),
+        "study_tracks": normalize_text_list(raw.get("study_tracks") or raw.get("studyTracks")),
         "level": normalize_text(raw.get("level")) or "uncategorized",
         "item_type": item_type,
         "reading_type": reading_type,
@@ -302,6 +305,194 @@ def load_manual_seed(path: Path = MANUAL_DIR / "business_seed.json") -> list[dic
             raise PipelineError(f"manual business_seed의 {index + 1}번째 항목이 객체가 아닙니다.")
         records.append(normalize_record(raw, origin="manual", index=index))
     return records
+
+
+CLAUDE_CATEGORY_MAP = {
+    "transaction": ("transaction", ["transaction", "sales"]),
+    "contract": ("transaction", ["contract", "compliance"]),
+    "finance": ("transaction", ["finance", "accounting"]),
+    "hr": ("relationship", ["hr", "organization"]),
+    "meeting": ("coordination", ["meeting", "decision"]),
+    "report": ("coordination", ["report", "communication"]),
+    "schedule": ("coordination", ["schedule", "project_management"]),
+    "operation": ("coordination", ["internal_process", "project_management"]),
+    "customer": ("relationship", ["customer_support", "service"]),
+    "general": ("advanced", ["general_vocabulary"]),
+}
+
+
+def load_claude_bjt_records(
+    n1_path: Path = CLAUDE_BJT_DIR / "p3_n1_vocab.json",
+    sentence_path: Path = CLAUDE_BJT_DIR / "sentences.json",
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """동일 사용자의 claude_bjt 프로젝트에서 검수 대상 데이터를 읽는다."""
+    source = {
+        "name": "claude_bjt",
+        "reference": "https://github.com/zedkwang/claude_bjt",
+        "version": "main@2026-09-29",
+    }
+
+    def prepare(path: Path, *, item_type: str) -> list[dict[str, Any]]:
+        payload = read_json(path)
+        if not isinstance(payload, list):
+            raise PipelineError(f"claude_bjt 원본은 JSON 배열이어야 합니다: {relative_path(path)}")
+        records: list[dict[str, Any]] = []
+        for index, raw in enumerate(payload):
+            if not isinstance(raw, dict):
+                raise PipelineError(f"{relative_path(path)} {index + 1}번째 항목이 객체가 아닙니다")
+            raw_category = normalize_text(raw.get("category")).lower()
+            legacy_category, categories = CLAUDE_CATEGORY_MAP.get(
+                raw_category, ("advanced", ["general_vocabulary"])
+            )
+            primary = normalize_reading(raw.get("reading"))
+            raw_reading_type = normalize_text(raw.get("reading_type")).lower()
+            reading_type = "compound" if raw_reading_type == "jukujikun" else raw_reading_type or "unknown"
+            prepared = {
+                "stable_id": f"claude-bjt-{normalize_text(raw.get('id')) or index + 1}",
+                "expression": raw.get("expression"),
+                "primary_reading": primary,
+                "accepted_readings": [primary, *(raw.get("alt_readings") or [])],
+                "meaning_ko": raw.get("meaning_ko"),
+                "legacy_category": legacy_category,
+                "categories": categories,
+                "study_tracks": ["general_n1"] if item_type == "word" else [],
+                "level": "general_n1" if item_type == "word" else "sentence",
+                "item_type": item_type,
+                "reading_type": "sentence" if item_type == "sentence" else reading_type,
+                "reading_difficulty": max(1, min(5, int(raw.get("priority") or 3))),
+                "business_relevance": max(0, min(5, int(raw.get("bjt_priority") or 0))),
+                "jlpt_level": "N1" if item_type == "word" else None,
+                "jlpt_level_source": "claude_bjt curated N1 set" if item_type == "word" else None,
+                "example": raw.get("example"),
+                "sources": [source],
+                "review_status": "ai_approved",
+                "review_confidence": 0.9,
+                "review_note": "claude_bjt 원본을 현재 파이프라인 규칙으로 정규화하고 JMdict와 대조함.",
+                "reviewer": "claude_bjt_crosscheck",
+                "reviewed_at": "2026-09-29",
+                "is_active": True,
+            }
+            record = normalize_record(prepared, origin="claude_bjt", index=index)
+            record["manual_readings_locked"] = True
+            records.append(record)
+        return records
+
+    return prepare(n1_path, item_type="word"), prepare(sentence_path, item_type="sentence")
+
+
+def merge_claude_n1(records: list[dict[str, Any]], candidates: list[dict[str, Any]]) -> tuple[int, int]:
+    """표기가 같은 기존 항목의 ID는 보존하고 N1 트랙과 읽기만 보강한다."""
+    added = 0
+    merged = 0
+    for candidate in candidates:
+        same_expression = [
+            record
+            for record in records
+            if record["item_type"] == "word" and record["expression"] == candidate["expression"]
+        ]
+        target = next(
+            (record for record in same_expression if record["primary_reading"] == candidate["primary_reading"]),
+            same_expression[0] if same_expression else None,
+        )
+        if target is None:
+            records.append(candidate)
+            added += 1
+            continue
+
+        merged += 1
+        target["study_tracks"] = list(
+            dict.fromkeys([*target.get("study_tracks", []), *candidate["study_tracks"]])
+        )
+        target["accepted_readings"] = dedupe(
+            [*target.get("accepted_readings", []), *candidate["accepted_readings"]]
+        )
+        target["manual_readings_locked"] = True
+        target["sources"] = merge_sources(target["sources"], candidate["sources"])
+        if not target.get("is_active") or not target.get("meaning_ko"):
+            for field in (
+                "meaning_ko",
+                "legacy_category",
+                "categories",
+                "level",
+                "reading_type",
+                "reading_difficulty",
+                "business_relevance",
+                "jlpt_level",
+                "jlpt_level_source",
+                "example",
+                "review_status",
+                "review_confidence",
+                "review_note",
+                "reviewer",
+                "reviewed_at",
+            ):
+                target[field] = candidate[field]
+            target["is_active"] = True
+            target["inactive_reason"] = None
+    return added, merged
+
+
+def merge_claude_sentences(records: list[dict[str, Any]], candidates: list[dict[str, Any]]) -> tuple[int, int]:
+    existing = {record["expression"]: record for record in records if record["item_type"] == "sentence"}
+    added = 0
+    merged = 0
+    for candidate in candidates:
+        target = existing.get(candidate["expression"])
+        if target:
+            target["sources"] = merge_sources(target["sources"], candidate["sources"])
+            target["accepted_readings"] = dedupe(
+                [*target.get("accepted_readings", []), *candidate["accepted_readings"]]
+            )
+            merged += 1
+            continue
+        records.append(candidate)
+        existing[candidate["expression"]] = candidate
+        added += 1
+    return added, merged
+
+
+def add_sentence_word_links(records: list[dict[str, Any]]) -> int:
+    """문장에 실제로 포함된 활성 단어만 자동 연결한다."""
+    words = [
+        record
+        for record in records
+        if record["item_type"] == "word" and record.get("is_active") and len(record["expression"]) >= 2
+    ]
+    words.sort(
+        key=lambda record: (
+            len(record["expression"]),
+            record.get("business_relevance", 0),
+            record.get("learning_priority") or 0,
+        ),
+        reverse=True,
+    )
+    linked_sentences = 0
+    for sentence in records:
+        if sentence["item_type"] != "sentence" or sentence.get("word_links"):
+            continue
+        occupied: list[tuple[int, int]] = []
+        links: list[dict[str, str]] = []
+        for word in words:
+            start = sentence["expression"].find(word["expression"])
+            if start < 0:
+                continue
+            end = start + len(word["expression"])
+            if any(start < used_end and end > used_start for used_start, used_end in occupied):
+                continue
+            links.append(
+                {
+                    "word_id": word["stable_id"],
+                    "surface": word["expression"],
+                    "reading_in_sentence": word["primary_reading"],
+                }
+            )
+            occupied.append((start, end))
+            if len(links) >= 5:
+                break
+        sentence["word_links"] = links
+        if links:
+            linked_sentences += 1
+    return linked_sentences
 
 
 def load_gloss_reviews(path: Path = GLOSS_REVIEW_DIR) -> tuple[list[dict[str, Any]], list[str]]:
@@ -844,6 +1035,9 @@ def validate_records(records: list[dict[str, Any]], category_codes: set[str]) ->
         unknown_categories = [category for category in record.get("categories", []) if category not in category_codes]
         if unknown_categories:
             errors.append(f"{label}: 정의되지 않은 category가 있습니다 ({', '.join(unknown_categories)})")
+        unknown_tracks = [track for track in record.get("study_tracks", []) if track not in VALID_STUDY_TRACKS]
+        if unknown_tracks:
+            errors.append(f"{label}: 정의되지 않은 study_track이 있습니다 ({', '.join(unknown_tracks)})")
         review_status = record.get("review_status")
         review_confidence = record.get("review_confidence")
         if review_status not in VALID_REVIEW_STATUSES:
@@ -873,13 +1067,17 @@ def validate_records(records: list[dict[str, Any]], category_codes: set[str]) ->
             inactive_without_meaning += 1
 
     records_by_id = {record.get("stable_id"): record for record in records if record.get("stable_id")}
+    unlinked_claude_sentences = 0
     for record in records:
         label = record.get("stable_id") or "(stable_id 없음)"
         word_links = record.get("word_links", [])
         if word_links and record.get("item_type") != "sentence":
             errors.append(f"{label}: word_links는 sentence 항목에서만 사용할 수 있습니다")
         if record.get("item_type") == "sentence" and record.get("is_active") and not word_links:
-            errors.append(f"{label}: 활성 sentence 항목에는 최소 1개의 word_links가 필요합니다")
+            if any(source.get("name") == "claude_bjt" for source in record.get("sources", [])):
+                unlinked_claude_sentences += 1
+            else:
+                errors.append(f"{label}: 활성 sentence 항목에는 최소 1개의 word_links가 필요합니다")
 
         linked_ids: set[str] = set()
         for link in word_links:
@@ -907,6 +1105,10 @@ def validate_records(records: list[dict[str, Any]], category_codes: set[str]) ->
                 errors.append(
                     f"{label}: word_links.reading_in_sentence은 정규화된 히라가나여야 합니다 ({reading_in_sentence})"
                 )
+    if unlinked_claude_sentences:
+        warnings.append(
+            f"claude_bjt 문장 {unlinked_claude_sentences}개는 연결 가능한 활성 단어가 없어 문장 전체 복습만 제공합니다."
+        )
     if inactive_without_meaning:
         warnings.append(
             f"한국어 뜻이 없는 비활성 후보 {inactive_without_meaning}개는 퀴즈 카탈로그에 내보내지 않았습니다."
@@ -949,6 +1151,7 @@ def client_items(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "accepted_readings": record["accepted_readings"],
             "meaning_ko": record["meaning_ko"],
             "categories": record["categories"],
+            "study_tracks": record["study_tracks"],
             "item_type": record["item_type"],
             "reading_type": record["reading_type"],
             "learning_priority": record["learning_priority"],
@@ -994,6 +1197,7 @@ def record_export(record: dict[str, Any]) -> dict[str, Any]:
         "meaning_ko",
         "legacy_category",
         "categories",
+        "study_tracks",
         "level",
         "item_type",
         "reading_type",
@@ -1061,6 +1265,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                 learning_priority REAL NOT NULL CHECK (learning_priority BETWEEN 0 AND 100),
                 item_type TEXT NOT NULL,
                 legacy_category TEXT,
+                study_tracks_json TEXT NOT NULL DEFAULT '[]',
                 related_json TEXT NOT NULL DEFAULT '[]',
                 word_links_json TEXT NOT NULL DEFAULT '[]',
                 example TEXT,
@@ -1137,7 +1342,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
         connection.executemany(
             "INSERT INTO build_metadata(key, value) VALUES (?, ?)",
             [
-                ("schema_version", "3"),
+                ("schema_version", "4"),
                 ("generated_at", generated_at),
                 ("quiz_meaning_policy", "active quiz catalog entries require meaning_ko; reveal after answer only"),
                 (
@@ -1154,8 +1359,8 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                     review_note, reviewer, reviewed_at, jlpt_level, jlpt_level_source,
                     jlpt_official, part_of_speech, reading_type, reading_difficulty, business_relevance,
                     frequency_score, frequency_source, learning_priority, item_type, legacy_category,
-                    related_json, word_links_json, example, is_active, inactive_reason, created_at, updated_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    study_tracks_json, related_json, word_links_json, example, is_active, inactive_reason, created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     record["stable_id"],
@@ -1178,6 +1383,7 @@ def create_database(path: Path, records: list[dict[str, Any]], categories: list[
                     record["learning_priority"],
                     record["item_type"],
                     record["legacy_category"],
+                    json.dumps(record["study_tracks"], ensure_ascii=False),
                     json.dumps(record["related"], ensure_ascii=False),
                     json.dumps(record["word_links"], ensure_ascii=False),
                     record["example"],
@@ -1249,14 +1455,20 @@ def build_pipeline(
     manual_records = load_manual_seed()
     openjlpt_records, notes = load_openjlpt_records(openjlpt_path, required=require_openjlpt)
     records = merge_manual_and_openjlpt(manual_records, openjlpt_records)
+    claude_n1_records, claude_sentence_records = load_claude_bjt_records()
     matches, jmdict_notes = load_jmdict_matches(
-        {record["expression"] for record in records}, jmdict_path, required=require_jmdict
+        {record["expression"] for record in [*records, *claude_n1_records]},
+        jmdict_path,
+        required=require_jmdict,
     )
     notes.extend(jmdict_notes)
     attach_jmdict(records, matches)
+    attach_jmdict(claude_n1_records, matches)
     gloss_reviews, gloss_review_notes = load_gloss_reviews()
     notes.extend(apply_gloss_reviews(records, gloss_reviews))
     notes.extend(gloss_review_notes)
+    claude_n1_added, claude_n1_merged = merge_claude_n1(records, claude_n1_records)
+    notes.append(f"claude_bjt N1: 신규 {claude_n1_added}개, 기존 표현 병합 {claude_n1_merged}개.")
     # 수동 override는 AI 검수 결과보다 마지막에 적용해 사람의 명시적 결정을 보존한다.
     override_notes = apply_overrides(records, load_overrides())
     excluded_ids, excluded_expressions = load_exclusions()
@@ -1264,6 +1476,13 @@ def build_pipeline(
     if excluded_count:
         notes.append(f"제외 목록으로 {excluded_count}개 항목을 비활성화했습니다.")
     notes.extend(override_notes)
+    calculate_priorities(records)
+    claude_sentence_added, claude_sentence_merged = merge_claude_sentences(records, claude_sentence_records)
+    linked_sentence_count = add_sentence_word_links(records)
+    notes.append(
+        f"claude_bjt 문장: 신규 {claude_sentence_added}개, 기존 문장 병합 {claude_sentence_merged}개; "
+        f"자동 단어 연결 문장 {linked_sentence_count}개."
+    )
     calculate_priorities(records)
     errors, warnings = validate_records(records, {category["code"] for category in categories})
     if errors:
@@ -1273,7 +1492,7 @@ def build_pipeline(
     write_json(
         PROCESSED_DIR / "vocabulary.json",
         {
-            "schema_version": 3,
+            "schema_version": 4,
             "generated_at": generated_at,
             "records": [record_export(record) for record in records],
         },

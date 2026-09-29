@@ -43,7 +43,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -61,6 +62,11 @@ button:disabled {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
+  outline: 3px solid rgba(217, 255, 112, 0.85);
+  outline-offset: 3px;
+}
+
+select:focus-visible {
   outline: 3px solid rgba(217, 255, 112, 0.85);
   outline-offset: 3px;
 }
@@ -296,7 +302,7 @@ main {
 
 .study-mode-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-bottom: 18px;
 }
@@ -315,6 +321,12 @@ main {
   background:
     radial-gradient(circle at 92% 12%, rgba(97, 207, 255, 0.17), transparent 12rem),
     linear-gradient(145deg, #172940, #172239 74%);
+}
+
+.study-mode-card.is-n1 {
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 200, 107, 0.17), transparent 12rem),
+    linear-gradient(145deg, #2b2636, #172239 74%);
 }
 
 .study-mode-card h2 {
@@ -1435,6 +1447,130 @@ main {
   font-size: 18px;
 }
 
+.wordbook-panel {
+  padding: 24px;
+}
+
+.wordbook-toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) minmax(150px, 0.7fr) minmax(150px, 0.7fr) auto;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.wordbook-toolbar label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.wordbook-toolbar input[type="search"],
+.wordbook-toolbar select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: rgba(8, 15, 29, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+}
+
+.wordbook-toolbar select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 18px, calc(100% - 10px) 18px;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+.meaning-switch {
+  display: flex !important;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px !important;
+  padding: 0 12px;
+  color: var(--ink) !important;
+  background: rgba(8, 15, 29, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  white-space: nowrap;
+}
+
+.meaning-switch input {
+  accent-color: var(--accent);
+}
+
+.wordbook-list {
+  display: grid;
+  gap: 8px;
+}
+
+.wordbook-row {
+  display: grid;
+  grid-template-columns: minmax(210px, 1.1fr) minmax(140px, 0.8fr) minmax(190px, 1fr) 90px auto;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.wordbook-expression {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.wordbook-expression b {
+  overflow-wrap: anywhere;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 20px;
+}
+
+.wordbook-reading,
+.wordbook-meaning {
+  color: #d7e0f2;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.wordbook-meaning.is-hidden {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.wordbook-progress b,
+.wordbook-progress small {
+  display: block;
+}
+
+.wordbook-progress b {
+  font-size: 13px;
+}
+
+.wordbook-progress small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.wordbook-review-toggle.is-active {
+  color: var(--warning);
+  border-color: rgba(255, 200, 107, 0.28);
+  background: rgba(255, 200, 107, 0.08);
+}
+
+.wordbook-more {
+  display: flex;
+  width: min(280px, 100%);
+  margin: 18px auto 0;
+}
+
 .boss-stage {
   position: relative;
   min-height: 500px;
@@ -1639,7 +1775,7 @@ main {
     bottom: 0;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding: 6px max(12px, env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom))
       max(12px, env(safe-area-inset-left));
     background: rgba(10, 16, 32, 0.94);
@@ -1679,6 +1815,18 @@ main {
   .rail-card {
     min-height: 150px;
   }
+
+  .wordbook-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wordbook-row {
+    grid-template-columns: minmax(180px, 1fr) minmax(130px, 0.7fr) minmax(170px, 1fr) auto;
+  }
+
+  .wordbook-progress {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1708,6 +1856,46 @@ main {
 
   .study-mode-card {
     min-height: auto;
+  }
+
+  .mobile-nav .nav-item {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .mobile-nav .nav-item > span:first-child {
+    font-size: 15px;
+  }
+
+  .wordbook-panel {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .wordbook-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .wordbook-row {
+    grid-template-columns: 1fr auto;
+    gap: 9px;
+  }
+
+  .wordbook-expression,
+  .wordbook-reading,
+  .wordbook-meaning {
+    grid-column: 1;
+  }
+
+  .wordbook-reading,
+  .wordbook-meaning {
+    padding-left: 2px;
+  }
+
+  .wordbook-review-toggle {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    align-self: center;
   }
 
   .mission-panel {

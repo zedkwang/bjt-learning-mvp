@@ -1,7 +1,7 @@
 /* 생성 파일: scripts/build_database.py로 다시 만드세요. */
 window.BJT_CATALOG = Object.freeze({
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T01:42:19Z",
+  "generatedAt": "2026-09-29T06:14:20Z",
   "quizPolicy": {
     "meaningVisibility": "after_answer_only",
     "requiresMeaningKo": true,
@@ -30,6 +30,7 @@ window.BJT_CATALOG = Object.freeze({
         "approval",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -59,6 +60,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "compound",
       "learning_priority": 78.0,
@@ -88,6 +90,7 @@ window.BJT_CATALOG = Object.freeze({
         "schedule",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 70.0,
@@ -117,6 +120,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 65.0,
@@ -146,6 +150,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 65.0,
@@ -175,6 +180,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -204,6 +210,7 @@ window.BJT_CATALOG = Object.freeze({
         "approval",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -234,6 +241,7 @@ window.BJT_CATALOG = Object.freeze({
         "accounting",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -263,6 +271,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -292,6 +301,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -321,6 +331,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -350,6 +361,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -379,6 +391,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -408,6 +421,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 85.0,
@@ -438,6 +452,7 @@ window.BJT_CATALOG = Object.freeze({
         "approval",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -467,6 +482,7 @@ window.BJT_CATALOG = Object.freeze({
         "approval",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -496,6 +512,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 65.0,
@@ -525,6 +542,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -554,6 +572,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "approval"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 77.0,
@@ -584,6 +603,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 83.0,
@@ -613,6 +633,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 87.0,
@@ -643,6 +664,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 67.0,
@@ -672,6 +694,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 79.0,
@@ -702,6 +725,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 87.0,
@@ -732,6 +756,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 83.0,
@@ -761,6 +786,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 87.0,
@@ -792,6 +818,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 87.0,
@@ -822,6 +849,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 87.0,
@@ -853,6 +881,7 @@ window.BJT_CATALOG = Object.freeze({
         "report",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 95.0,
@@ -883,6 +912,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 67.0,
@@ -912,6 +942,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "compound",
       "learning_priority": 71.0,
@@ -941,6 +972,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 60.0,
@@ -970,6 +1002,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 70.0,
@@ -999,6 +1032,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 73.0,
@@ -1028,6 +1062,7 @@ window.BJT_CATALOG = Object.freeze({
         "report",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "compound",
       "learning_priority": 65.0,
@@ -1058,6 +1093,7 @@ window.BJT_CATALOG = Object.freeze({
         "schedule",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "compound",
       "learning_priority": 78.0,
@@ -1087,6 +1123,7 @@ window.BJT_CATALOG = Object.freeze({
         "schedule",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "kunyomi",
       "learning_priority": 78.0,
@@ -1116,6 +1153,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "onyomi",
       "learning_priority": 60.0,
@@ -1146,11 +1184,13 @@ window.BJT_CATALOG = Object.freeze({
         "transaction",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "sentence",
       "reading_type": "sentence",
       "learning_priority": 71.0,
       "sources": [
-        "manual_demo_seed"
+        "manual_demo_seed",
+        "claude_bjt"
       ],
       "type": "sentence",
       "word_links": [
@@ -1187,6 +1227,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "sentence",
       "reading_type": "sentence",
       "learning_priority": 71.0,
@@ -1240,6 +1281,7 @@ window.BJT_CATALOG = Object.freeze({
         "schedule",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "sentence",
       "reading_type": "sentence",
       "learning_priority": 76.0,
@@ -1281,6 +1323,37 @@ window.BJT_CATALOG = Object.freeze({
       ]
     },
     {
+      "id": "auto-9f063f42eff4a7",
+      "display": "愛想",
+      "reading": "あいそ",
+      "meaning": "붙임성(애상)",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "愛想",
+      "primary_reading": "あいそ",
+      "accepted_readings": [
+        "あいそ",
+        "あいそう"
+      ],
+      "meaning_ko": "붙임성(애상)",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
+      ]
+    },
+    {
       "id": "auto-741ebffa312de3",
       "display": "暗殺",
       "reading": "あんさつ",
@@ -1297,6 +1370,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1323,6 +1397,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1349,6 +1424,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1375,6 +1451,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1395,11 +1472,15 @@ window.BJT_CATALOG = Object.freeze({
       "expression": "依存",
       "primary_reading": "いそん",
       "accepted_readings": [
-        "いそん"
+        "いそん",
+        "いぞん"
       ],
       "meaning_ko": "의존",
       "categories": [
         "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
       ],
       "item_type": "word",
       "reading_type": "unknown",
@@ -1407,7 +1488,8 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -1428,6 +1510,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -1454,6 +1537,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1484,6 +1568,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -1514,6 +1599,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -1540,6 +1626,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1570,6 +1657,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1600,6 +1688,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -1630,6 +1719,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 62.0,
@@ -1656,6 +1746,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1686,6 +1777,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -1716,6 +1808,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -1746,6 +1839,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -1772,6 +1866,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1798,6 +1893,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1824,6 +1920,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1850,6 +1947,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1876,6 +1974,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1902,6 +2001,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1928,6 +2028,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1954,6 +2055,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -1980,6 +2082,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2006,6 +2109,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2032,6 +2136,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2058,6 +2163,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2084,6 +2190,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2110,6 +2217,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2136,6 +2244,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2162,6 +2271,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2188,6 +2298,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2214,6 +2325,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2240,6 +2352,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2266,6 +2379,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2292,6 +2406,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2318,6 +2433,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2325,6 +2441,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-d57df8d996d971",
+      "display": "云々",
+      "reading": "うんぬん",
+      "meaning": "운운",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "云々",
+      "primary_reading": "うんぬん",
+      "accepted_readings": [
+        "うんぬん"
+      ],
+      "meaning_ko": "운운",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -2348,6 +2493,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -2378,6 +2524,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -2408,6 +2555,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "finance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -2437,6 +2585,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "inventory"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -2463,6 +2612,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2493,6 +2643,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -2523,6 +2674,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -2549,6 +2701,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2575,6 +2728,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2601,6 +2755,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2627,6 +2782,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2653,6 +2809,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2679,6 +2836,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2705,6 +2863,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2732,6 +2891,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "inventory"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -2758,6 +2918,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2784,6 +2945,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2811,6 +2973,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -2838,6 +3001,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -2864,6 +3028,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2890,6 +3055,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2916,6 +3082,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2942,6 +3109,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2968,6 +3136,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -2994,6 +3163,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3020,6 +3190,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3047,6 +3218,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3073,6 +3245,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3099,6 +3272,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3126,6 +3300,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3152,6 +3327,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3178,6 +3354,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3205,6 +3382,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3231,6 +3409,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3257,6 +3436,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3283,6 +3463,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3310,6 +3491,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3336,6 +3518,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3362,6 +3545,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3392,6 +3576,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3418,6 +3603,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3444,6 +3630,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3470,6 +3657,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3496,6 +3684,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3522,6 +3711,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3548,6 +3738,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3574,6 +3765,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3604,6 +3796,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3634,6 +3827,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3664,6 +3858,7 @@ window.BJT_CATALOG = Object.freeze({
         "policy",
         "contract"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3694,6 +3889,7 @@ window.BJT_CATALOG = Object.freeze({
         "policy",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -3724,6 +3920,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3750,6 +3947,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3777,6 +3975,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -3803,6 +4002,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3829,6 +4029,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3856,6 +4057,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -3882,6 +4084,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3889,6 +4092,36 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-62f8509c36797b",
+      "display": "概略",
+      "reading": "がいりゃく",
+      "meaning": "개략",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "概略",
+      "primary_reading": "がいりゃく",
+      "accepted_readings": [
+        "がいりゃく"
+      ],
+      "meaning_ko": "개략",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -3908,6 +4141,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3934,6 +4168,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -3964,6 +4199,7 @@ window.BJT_CATALOG = Object.freeze({
         "compliance",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -3990,13 +4226,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -4016,6 +4256,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4042,6 +4283,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4069,6 +4311,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -4099,6 +4342,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -4125,6 +4369,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4151,6 +4396,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4177,6 +4423,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4203,6 +4450,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4233,6 +4481,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -4263,6 +4512,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -4289,6 +4539,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4319,6 +4570,7 @@ window.BJT_CATALOG = Object.freeze({
         "policy",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4345,6 +4597,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4371,6 +4624,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4401,6 +4655,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -4427,6 +4682,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4453,6 +4709,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4479,13 +4736,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -4505,6 +4766,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4531,6 +4793,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4557,6 +4820,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4583,6 +4847,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4609,6 +4874,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4635,6 +4901,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4661,13 +4928,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -4687,13 +4958,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -4717,6 +4992,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "logistics"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -4743,6 +5019,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4769,6 +5046,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4795,6 +5073,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4821,6 +5100,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4847,6 +5127,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4873,6 +5154,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4903,6 +5185,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "product"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -4929,6 +5212,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4955,6 +5239,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -4981,6 +5266,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5008,6 +5294,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5034,6 +5321,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5041,6 +5329,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-f5c16d2cae5984",
+      "display": "寄与",
+      "reading": "きよ",
+      "meaning": "기여",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "寄与",
+      "primary_reading": "きよ",
+      "accepted_readings": [
+        "きよ"
+      ],
+      "meaning_ko": "기여",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -5060,6 +5377,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5086,6 +5404,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5113,6 +5432,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -5139,6 +5459,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5165,6 +5486,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5191,6 +5513,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5221,6 +5544,7 @@ window.BJT_CATALOG = Object.freeze({
         "compliance",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5248,6 +5572,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5274,6 +5599,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5301,6 +5627,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5331,6 +5658,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5357,6 +5685,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5383,6 +5712,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5409,6 +5739,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5435,6 +5766,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5461,6 +5793,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5487,6 +5820,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5513,6 +5847,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5539,6 +5874,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5569,6 +5905,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5599,6 +5936,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5625,6 +5963,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5655,6 +5994,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -5681,6 +6021,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5707,6 +6048,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5733,6 +6075,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5759,6 +6102,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5785,6 +6129,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5811,6 +6156,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5838,6 +6184,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 74.0,
@@ -5864,6 +6211,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5890,6 +6238,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5916,6 +6265,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5942,6 +6292,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5968,6 +6319,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -5994,13 +6346,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -6020,6 +6376,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6046,6 +6403,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6072,6 +6430,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6098,6 +6457,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6129,6 +6489,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6159,6 +6520,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -6189,6 +6551,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -6215,6 +6578,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6241,6 +6605,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6267,6 +6632,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6293,6 +6659,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6319,6 +6686,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6345,6 +6713,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6372,6 +6741,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -6398,6 +6768,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6424,6 +6795,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6453,6 +6825,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -6483,6 +6856,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6513,6 +6887,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6539,6 +6914,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6565,6 +6941,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6595,6 +6972,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6621,13 +6999,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -6647,6 +7029,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6673,6 +7056,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6699,6 +7083,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6725,6 +7110,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6752,6 +7138,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6778,6 +7165,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6804,6 +7192,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6830,6 +7219,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6856,6 +7246,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6883,6 +7274,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -6909,6 +7301,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6935,6 +7328,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6961,6 +7355,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6987,6 +7382,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -6994,6 +7390,71 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-74a6f318b31f81",
+      "display": "掲載",
+      "reading": "けいさい",
+      "meaning": "게재",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "掲載",
+      "primary_reading": "けいさい",
+      "accepted_readings": [
+        "けいさい"
+      ],
+      "meaning_ko": "게재",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
+      ]
+    },
+    {
+      "id": "auto-f85a44c93720e7",
+      "display": "経緯",
+      "reading": "いきさつ",
+      "meaning": "경위",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [
+        "経過 けいか",
+        "業務 ぎょうむ"
+      ],
+      "expression": "経緯",
+      "primary_reading": "いきさつ",
+      "accepted_readings": [
+        "いきさつ",
+        "けいい"
+      ],
+      "meaning_ko": "경위",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -7016,6 +7477,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -7046,6 +7508,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7076,6 +7539,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -7102,6 +7566,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7128,6 +7593,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7158,6 +7624,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -7188,6 +7655,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7215,6 +7683,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 82.0,
@@ -7245,6 +7714,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7275,6 +7745,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7301,6 +7772,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7327,6 +7799,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7353,6 +7826,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7379,6 +7853,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7405,6 +7880,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7431,6 +7907,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7457,6 +7934,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7483,6 +7961,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7509,6 +7988,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7535,6 +8015,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 66.0,
@@ -7561,6 +8042,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7587,6 +8069,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7617,6 +8100,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7643,6 +8127,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7670,6 +8155,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7696,6 +8182,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7722,6 +8209,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7748,6 +8236,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7774,6 +8263,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7800,6 +8290,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7827,6 +8318,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7853,6 +8345,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7879,6 +8372,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7905,6 +8399,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -7935,6 +8430,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -7942,6 +8438,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-1cd306b5e922f5",
+      "display": "玄人",
+      "reading": "くろうと",
+      "meaning": "전문가(현인)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "玄人",
+      "primary_reading": "くろうと",
+      "accepted_readings": [
+        "くろうと"
+      ],
+      "meaning_ko": "전문가(현인)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 61.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -7962,6 +8487,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -7988,6 +8514,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8014,6 +8541,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8040,6 +8568,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8067,6 +8596,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -8093,6 +8623,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8119,6 +8650,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8145,6 +8677,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8171,6 +8704,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8197,6 +8731,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8223,6 +8758,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8249,6 +8785,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8275,6 +8812,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8305,6 +8843,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -8331,6 +8870,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8357,6 +8897,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 66.0,
@@ -8383,6 +8924,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8409,6 +8951,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8435,6 +8978,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8462,6 +9006,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -8488,6 +9033,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8519,6 +9065,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -8545,6 +9092,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8575,6 +9123,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -8601,6 +9150,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8627,6 +9177,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8653,6 +9204,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8679,6 +9231,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8705,6 +9258,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8732,6 +9286,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -8758,6 +9313,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8785,6 +9341,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -8811,6 +9368,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8837,6 +9395,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8863,6 +9422,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8889,6 +9449,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8915,6 +9476,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8941,6 +9503,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8967,6 +9530,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -8994,6 +9558,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9020,6 +9585,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9046,6 +9612,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9073,6 +9640,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9099,6 +9667,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9125,6 +9694,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9151,6 +9721,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9178,6 +9749,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9205,6 +9777,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9231,6 +9804,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9257,6 +9831,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9283,6 +9858,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9309,6 +9885,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9339,6 +9916,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9366,6 +9944,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -9392,6 +9971,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9418,6 +9998,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9445,6 +10026,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9452,6 +10034,36 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-b92407484ba195",
+      "display": "合併",
+      "reading": "がっぺい",
+      "meaning": "합병",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "合併",
+      "primary_reading": "がっぺい",
+      "accepted_readings": [
+        "がっぺい"
+      ],
+      "meaning_ko": "합병",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -9471,6 +10083,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9497,6 +10110,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9523,6 +10137,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9549,6 +10164,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9575,6 +10191,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9601,6 +10218,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9627,6 +10245,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9653,6 +10272,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9679,6 +10299,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9705,6 +10326,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9731,6 +10353,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9758,6 +10381,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9784,6 +10408,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9810,6 +10435,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9836,6 +10462,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9862,6 +10489,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9888,6 +10516,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9914,6 +10543,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9940,6 +10570,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -9967,6 +10598,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -9994,6 +10626,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10020,6 +10653,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10046,6 +10680,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10073,6 +10708,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10103,6 +10739,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10129,6 +10766,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10155,6 +10793,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10181,6 +10820,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10207,6 +10847,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10234,6 +10875,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -10265,6 +10907,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -10291,6 +10934,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10317,6 +10961,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10344,6 +10989,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10371,6 +11017,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10397,6 +11044,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10423,6 +11071,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10449,6 +11098,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10475,6 +11125,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10501,6 +11152,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10527,6 +11179,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10553,6 +11206,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10580,6 +11234,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -10600,11 +11255,16 @@ window.BJT_CATALOG = Object.freeze({
       "expression": "施行",
       "primary_reading": "しぎょう",
       "accepted_readings": [
-        "しぎょう"
+        "しぎょう",
+        "しこう",
+        "せこう"
       ],
       "meaning_ko": "시행",
       "categories": [
         "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
       ],
       "item_type": "word",
       "reading_type": "unknown",
@@ -10612,7 +11272,8 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -10632,6 +11293,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10659,6 +11321,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10685,6 +11348,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10711,6 +11375,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10737,6 +11402,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10763,6 +11429,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10789,6 +11456,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10815,6 +11483,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10842,6 +11511,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10869,6 +11539,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10895,6 +11566,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10922,6 +11594,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -10948,6 +11621,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -10975,6 +11649,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -11001,6 +11676,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11027,6 +11703,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11053,6 +11730,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11079,6 +11757,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11105,6 +11784,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11131,6 +11811,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11157,6 +11838,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11183,6 +11865,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11213,6 +11896,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "hr"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -11233,11 +11917,15 @@ window.BJT_CATALOG = Object.freeze({
       "expression": "執着",
       "primary_reading": "しゅうじゃく",
       "accepted_readings": [
-        "しゅうじゃく"
+        "しゅうじゃく",
+        "しゅうちゃく"
       ],
       "meaning_ko": "집착",
       "categories": [
         "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
       ],
       "item_type": "word",
       "reading_type": "unknown",
@@ -11245,7 +11933,8 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -11266,6 +11955,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -11292,6 +11982,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11318,6 +12009,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11344,6 +12036,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11370,6 +12063,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11397,6 +12091,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -11423,6 +12118,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11449,6 +12145,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11476,6 +12173,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -11502,6 +12200,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11528,6 +12227,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11554,6 +12254,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11580,6 +12281,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11606,6 +12308,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11632,6 +12335,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11658,6 +12362,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11684,6 +12389,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11714,6 +12420,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -11740,6 +12447,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11766,6 +12474,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11793,6 +12502,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -11819,6 +12529,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11845,13 +12556,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -11871,6 +12586,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11898,6 +12614,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -11924,6 +12641,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11950,6 +12668,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -11976,6 +12695,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12002,6 +12722,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12028,6 +12749,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12054,6 +12776,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12080,6 +12803,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12106,6 +12830,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12126,11 +12851,15 @@ window.BJT_CATALOG = Object.freeze({
       "expression": "重複",
       "primary_reading": "じゅうふく",
       "accepted_readings": [
-        "じゅうふく"
+        "じゅうふく",
+        "ちょうふく"
       ],
       "meaning_ko": "중복",
       "categories": [
         "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
       ],
       "item_type": "word",
       "reading_type": "unknown",
@@ -12138,7 +12867,8 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -12158,6 +12888,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12184,6 +12915,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12210,6 +12942,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12236,6 +12969,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12263,6 +12997,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -12289,6 +13024,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12315,6 +13051,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12341,6 +13078,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12367,6 +13105,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12393,6 +13132,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12419,6 +13159,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12445,6 +13186,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12471,6 +13213,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12497,6 +13240,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12523,6 +13267,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12550,6 +13295,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -12576,6 +13322,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12602,6 +13349,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12628,6 +13376,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12654,6 +13403,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12680,6 +13430,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12706,6 +13457,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12732,6 +13484,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12758,6 +13511,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12784,6 +13538,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12811,6 +13566,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -12837,6 +13593,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12863,6 +13620,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12893,6 +13651,7 @@ window.BJT_CATALOG = Object.freeze({
         "approval",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -12919,6 +13678,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12945,6 +13705,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12971,6 +13732,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -12997,6 +13759,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13023,6 +13786,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13049,6 +13813,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13076,6 +13841,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -13102,6 +13868,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13128,6 +13895,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13154,6 +13922,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13180,6 +13949,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13206,6 +13976,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13232,6 +14003,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13239,6 +14011,36 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-e3ea2fb84564a0",
+      "display": "情緒",
+      "reading": "じょうしょ",
+      "meaning": "정서",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "情緒",
+      "primary_reading": "じょうしょ",
+      "accepted_readings": [
+        "じょうしょ",
+        "じょうちょ"
+      ],
+      "meaning_ko": "정서",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -13258,6 +14060,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13284,6 +14087,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13310,6 +14114,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13336,6 +14141,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13363,6 +14169,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -13389,6 +14196,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13415,6 +14223,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13441,6 +14250,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13467,6 +14277,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13493,6 +14304,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13519,6 +14331,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13545,6 +14358,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13571,6 +14385,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13597,6 +14412,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13623,6 +14439,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13650,6 +14467,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -13676,6 +14494,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13702,6 +14521,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13728,6 +14548,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13754,6 +14575,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13780,6 +14602,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13806,6 +14629,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13833,6 +14657,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -13859,6 +14684,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13885,6 +14711,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13911,6 +14738,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13937,6 +14765,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13963,6 +14792,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -13989,6 +14819,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14015,6 +14846,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14041,6 +14873,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14067,6 +14900,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14093,6 +14927,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14119,6 +14954,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14145,6 +14981,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14171,6 +15008,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14197,6 +15035,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14223,6 +15062,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14249,6 +15089,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14275,6 +15116,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14301,6 +15143,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14327,6 +15170,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14353,6 +15197,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14373,11 +15218,15 @@ window.BJT_CATALOG = Object.freeze({
       "expression": "世論",
       "primary_reading": "せろん",
       "accepted_readings": [
-        "せろん"
+        "せろん",
+        "よろん"
       ],
       "meaning_ko": "여론",
       "categories": [
         "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
       ],
       "item_type": "word",
       "reading_type": "unknown",
@@ -14385,7 +15234,8 @@ window.BJT_CATALOG = Object.freeze({
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -14405,6 +15255,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14431,6 +15282,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14461,6 +15313,7 @@ window.BJT_CATALOG = Object.freeze({
         "policy",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -14487,6 +15340,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14517,6 +15371,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "policy"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -14543,6 +15398,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14569,6 +15425,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14595,6 +15452,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14621,6 +15479,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14647,6 +15506,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14673,6 +15533,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14700,6 +15561,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -14726,6 +15588,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14752,6 +15615,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14778,6 +15642,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14805,6 +15670,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -14832,6 +15698,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -14858,6 +15725,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14884,6 +15752,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14911,6 +15780,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -14937,6 +15807,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14963,6 +15834,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -14989,6 +15861,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15015,6 +15888,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15042,6 +15916,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -15068,6 +15943,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15094,6 +15970,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15101,6 +15978,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-3b04385b8974b8",
+      "display": "声明",
+      "reading": "せいめい",
+      "meaning": "성명",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "声明",
+      "primary_reading": "せいめい",
+      "accepted_readings": [
+        "せいめい"
+      ],
+      "meaning_ko": "성명",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -15121,6 +16027,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -15151,6 +16058,7 @@ window.BJT_CATALOG = Object.freeze({
         "compliance",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -15177,6 +16085,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15203,6 +16112,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15229,6 +16139,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15255,6 +16166,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15281,6 +16193,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15307,6 +16220,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15333,6 +16247,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15359,6 +16274,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15385,6 +16301,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15411,6 +16328,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15437,6 +16355,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15463,6 +16382,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15489,6 +16409,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15519,6 +16440,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -15545,6 +16467,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15571,6 +16494,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15597,6 +16521,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15623,13 +16548,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -15649,6 +16578,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15675,6 +16605,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15702,6 +16633,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -15728,6 +16660,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15754,6 +16687,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15781,6 +16715,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -15807,6 +16742,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15836,6 +16772,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -15862,6 +16799,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15892,13 +16830,17 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "policy"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -15918,6 +16860,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15944,6 +16887,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15970,6 +16914,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -15996,6 +16941,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16022,6 +16968,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16048,6 +16995,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16078,6 +17026,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16105,6 +17054,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -16136,6 +17086,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16167,6 +17118,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16197,6 +17149,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16223,6 +17176,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16249,6 +17203,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16275,6 +17230,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16304,6 +17260,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16330,6 +17287,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16360,6 +17318,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -16386,6 +17345,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16413,6 +17373,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -16439,6 +17400,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16465,6 +17427,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16491,6 +17454,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16517,6 +17481,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16543,6 +17508,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16569,6 +17535,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16599,6 +17566,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -16626,6 +17594,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "report"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16652,6 +17621,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16678,6 +17648,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16704,6 +17675,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16730,6 +17702,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16760,6 +17733,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -16786,6 +17760,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16812,6 +17787,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16838,6 +17814,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16864,6 +17841,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16890,6 +17868,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16916,6 +17895,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16942,6 +17922,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -16969,6 +17950,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -16995,6 +17977,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17021,6 +18004,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17050,6 +18034,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -17076,6 +18061,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17102,6 +18088,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17128,6 +18115,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17154,6 +18142,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17180,6 +18169,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17206,6 +18196,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17232,6 +18223,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17258,6 +18250,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17288,6 +18281,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17314,6 +18308,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17340,6 +18335,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17366,6 +18362,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17392,6 +18389,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17418,6 +18416,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17444,6 +18443,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17470,6 +18470,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17496,6 +18497,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17522,6 +18524,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17548,6 +18551,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17578,6 +18582,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "finance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -17604,6 +18609,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17630,6 +18636,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17656,6 +18663,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17682,6 +18690,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17708,6 +18717,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17734,6 +18744,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17760,6 +18771,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17767,6 +18779,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-9e8a2e08838211",
+      "display": "停滞",
+      "reading": "ていたい",
+      "meaning": "정체",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "停滞",
+      "primary_reading": "ていたい",
+      "accepted_readings": [
+        "ていたい"
+      ],
+      "meaning_ko": "정체",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -17787,6 +18828,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -17813,6 +18855,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17839,6 +18882,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17869,6 +18913,7 @@ window.BJT_CATALOG = Object.freeze({
         "service",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -17899,6 +18944,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -17929,6 +18975,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -17955,6 +19002,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -17981,6 +19029,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18007,6 +19056,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18033,6 +19083,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18060,6 +19111,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18086,6 +19138,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18112,6 +19165,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18138,6 +19192,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18164,6 +19219,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18190,6 +19246,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18220,6 +19277,7 @@ window.BJT_CATALOG = Object.freeze({
         "hr",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -18250,6 +19308,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18280,6 +19339,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18306,6 +19366,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18332,6 +19393,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18358,6 +19420,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18384,6 +19447,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18410,6 +19474,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18436,6 +19501,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18463,6 +19529,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -18490,6 +19557,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18516,6 +19584,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18543,6 +19612,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18569,6 +19639,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18599,6 +19670,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -18625,6 +19697,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18652,6 +19725,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18682,6 +19756,7 @@ window.BJT_CATALOG = Object.freeze({
         "compliance",
         "organization"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18708,6 +19783,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18734,6 +19810,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18765,6 +19842,7 @@ window.BJT_CATALOG = Object.freeze({
         "decision",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -18792,6 +19870,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -18818,6 +19897,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18844,6 +19924,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18870,6 +19951,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18896,6 +19978,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18922,6 +20005,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -18948,13 +20032,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -18974,6 +20062,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19005,6 +20094,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -19032,6 +20122,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -19058,6 +20149,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19084,6 +20176,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19110,6 +20203,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19136,6 +20230,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19163,6 +20258,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -19189,6 +20285,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19215,6 +20312,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19246,6 +20344,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -19272,6 +20371,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19298,6 +20398,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19324,6 +20425,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19351,6 +20453,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -19377,6 +20480,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19384,6 +20488,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-d1ffef38b686ad",
+      "display": "突如",
+      "reading": "とつじょ",
+      "meaning": "돌연(돌여)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "突如",
+      "primary_reading": "とつじょ",
+      "accepted_readings": [
+        "とつじょ"
+      ],
+      "meaning_ko": "돌연(돌여)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -19403,6 +20536,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19429,6 +20563,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19455,6 +20590,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19481,6 +20617,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19507,6 +20644,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19533,6 +20671,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19559,6 +20698,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19585,6 +20725,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19611,6 +20752,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19641,6 +20783,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -19667,6 +20810,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19693,6 +20837,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19719,6 +20864,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19745,6 +20891,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19771,6 +20918,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19797,6 +20945,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19823,6 +20972,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19849,6 +20999,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19875,6 +21026,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19901,6 +21053,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19927,6 +21080,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -19953,13 +21107,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -19979,6 +21137,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20005,6 +21164,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20031,6 +21191,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20057,6 +21218,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20087,6 +21249,7 @@ window.BJT_CATALOG = Object.freeze({
         "policy",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -20113,6 +21276,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20139,6 +21303,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20165,6 +21330,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20191,6 +21357,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20221,6 +21388,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "hr"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20251,6 +21419,7 @@ window.BJT_CATALOG = Object.freeze({
         "internal_process",
         "communication"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20281,6 +21450,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "finance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20311,6 +21481,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20337,6 +21508,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20363,6 +21535,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20389,6 +21562,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20415,6 +21589,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20441,6 +21616,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20467,6 +21643,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20493,6 +21670,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20500,6 +21678,36 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-92c45a56133cac",
+      "display": "発足",
+      "reading": "はっそく",
+      "meaning": "발족",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "発足",
+      "primary_reading": "はっそく",
+      "accepted_readings": [
+        "はっそく",
+        "ほっそく"
+      ],
+      "meaning_ko": "발족",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -20520,6 +21728,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20547,6 +21756,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -20573,6 +21783,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20599,6 +21810,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20625,6 +21837,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20651,6 +21864,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20677,6 +21891,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20703,13 +21918,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -20729,6 +21948,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20755,6 +21975,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20781,6 +22002,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20807,6 +22029,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20833,6 +22056,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20859,6 +22083,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20885,6 +22110,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20911,6 +22137,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20937,6 +22164,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20963,6 +22191,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -20989,6 +22218,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21015,6 +22245,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21041,6 +22272,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21067,6 +22299,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21093,6 +22326,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21119,6 +22353,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21145,6 +22380,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21172,6 +22408,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -21198,6 +22435,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21224,6 +22462,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21250,6 +22489,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21276,6 +22516,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21302,13 +22543,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -21328,6 +22573,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21354,6 +22600,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21380,6 +22627,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21406,6 +22654,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21432,6 +22681,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21458,6 +22708,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21484,6 +22735,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21510,6 +22762,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21537,6 +22790,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -21563,6 +22817,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21589,6 +22844,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21616,6 +22872,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -21642,6 +22899,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21668,6 +22926,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21694,6 +22953,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21720,6 +22980,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21746,6 +23007,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21773,6 +23035,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -21799,6 +23062,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21825,6 +23089,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21851,6 +23116,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21877,6 +23143,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21903,6 +23170,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21929,6 +23197,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21955,6 +23224,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -21985,6 +23255,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "hr"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -22015,6 +23286,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -22042,6 +23314,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -22068,6 +23341,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22095,6 +23369,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -22121,6 +23396,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22147,13 +23423,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -22173,6 +23453,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22199,6 +23480,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22225,6 +23507,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22251,6 +23534,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22278,6 +23562,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -22305,6 +23590,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "inventory"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -22331,6 +23617,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22357,6 +23644,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22383,6 +23671,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22409,6 +23698,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22435,6 +23725,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22461,6 +23752,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22487,6 +23779,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22513,6 +23806,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22539,6 +23833,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22565,6 +23860,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22592,6 +23888,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -22618,6 +23915,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22644,6 +23942,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22670,6 +23969,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22696,6 +23996,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22722,6 +24023,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22748,6 +24050,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22774,6 +24077,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22800,6 +24104,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22826,6 +24131,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22852,6 +24158,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22878,6 +24185,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22908,6 +24216,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "customer_support"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -22934,13 +24243,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -22960,6 +24273,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -22986,6 +24300,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23012,6 +24327,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23038,6 +24354,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23064,6 +24381,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23090,6 +24408,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23116,6 +24435,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23142,6 +24462,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23168,6 +24489,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23194,6 +24516,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23221,6 +24544,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -23247,6 +24571,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23273,6 +24598,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23300,6 +24626,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -23326,6 +24653,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23352,6 +24680,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23378,6 +24707,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23405,6 +24735,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -23432,6 +24763,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "service"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -23458,6 +24790,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23484,6 +24817,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23510,6 +24844,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23537,6 +24872,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -23564,6 +24900,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -23591,6 +24928,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -23617,6 +24955,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23643,6 +24982,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23669,6 +25009,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23695,6 +25036,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23721,6 +25063,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23747,13 +25090,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -23773,6 +25120,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23799,6 +25147,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23825,6 +25174,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23851,6 +25201,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23877,6 +25228,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23903,6 +25255,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23930,6 +25283,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -23956,6 +25310,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -23982,6 +25337,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24008,6 +25364,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24034,6 +25391,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24060,6 +25418,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24086,6 +25445,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24112,6 +25472,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24138,6 +25499,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24164,6 +25526,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24190,6 +25553,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24216,6 +25580,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24242,6 +25607,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24268,6 +25634,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24294,6 +25661,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24320,6 +25688,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24346,6 +25715,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24372,6 +25742,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24398,6 +25769,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24424,6 +25796,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24450,6 +25823,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24476,6 +25850,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24502,6 +25877,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24528,6 +25904,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24554,13 +25931,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -24580,6 +25961,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24606,6 +25988,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24632,6 +26015,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24658,6 +26042,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24684,6 +26069,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24711,6 +26097,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 74.0,
@@ -24737,6 +26124,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24763,6 +26151,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24789,6 +26178,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24815,6 +26205,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24841,6 +26232,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24867,6 +26259,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24893,6 +26286,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24919,6 +26313,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24945,6 +26340,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24952,6 +26348,35 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "auto-e0c29ccbcc8554",
+      "display": "模索",
+      "reading": "もさく",
+      "meaning": "모색",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "模索",
+      "primary_reading": "もさく",
+      "accepted_readings": [
+        "もさく"
+      ],
+      "meaning_ko": "모색",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "OpenJLPT",
+        "JMdict",
+        "claude_bjt"
       ]
     },
     {
@@ -24971,6 +26396,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -24997,6 +26423,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25023,6 +26450,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25049,6 +26477,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25075,6 +26504,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25101,6 +26531,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25127,6 +26558,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25153,6 +26585,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25179,6 +26612,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25205,6 +26639,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25231,6 +26666,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25257,6 +26693,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25284,6 +26721,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -25310,6 +26748,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25336,6 +26775,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25362,6 +26802,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25388,6 +26829,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25414,6 +26856,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25441,13 +26884,17 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -25468,6 +26915,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -25494,6 +26942,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25520,6 +26969,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25546,6 +26996,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25572,6 +27023,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25598,6 +27050,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25628,6 +27081,7 @@ window.BJT_CATALOG = Object.freeze({
         "communication",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -25659,6 +27113,7 @@ window.BJT_CATALOG = Object.freeze({
         "customer_support",
         "product"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -25686,6 +27141,7 @@ window.BJT_CATALOG = Object.freeze({
         "product",
         "project_management"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -25712,13 +27168,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -25738,6 +27198,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25764,6 +27225,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25790,6 +27252,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25816,6 +27279,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25843,6 +27307,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -25870,6 +27335,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -25897,6 +27363,7 @@ window.BJT_CATALOG = Object.freeze({
         "finance",
         "accounting"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -25923,6 +27390,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25949,6 +27417,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -25975,6 +27444,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26001,13 +27471,17 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [
+        "general_n1"
+      ],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
       "sources": [
         "OpenJLPT",
         "JMdict",
-        "ai_gloss_review"
+        "ai_gloss_review",
+        "claude_bjt"
       ]
     },
     {
@@ -26028,6 +27502,7 @@ window.BJT_CATALOG = Object.freeze({
         "contract",
         "compliance"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -26054,6 +27529,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26080,6 +27556,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26107,6 +27584,7 @@ window.BJT_CATALOG = Object.freeze({
         "sales",
         "transaction"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -26134,6 +27612,7 @@ window.BJT_CATALOG = Object.freeze({
         "logistics",
         "inventory"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -26160,6 +27639,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26186,6 +27666,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26212,6 +27693,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26238,6 +27720,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26264,6 +27747,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26290,6 +27774,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26316,6 +27801,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26342,6 +27828,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26368,6 +27855,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26394,6 +27882,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26420,6 +27909,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26446,6 +27936,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26472,6 +27963,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26499,6 +27991,7 @@ window.BJT_CATALOG = Object.freeze({
         "organization",
         "internal_process"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -26525,6 +28018,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26551,6 +28045,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26577,6 +28072,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26603,6 +28099,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26630,6 +28127,7 @@ window.BJT_CATALOG = Object.freeze({
         "meeting",
         "decision"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 77.0,
@@ -26656,6 +28154,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26682,6 +28181,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26709,6 +28209,7 @@ window.BJT_CATALOG = Object.freeze({
         "project_management",
         "schedule"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 85.0,
@@ -26735,6 +28236,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26761,6 +28263,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26787,6 +28290,7 @@ window.BJT_CATALOG = Object.freeze({
       "categories": [
         "general_vocabulary"
       ],
+      "study_tracks": [],
       "item_type": "word",
       "reading_type": "unknown",
       "learning_priority": 69.0,
@@ -26794,6 +28298,7883 @@ window.BJT_CATALOG = Object.freeze({
         "OpenJLPT",
         "JMdict",
         "ai_gloss_review"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-001",
+      "display": "顕著",
+      "reading": "けんちょ",
+      "meaning": "현저",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "顕著",
+      "primary_reading": "けんちょ",
+      "accepted_readings": [
+        "けんちょ"
+      ],
+      "meaning_ko": "현저",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-009",
+      "display": "貢献",
+      "reading": "こうけん",
+      "meaning": "공헌",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "貢献",
+      "primary_reading": "こうけん",
+      "accepted_readings": [
+        "こうけん"
+      ],
+      "meaning_ko": "공헌",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-010",
+      "display": "妥当",
+      "reading": "だとう",
+      "meaning": "타당",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "妥当",
+      "primary_reading": "だとう",
+      "accepted_readings": [
+        "だとう"
+      ],
+      "meaning_ko": "타당",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-016",
+      "display": "推移",
+      "reading": "すいい",
+      "meaning": "추이",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "推移",
+      "primary_reading": "すいい",
+      "accepted_readings": [
+        "すいい"
+      ],
+      "meaning_ko": "추이",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-017",
+      "display": "示唆",
+      "reading": "しさ",
+      "meaning": "시사",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "示唆",
+      "primary_reading": "しさ",
+      "accepted_readings": [
+        "しさ"
+      ],
+      "meaning_ko": "시사",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-024",
+      "display": "遂行",
+      "reading": "すいこう",
+      "meaning": "수행",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遂行",
+      "primary_reading": "すいこう",
+      "accepted_readings": [
+        "すいこう"
+      ],
+      "meaning_ko": "수행",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-025",
+      "display": "逐一",
+      "reading": "ちくいち",
+      "meaning": "일일이(축일)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "逐一",
+      "primary_reading": "ちくいち",
+      "accepted_readings": [
+        "ちくいち"
+      ],
+      "meaning_ko": "일일이(축일)",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 82.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-026",
+      "display": "一環",
+      "reading": "いっかん",
+      "meaning": "일환",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "一環",
+      "primary_reading": "いっかん",
+      "accepted_readings": [
+        "いっかん"
+      ],
+      "meaning_ko": "일환",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-028",
+      "display": "抜本的",
+      "reading": "ばっぽんてき",
+      "meaning": "발본적",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "抜本的",
+      "primary_reading": "ばっぽんてき",
+      "accepted_readings": [
+        "ばっぽんてき"
+      ],
+      "meaning_ko": "발본적",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-029",
+      "display": "画期的",
+      "reading": "かっきてき",
+      "meaning": "획기적",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "画期的",
+      "primary_reading": "かっきてき",
+      "accepted_readings": [
+        "かっきてき"
+      ],
+      "meaning_ko": "획기적",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-035",
+      "display": "利益",
+      "reading": "りえき",
+      "meaning": "이익",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "利益",
+      "primary_reading": "りえき",
+      "accepted_readings": [
+        "りえき"
+      ],
+      "meaning_ko": "이익",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-037",
+      "display": "老舗",
+      "reading": "しにせ",
+      "meaning": "노포(전통 있는 가게)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "老舗",
+      "primary_reading": "しにせ",
+      "accepted_readings": [
+        "しにせ"
+      ],
+      "meaning_ko": "노포(전통 있는 가게)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 85.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-040",
+      "display": "僭越",
+      "reading": "せんえつ",
+      "meaning": "외람됨(참월)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "僭越",
+      "primary_reading": "せんえつ",
+      "accepted_readings": [
+        "せんえつ"
+      ],
+      "meaning_ko": "외람됨(참월)",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 78.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-041",
+      "display": "忌憚",
+      "reading": "きたん",
+      "meaning": "기탄",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "忌憚",
+      "primary_reading": "きたん",
+      "accepted_readings": [
+        "きたん"
+      ],
+      "meaning_ko": "기탄",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 78.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-047",
+      "display": "踏襲",
+      "reading": "とうしゅう",
+      "meaning": "답습",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "踏襲",
+      "primary_reading": "とうしゅう",
+      "accepted_readings": [
+        "とうしゅう"
+      ],
+      "meaning_ko": "답습",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-048",
+      "display": "駆使",
+      "reading": "くし",
+      "meaning": "구사",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "駆使",
+      "primary_reading": "くし",
+      "accepted_readings": [
+        "くし"
+      ],
+      "meaning_ko": "구사",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-049",
+      "display": "潜在",
+      "reading": "せんざい",
+      "meaning": "잠재",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "潜在",
+      "primary_reading": "せんざい",
+      "accepted_readings": [
+        "せんざい"
+      ],
+      "meaning_ko": "잠재",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-050",
+      "display": "顕在",
+      "reading": "けんざい",
+      "meaning": "현재(드러나 있음)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "顕在",
+      "primary_reading": "けんざい",
+      "accepted_readings": [
+        "けんざい"
+      ],
+      "meaning_ko": "현재(드러나 있음)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-053",
+      "display": "収束",
+      "reading": "しゅうそく",
+      "meaning": "수습·종식(수속)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "収束",
+      "primary_reading": "しゅうそく",
+      "accepted_readings": [
+        "しゅうそく"
+      ],
+      "meaning_ko": "수습·종식(수속)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-054",
+      "display": "収拾",
+      "reading": "しゅうしゅう",
+      "meaning": "수습",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "収拾",
+      "primary_reading": "しゅうしゅう",
+      "accepted_readings": [
+        "しゅうしゅう"
+      ],
+      "meaning_ko": "수습",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-056",
+      "display": "恒久",
+      "reading": "こうきゅう",
+      "meaning": "항구",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "恒久",
+      "primary_reading": "こうきゅう",
+      "accepted_readings": [
+        "こうきゅう"
+      ],
+      "meaning_ko": "항구",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-057",
+      "display": "煩雑",
+      "reading": "はんざつ",
+      "meaning": "번잡",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "煩雑",
+      "primary_reading": "はんざつ",
+      "accepted_readings": [
+        "はんざつ"
+      ],
+      "meaning_ko": "번잡",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-063",
+      "display": "低迷",
+      "reading": "ていめい",
+      "meaning": "침체(저미)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "低迷",
+      "primary_reading": "ていめい",
+      "accepted_readings": [
+        "ていめい"
+      ],
+      "meaning_ko": "침체(저미)",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-064",
+      "display": "台頭",
+      "reading": "たいとう",
+      "meaning": "대두",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "台頭",
+      "primary_reading": "たいとう",
+      "accepted_readings": [
+        "たいとう"
+      ],
+      "meaning_ko": "대두",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-065",
+      "display": "淘汰",
+      "reading": "とうた",
+      "meaning": "도태",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "淘汰",
+      "primary_reading": "とうた",
+      "accepted_readings": [
+        "とうた"
+      ],
+      "meaning_ko": "도태",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-066",
+      "display": "過剰",
+      "reading": "かじょう",
+      "meaning": "과잉",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "過剰",
+      "primary_reading": "かじょう",
+      "accepted_readings": [
+        "かじょう"
+      ],
+      "meaning_ko": "과잉",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-068",
+      "display": "膨張",
+      "reading": "ぼうちょう",
+      "meaning": "팽창",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "膨張",
+      "primary_reading": "ぼうちょう",
+      "accepted_readings": [
+        "ぼうちょう"
+      ],
+      "meaning_ko": "팽창",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-069",
+      "display": "撤廃",
+      "reading": "てっぱい",
+      "meaning": "철폐",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "撤廃",
+      "primary_reading": "てっぱい",
+      "accepted_readings": [
+        "てっぱい"
+      ],
+      "meaning_ko": "철폐",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-070",
+      "display": "弊害",
+      "reading": "へいがい",
+      "meaning": "폐해",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "弊害",
+      "primary_reading": "へいがい",
+      "accepted_readings": [
+        "へいがい"
+      ],
+      "meaning_ko": "폐해",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-071",
+      "display": "脆弱",
+      "reading": "ぜいじゃく",
+      "meaning": "취약",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "脆弱",
+      "primary_reading": "ぜいじゃく",
+      "accepted_readings": [
+        "ぜいじゃく"
+      ],
+      "meaning_ko": "취약",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-072",
+      "display": "堅調",
+      "reading": "けんちょう",
+      "meaning": "견조",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "堅調",
+      "primary_reading": "けんちょう",
+      "accepted_readings": [
+        "けんちょう"
+      ],
+      "meaning_ko": "견조",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-073",
+      "display": "旺盛",
+      "reading": "おうせい",
+      "meaning": "왕성",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "旺盛",
+      "primary_reading": "おうせい",
+      "accepted_readings": [
+        "おうせい"
+      ],
+      "meaning_ko": "왕성",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-074",
+      "display": "錯綜",
+      "reading": "さくそう",
+      "meaning": "착종(뒤얽힘)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "錯綜",
+      "primary_reading": "さくそう",
+      "accepted_readings": [
+        "さくそう"
+      ],
+      "meaning_ko": "착종(뒤얽힘)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-075",
+      "display": "紛糾",
+      "reading": "ふんきゅう",
+      "meaning": "분규(난항)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "紛糾",
+      "primary_reading": "ふんきゅう",
+      "accepted_readings": [
+        "ふんきゅう"
+      ],
+      "meaning_ko": "분규(난항)",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-079",
+      "display": "還付",
+      "reading": "かんぷ",
+      "meaning": "환급(환부)",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "還付",
+      "primary_reading": "かんぷ",
+      "accepted_readings": [
+        "かんぷ"
+      ],
+      "meaning_ko": "환급(환부)",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-080",
+      "display": "不祥事",
+      "reading": "ふしょうじ",
+      "meaning": "불상사",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "不祥事",
+      "primary_reading": "ふしょうじ",
+      "accepted_readings": [
+        "ふしょうじ"
+      ],
+      "meaning_ko": "불상사",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-081",
+      "display": "隠蔽",
+      "reading": "いんぺい",
+      "meaning": "은폐",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "隠蔽",
+      "primary_reading": "いんぺい",
+      "accepted_readings": [
+        "いんぺい"
+      ],
+      "meaning_ko": "은폐",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 70.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-084",
+      "display": "斡旋",
+      "reading": "あっせん",
+      "meaning": "알선",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "斡旋",
+      "primary_reading": "あっせん",
+      "accepted_readings": [
+        "あっせん"
+      ],
+      "meaning_ko": "알선",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-089",
+      "display": "拠点",
+      "reading": "きょてん",
+      "meaning": "거점",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "拠点",
+      "primary_reading": "きょてん",
+      "accepted_readings": [
+        "きょてん"
+      ],
+      "meaning_ko": "거점",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-090",
+      "display": "根幹",
+      "reading": "こんかん",
+      "meaning": "근간",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "根幹",
+      "primary_reading": "こんかん",
+      "accepted_readings": [
+        "こんかん"
+      ],
+      "meaning_ko": "근간",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-091",
+      "display": "屈指",
+      "reading": "くっし",
+      "meaning": "굴지",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "屈指",
+      "primary_reading": "くっし",
+      "accepted_readings": [
+        "くっし"
+      ],
+      "meaning_ko": "굴지",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-093",
+      "display": "釈明",
+      "reading": "しゃくめい",
+      "meaning": "해명(석명)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "釈明",
+      "primary_reading": "しゃくめい",
+      "accepted_readings": [
+        "しゃくめい"
+      ],
+      "meaning_ko": "해명(석명)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-094",
+      "display": "遺憾",
+      "reading": "いかん",
+      "meaning": "유감",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遺憾",
+      "primary_reading": "いかん",
+      "accepted_readings": [
+        "いかん"
+      ],
+      "meaning_ko": "유감",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-095",
+      "display": "年俸",
+      "reading": "ねんぽう",
+      "meaning": "연봉",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "年俸",
+      "primary_reading": "ねんぽう",
+      "accepted_readings": [
+        "ねんぽう"
+      ],
+      "meaning_ko": "연봉",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-096",
+      "display": "裁量",
+      "reading": "さいりょう",
+      "meaning": "재량",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "裁量",
+      "primary_reading": "さいりょう",
+      "accepted_readings": [
+        "さいりょう"
+      ],
+      "meaning_ko": "재량",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-097",
+      "display": "繁忙",
+      "reading": "はんぼう",
+      "meaning": "번망(바쁨)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "繁忙",
+      "primary_reading": "はんぼう",
+      "accepted_readings": [
+        "はんぼう"
+      ],
+      "meaning_ko": "번망(바쁨)",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-098",
+      "display": "下落",
+      "reading": "げらく",
+      "meaning": "하락",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "下落",
+      "primary_reading": "げらく",
+      "accepted_readings": [
+        "げらく"
+      ],
+      "meaning_ko": "하락",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-099",
+      "display": "端数",
+      "reading": "はすう",
+      "meaning": "끝수(단수)",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "端数",
+      "primary_reading": "はすう",
+      "accepted_readings": [
+        "はすう"
+      ],
+      "meaning_ko": "끝수(단수)",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "mixed",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-101",
+      "display": "勘定",
+      "reading": "かんじょう",
+      "meaning": "계산·계정(감정)",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "勘定",
+      "primary_reading": "かんじょう",
+      "accepted_readings": [
+        "かんじょう"
+      ],
+      "meaning_ko": "계산·계정(감정)",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-102",
+      "display": "目途",
+      "reading": "めど",
+      "meaning": "목표·전망(목도)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "目途",
+      "primary_reading": "めど",
+      "accepted_readings": [
+        "めど",
+        "もくと"
+      ],
+      "meaning_ko": "목표·전망(목도)",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-103",
+      "display": "必須",
+      "reading": "ひっす",
+      "meaning": "필수",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "必須",
+      "primary_reading": "ひっす",
+      "accepted_readings": [
+        "ひっす"
+      ],
+      "meaning_ko": "필수",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-104",
+      "display": "肝要",
+      "reading": "かんよう",
+      "meaning": "간요(매우 중요)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "肝要",
+      "primary_reading": "かんよう",
+      "accepted_readings": [
+        "かんよう"
+      ],
+      "meaning_ko": "간요(매우 중요)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-105",
+      "display": "早晩",
+      "reading": "そうばん",
+      "meaning": "조만간(조만)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "早晩",
+      "primary_reading": "そうばん",
+      "accepted_readings": [
+        "そうばん"
+      ],
+      "meaning_ko": "조만간(조만)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-106",
+      "display": "暫時",
+      "reading": "ざんじ",
+      "meaning": "잠시",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "暫時",
+      "primary_reading": "ざんじ",
+      "accepted_readings": [
+        "ざんじ"
+      ],
+      "meaning_ko": "잠시",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-109",
+      "display": "遡及",
+      "reading": "そきゅう",
+      "meaning": "소급",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遡及",
+      "primary_reading": "そきゅう",
+      "accepted_readings": [
+        "そきゅう",
+        "さっきゅう"
+      ],
+      "meaning_ko": "소급",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-110",
+      "display": "席巻",
+      "reading": "せっけん",
+      "meaning": "석권",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "席巻",
+      "primary_reading": "せっけん",
+      "accepted_readings": [
+        "せっけん"
+      ],
+      "meaning_ko": "석권",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-111",
+      "display": "賛否",
+      "reading": "さんぴ",
+      "meaning": "찬반(찬부)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "賛否",
+      "primary_reading": "さんぴ",
+      "accepted_readings": [
+        "さんぴ"
+      ],
+      "meaning_ko": "찬반(찬부)",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-112",
+      "display": "真偽",
+      "reading": "しんぎ",
+      "meaning": "진위",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "真偽",
+      "primary_reading": "しんぎ",
+      "accepted_readings": [
+        "しんぎ"
+      ],
+      "meaning_ko": "진위",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-113",
+      "display": "未曾有",
+      "reading": "みぞう",
+      "meaning": "미증유",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "未曾有",
+      "primary_reading": "みぞう",
+      "accepted_readings": [
+        "みぞう"
+      ],
+      "meaning_ko": "미증유",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-114",
+      "display": "画一的",
+      "reading": "かくいつてき",
+      "meaning": "획일적",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "画一的",
+      "primary_reading": "かくいつてき",
+      "accepted_readings": [
+        "かくいつてき"
+      ],
+      "meaning_ko": "획일적",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-115",
+      "display": "如実",
+      "reading": "にょじつ",
+      "meaning": "여실",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "如実",
+      "primary_reading": "にょじつ",
+      "accepted_readings": [
+        "にょじつ"
+      ],
+      "meaning_ko": "여실",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-116",
+      "display": "欠如",
+      "reading": "けつじょ",
+      "meaning": "결여",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "欠如",
+      "primary_reading": "けつじょ",
+      "accepted_readings": [
+        "けつじょ"
+      ],
+      "meaning_ko": "결여",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-118",
+      "display": "逝去",
+      "reading": "せいきょ",
+      "meaning": "서거·별세",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "逝去",
+      "primary_reading": "せいきょ",
+      "accepted_readings": [
+        "せいきょ"
+      ],
+      "meaning_ko": "서거·별세",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-119",
+      "display": "勃発",
+      "reading": "ぼっぱつ",
+      "meaning": "발발",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "勃発",
+      "primary_reading": "ぼっぱつ",
+      "accepted_readings": [
+        "ぼっぱつ"
+      ],
+      "meaning_ko": "발발",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-120",
+      "display": "醸成",
+      "reading": "じょうせい",
+      "meaning": "조성(양성)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "醸成",
+      "primary_reading": "じょうせい",
+      "accepted_readings": [
+        "じょうせい"
+      ],
+      "meaning_ko": "조성(양성)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-125",
+      "display": "拮抗",
+      "reading": "きっこう",
+      "meaning": "길항(팽팽함)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "拮抗",
+      "primary_reading": "きっこう",
+      "accepted_readings": [
+        "きっこう"
+      ],
+      "meaning_ko": "길항(팽팽함)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-126",
+      "display": "確執",
+      "reading": "かくしつ",
+      "meaning": "불화(확집)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "確執",
+      "primary_reading": "かくしつ",
+      "accepted_readings": [
+        "かくしつ",
+        "かくしゅう"
+      ],
+      "meaning_ko": "불화(확집)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-127",
+      "display": "葛藤",
+      "reading": "かっとう",
+      "meaning": "갈등",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "葛藤",
+      "primary_reading": "かっとう",
+      "accepted_readings": [
+        "かっとう"
+      ],
+      "meaning_ko": "갈등",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-128",
+      "display": "遜色",
+      "reading": "そんしょく",
+      "meaning": "손색",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遜色",
+      "primary_reading": "そんしょく",
+      "accepted_readings": [
+        "そんしょく"
+      ],
+      "meaning_ko": "손색",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-130",
+      "display": "騰貴",
+      "reading": "とうき",
+      "meaning": "등귀(값이 오름)",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "騰貴",
+      "primary_reading": "とうき",
+      "accepted_readings": [
+        "とうき"
+      ],
+      "meaning_ko": "등귀(값이 오름)",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-131",
+      "display": "一段落",
+      "reading": "いちだんらく",
+      "meaning": "일단락",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "一段落",
+      "primary_reading": "いちだんらく",
+      "accepted_readings": [
+        "いちだんらく"
+      ],
+      "meaning_ko": "일단락",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-132",
+      "display": "一家言",
+      "reading": "いっかげん",
+      "meaning": "일가견(일가언)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "一家言",
+      "primary_reading": "いっかげん",
+      "accepted_readings": [
+        "いっかげん"
+      ],
+      "meaning_ko": "일가견(일가언)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-133",
+      "display": "便乗",
+      "reading": "びんじょう",
+      "meaning": "편승",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "便乗",
+      "primary_reading": "びんじょう",
+      "accepted_readings": [
+        "びんじょう"
+      ],
+      "meaning_ko": "편승",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-134",
+      "display": "穏便",
+      "reading": "おんびん",
+      "meaning": "원만(온편)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "穏便",
+      "primary_reading": "おんびん",
+      "accepted_readings": [
+        "おんびん"
+      ],
+      "meaning_ko": "원만(온편)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-135",
+      "display": "強引",
+      "reading": "ごういん",
+      "meaning": "억지·강압(강인)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "強引",
+      "primary_reading": "ごういん",
+      "accepted_readings": [
+        "ごういん"
+      ],
+      "meaning_ko": "억지·강압(강인)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-136",
+      "display": "会得",
+      "reading": "えとく",
+      "meaning": "터득(회득)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "会得",
+      "primary_reading": "えとく",
+      "accepted_readings": [
+        "えとく"
+      ],
+      "meaning_ko": "터득(회득)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-137",
+      "display": "作法",
+      "reading": "さほう",
+      "meaning": "예법(작법)",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "作法",
+      "primary_reading": "さほう",
+      "accepted_readings": [
+        "さほう"
+      ],
+      "meaning_ko": "예법(작법)",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-138",
+      "display": "頒布",
+      "reading": "はんぷ",
+      "meaning": "반포(배포)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "頒布",
+      "primary_reading": "はんぷ",
+      "accepted_readings": [
+        "はんぷ"
+      ],
+      "meaning_ko": "반포(배포)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-139",
+      "display": "流布",
+      "reading": "るふ",
+      "meaning": "유포",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "流布",
+      "primary_reading": "るふ",
+      "accepted_readings": [
+        "るふ"
+      ],
+      "meaning_ko": "유포",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-140",
+      "display": "杜撰",
+      "reading": "ずさん",
+      "meaning": "엉성함(두찬)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "杜撰",
+      "primary_reading": "ずさん",
+      "accepted_readings": [
+        "ずさん"
+      ],
+      "meaning_ko": "엉성함(두찬)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-145",
+      "display": "賦課",
+      "reading": "ふか",
+      "meaning": "부과",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "賦課",
+      "primary_reading": "ふか",
+      "accepted_readings": [
+        "ふか"
+      ],
+      "meaning_ko": "부과",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-146",
+      "display": "施工",
+      "reading": "せこう",
+      "meaning": "시공",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "施工",
+      "primary_reading": "せこう",
+      "accepted_readings": [
+        "せこう",
+        "しこう"
+      ],
+      "meaning_ko": "시공",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-148",
+      "display": "施錠",
+      "reading": "せじょう",
+      "meaning": "잠금(시정)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "施錠",
+      "primary_reading": "せじょう",
+      "accepted_readings": [
+        "せじょう"
+      ],
+      "meaning_ko": "잠금(시정)",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-149",
+      "display": "抑止",
+      "reading": "よくし",
+      "meaning": "억지(억제)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "抑止",
+      "primary_reading": "よくし",
+      "accepted_readings": [
+        "よくし"
+      ],
+      "meaning_ko": "억지(억제)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-150",
+      "display": "範疇",
+      "reading": "はんちゅう",
+      "meaning": "범주",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "範疇",
+      "primary_reading": "はんちゅう",
+      "accepted_readings": [
+        "はんちゅう"
+      ],
+      "meaning_ko": "범주",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-153",
+      "display": "力量",
+      "reading": "りきりょう",
+      "meaning": "역량",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "力量",
+      "primary_reading": "りきりょう",
+      "accepted_readings": [
+        "りきりょう"
+      ],
+      "meaning_ko": "역량",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-154",
+      "display": "力説",
+      "reading": "りきせつ",
+      "meaning": "역설(힘주어 말함)",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "力説",
+      "primary_reading": "りきせつ",
+      "accepted_readings": [
+        "りきせつ"
+      ],
+      "meaning_ko": "역설(힘주어 말함)",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-155",
+      "display": "閉塞",
+      "reading": "へいそく",
+      "meaning": "폐색(막힘)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "閉塞",
+      "primary_reading": "へいそく",
+      "accepted_readings": [
+        "へいそく"
+      ],
+      "meaning_ko": "폐색(막힘)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-156",
+      "display": "有無",
+      "reading": "うむ",
+      "meaning": "유무",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "有無",
+      "primary_reading": "うむ",
+      "accepted_readings": [
+        "うむ"
+      ],
+      "meaning_ko": "유무",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-160",
+      "display": "凡例",
+      "reading": "はんれい",
+      "meaning": "범례",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "凡例",
+      "primary_reading": "はんれい",
+      "accepted_readings": [
+        "はんれい"
+      ],
+      "meaning_ko": "범례",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-163",
+      "display": "言質",
+      "reading": "げんち",
+      "meaning": "언질",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "言質",
+      "primary_reading": "げんち",
+      "accepted_readings": [
+        "げんち",
+        "げんしつ"
+      ],
+      "meaning_ko": "언질",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-164",
+      "display": "端緒",
+      "reading": "たんしょ",
+      "meaning": "단서·실마리",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "端緒",
+      "primary_reading": "たんしょ",
+      "accepted_readings": [
+        "たんしょ",
+        "たんちょ"
+      ],
+      "meaning_ko": "단서·실마리",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-165",
+      "display": "発端",
+      "reading": "ほったん",
+      "meaning": "발단",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "発端",
+      "primary_reading": "ほったん",
+      "accepted_readings": [
+        "ほったん"
+      ],
+      "meaning_ko": "발단",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-166",
+      "display": "歳暮",
+      "reading": "せいぼ",
+      "meaning": "연말 선물(세모)",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "歳暮",
+      "primary_reading": "せいぼ",
+      "accepted_readings": [
+        "せいぼ"
+      ],
+      "meaning_ko": "연말 선물(세모)",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-167",
+      "display": "殺到",
+      "reading": "さっとう",
+      "meaning": "쇄도",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "殺到",
+      "primary_reading": "さっとう",
+      "accepted_readings": [
+        "さっとう"
+      ],
+      "meaning_ko": "쇄도",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-168",
+      "display": "工夫",
+      "reading": "くふう",
+      "meaning": "궁리·고안(공부)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "工夫",
+      "primary_reading": "くふう",
+      "accepted_readings": [
+        "くふう"
+      ],
+      "meaning_ko": "궁리·고안(공부)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-169",
+      "display": "固執",
+      "reading": "こしつ",
+      "meaning": "고집",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "固執",
+      "primary_reading": "こしつ",
+      "accepted_readings": [
+        "こしつ",
+        "こしゅう"
+      ],
+      "meaning_ko": "고집",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-170",
+      "display": "納得",
+      "reading": "なっとく",
+      "meaning": "납득",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "納得",
+      "primary_reading": "なっとく",
+      "accepted_readings": [
+        "なっとく"
+      ],
+      "meaning_ko": "납득",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-171",
+      "display": "減殺",
+      "reading": "げんさい",
+      "meaning": "감쇄(줄어듦)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "減殺",
+      "primary_reading": "げんさい",
+      "accepted_readings": [
+        "げんさい"
+      ],
+      "meaning_ko": "감쇄(줄어듦)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-172",
+      "display": "言語",
+      "reading": "げんご",
+      "meaning": "언어",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "言語",
+      "primary_reading": "げんご",
+      "accepted_readings": [
+        "げんご"
+      ],
+      "meaning_ko": "언어",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-173",
+      "display": "境内",
+      "reading": "けいだい",
+      "meaning": "경내",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "境内",
+      "primary_reading": "けいだい",
+      "accepted_readings": [
+        "けいだい"
+      ],
+      "meaning_ko": "경내",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-174",
+      "display": "夏至",
+      "reading": "げし",
+      "meaning": "하지",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "夏至",
+      "primary_reading": "げし",
+      "accepted_readings": [
+        "げし"
+      ],
+      "meaning_ko": "하지",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-175",
+      "display": "会釈",
+      "reading": "えしゃく",
+      "meaning": "가벼운 목례(회석)",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "会釈",
+      "primary_reading": "えしゃく",
+      "accepted_readings": [
+        "えしゃく"
+      ],
+      "meaning_ko": "가벼운 목례(회석)",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-176",
+      "display": "遊説",
+      "reading": "ゆうぜい",
+      "meaning": "유세",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遊説",
+      "primary_reading": "ゆうぜい",
+      "accepted_readings": [
+        "ゆうぜい"
+      ],
+      "meaning_ko": "유세",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-177",
+      "display": "反故",
+      "reading": "ほご",
+      "meaning": "휴지·파기(반고)",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "反故",
+      "primary_reading": "ほご",
+      "accepted_readings": [
+        "ほご"
+      ],
+      "meaning_ko": "휴지·파기(반고)",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 54.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-178",
+      "display": "建立",
+      "reading": "こんりゅう",
+      "meaning": "건립(사찰 등)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "建立",
+      "primary_reading": "こんりゅう",
+      "accepted_readings": [
+        "こんりゅう"
+      ],
+      "meaning_ko": "건립(사찰 등)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-179",
+      "display": "殺生",
+      "reading": "せっしょう",
+      "meaning": "살생",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "殺生",
+      "primary_reading": "せっしょう",
+      "accepted_readings": [
+        "せっしょう"
+      ],
+      "meaning_ko": "살생",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-181",
+      "display": "風情",
+      "reading": "ふぜい",
+      "meaning": "정취(풍정)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "風情",
+      "primary_reading": "ふぜい",
+      "accepted_readings": [
+        "ふぜい"
+      ],
+      "meaning_ko": "정취(풍정)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-182",
+      "display": "疾病",
+      "reading": "しっぺい",
+      "meaning": "질병",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "疾病",
+      "primary_reading": "しっぺい",
+      "accepted_readings": [
+        "しっぺい"
+      ],
+      "meaning_ko": "질병",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-183",
+      "display": "他人事",
+      "reading": "ひとごと",
+      "meaning": "남의 일(타인사)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "他人事",
+      "primary_reading": "ひとごと",
+      "accepted_readings": [
+        "ひとごと",
+        "たにんごと"
+      ],
+      "meaning_ko": "남의 일(타인사)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-184",
+      "display": "御利益",
+      "reading": "ごりやく",
+      "meaning": "영험·은혜(어이익)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "御利益",
+      "primary_reading": "ごりやく",
+      "accepted_readings": [
+        "ごりやく"
+      ],
+      "meaning_ko": "영험·은혜(어이익)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-185",
+      "display": "成就",
+      "reading": "じょうじゅ",
+      "meaning": "성취",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "成就",
+      "primary_reading": "じょうじゅ",
+      "accepted_readings": [
+        "じょうじゅ"
+      ],
+      "meaning_ko": "성취",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-186",
+      "display": "平等",
+      "reading": "びょうどう",
+      "meaning": "평등",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "平等",
+      "primary_reading": "びょうどう",
+      "accepted_readings": [
+        "びょうどう"
+      ],
+      "meaning_ko": "평등",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-187",
+      "display": "平生",
+      "reading": "へいぜい",
+      "meaning": "평소(평생)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "平生",
+      "primary_reading": "へいぜい",
+      "accepted_readings": [
+        "へいぜい"
+      ],
+      "meaning_ko": "평소(평생)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-188",
+      "display": "行脚",
+      "reading": "あんぎゃ",
+      "meaning": "행각(순회)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "行脚",
+      "primary_reading": "あんぎゃ",
+      "accepted_readings": [
+        "あんぎゃ"
+      ],
+      "meaning_ko": "행각(순회)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-189",
+      "display": "精進",
+      "reading": "しょうじん",
+      "meaning": "정진",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "精進",
+      "primary_reading": "しょうじん",
+      "accepted_readings": [
+        "しょうじん"
+      ],
+      "meaning_ko": "정진",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-191",
+      "display": "礼賛",
+      "reading": "らいさん",
+      "meaning": "예찬",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "礼賛",
+      "primary_reading": "らいさん",
+      "accepted_readings": [
+        "らいさん"
+      ],
+      "meaning_ko": "예찬",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-192",
+      "display": "素性",
+      "reading": "すじょう",
+      "meaning": "내력·신원(소성)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "素性",
+      "primary_reading": "すじょう",
+      "accepted_readings": [
+        "すじょう"
+      ],
+      "meaning_ko": "내력·신원(소성)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-193",
+      "display": "素人",
+      "reading": "しろうと",
+      "meaning": "비전문가(소인)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "素人",
+      "primary_reading": "しろうと",
+      "accepted_readings": [
+        "しろうと"
+      ],
+      "meaning_ko": "비전문가(소인)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-195",
+      "display": "無頓着",
+      "reading": "むとんちゃく",
+      "meaning": "무관심(무돈착)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "無頓着",
+      "primary_reading": "むとんちゃく",
+      "accepted_readings": [
+        "むとんちゃく"
+      ],
+      "meaning_ko": "무관심(무돈착)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 54.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-196",
+      "display": "遺言",
+      "reading": "ゆいごん",
+      "meaning": "유언",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "遺言",
+      "primary_reading": "ゆいごん",
+      "accepted_readings": [
+        "ゆいごん",
+        "いごん"
+      ],
+      "meaning_ko": "유언",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-197",
+      "display": "由緒",
+      "reading": "ゆいしょ",
+      "meaning": "유서",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "由緒",
+      "primary_reading": "ゆいしょ",
+      "accepted_readings": [
+        "ゆいしょ"
+      ],
+      "meaning_ko": "유서",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-199",
+      "display": "合点",
+      "reading": "がてん",
+      "meaning": "납득(합점)",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "合点",
+      "primary_reading": "がてん",
+      "accepted_readings": [
+        "がてん",
+        "がってん"
+      ],
+      "meaning_ko": "납득(합점)",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-200",
+      "display": "無尽蔵",
+      "reading": "むじんぞう",
+      "meaning": "무진장",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "無尽蔵",
+      "primary_reading": "むじんぞう",
+      "accepted_readings": [
+        "むじんぞう"
+      ],
+      "meaning_ko": "무진장",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-203",
+      "display": "率先",
+      "reading": "そっせん",
+      "meaning": "솔선",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "率先",
+      "primary_reading": "そっせん",
+      "accepted_readings": [
+        "そっせん"
+      ],
+      "meaning_ko": "솔선",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-204",
+      "display": "貪欲",
+      "reading": "どんよく",
+      "meaning": "탐욕스러움",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "貪欲",
+      "primary_reading": "どんよく",
+      "accepted_readings": [
+        "どんよく"
+      ],
+      "meaning_ko": "탐욕스러움",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-205",
+      "display": "危惧",
+      "reading": "きぐ",
+      "meaning": "우려, 위구",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "危惧",
+      "primary_reading": "きぐ",
+      "accepted_readings": [
+        "きぐ"
+      ],
+      "meaning_ko": "우려, 위구",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-207",
+      "display": "直訴",
+      "reading": "じきそ",
+      "meaning": "직소, 직접 호소",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "直訴",
+      "primary_reading": "じきそ",
+      "accepted_readings": [
+        "じきそ"
+      ],
+      "meaning_ko": "직소, 직접 호소",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-208",
+      "display": "直筆",
+      "reading": "じきひつ",
+      "meaning": "친필",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "直筆",
+      "primary_reading": "じきひつ",
+      "accepted_readings": [
+        "じきひつ"
+      ],
+      "meaning_ko": "친필",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-209",
+      "display": "所以",
+      "reading": "ゆえん",
+      "meaning": "까닭, 이유",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "所以",
+      "primary_reading": "ゆえん",
+      "accepted_readings": [
+        "ゆえん"
+      ],
+      "meaning_ko": "까닭, 이유",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "compound",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-210",
+      "display": "因縁",
+      "reading": "いんねん",
+      "meaning": "인연, 숙연",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "因縁",
+      "primary_reading": "いんねん",
+      "accepted_readings": [
+        "いんねん"
+      ],
+      "meaning_ko": "인연, 숙연",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-211",
+      "display": "拙速",
+      "reading": "せっそく",
+      "meaning": "졸속",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "拙速",
+      "primary_reading": "せっそく",
+      "accepted_readings": [
+        "せっそく"
+      ],
+      "meaning_ko": "졸속",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-212",
+      "display": "陳腐",
+      "reading": "ちんぷ",
+      "meaning": "진부",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "陳腐",
+      "primary_reading": "ちんぷ",
+      "accepted_readings": [
+        "ちんぷ"
+      ],
+      "meaning_ko": "진부",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-213",
+      "display": "形相",
+      "reading": "ぎょうそう",
+      "meaning": "(험한) 얼굴 표정, 형상",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "形相",
+      "primary_reading": "ぎょうそう",
+      "accepted_readings": [
+        "ぎょうそう"
+      ],
+      "meaning_ko": "(험한) 얼굴 표정, 형상",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 74.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-215",
+      "display": "由来",
+      "reading": "ゆらい",
+      "meaning": "유래",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "由来",
+      "primary_reading": "ゆらい",
+      "accepted_readings": [
+        "ゆらい"
+      ],
+      "meaning_ko": "유래",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-216",
+      "display": "捏造",
+      "reading": "ねつぞう",
+      "meaning": "날조",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "捏造",
+      "primary_reading": "ねつぞう",
+      "accepted_readings": [
+        "ねつぞう"
+      ],
+      "meaning_ko": "날조",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-217",
+      "display": "改竄",
+      "reading": "かいざん",
+      "meaning": "(문서·데이터) 조작, 개찬",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "改竄",
+      "primary_reading": "かいざん",
+      "accepted_readings": [
+        "かいざん"
+      ],
+      "meaning_ko": "(문서·데이터) 조작, 개찬",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-218",
+      "display": "軋轢",
+      "reading": "あつれき",
+      "meaning": "알력, 마찰",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "軋轢",
+      "primary_reading": "あつれき",
+      "accepted_readings": [
+        "あつれき"
+      ],
+      "meaning_ko": "알력, 마찰",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-219",
+      "display": "顛末",
+      "reading": "てんまつ",
+      "meaning": "전말",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "顛末",
+      "primary_reading": "てんまつ",
+      "accepted_readings": [
+        "てんまつ"
+      ],
+      "meaning_ko": "전말",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 62.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-220",
+      "display": "蔓延",
+      "reading": "まんえん",
+      "meaning": "만연",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "蔓延",
+      "primary_reading": "まんえん",
+      "accepted_readings": [
+        "まんえん"
+      ],
+      "meaning_ko": "만연",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-221",
+      "display": "波及",
+      "reading": "はきゅう",
+      "meaning": "파급",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "波及",
+      "primary_reading": "はきゅう",
+      "accepted_readings": [
+        "はきゅう"
+      ],
+      "meaning_ko": "파급",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-222",
+      "display": "浸透",
+      "reading": "しんとう",
+      "meaning": "침투, 보급",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "浸透",
+      "primary_reading": "しんとう",
+      "accepted_readings": [
+        "しんとう"
+      ],
+      "meaning_ko": "침투, 보급",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-223",
+      "display": "提唱",
+      "reading": "ていしょう",
+      "meaning": "제창",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "提唱",
+      "primary_reading": "ていしょう",
+      "accepted_readings": [
+        "ていしょう"
+      ],
+      "meaning_ko": "제창",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-224",
+      "display": "標榜",
+      "reading": "ひょうぼう",
+      "meaning": "표방",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "標榜",
+      "primary_reading": "ひょうぼう",
+      "accepted_readings": [
+        "ひょうぼう"
+      ],
+      "meaning_ko": "표방",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-225",
+      "display": "喚起",
+      "reading": "かんき",
+      "meaning": "환기, 불러일으킴",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "喚起",
+      "primary_reading": "かんき",
+      "accepted_readings": [
+        "かんき"
+      ],
+      "meaning_ko": "환기, 불러일으킴",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-226",
+      "display": "罷免",
+      "reading": "ひめん",
+      "meaning": "파면",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "罷免",
+      "primary_reading": "ひめん",
+      "accepted_readings": [
+        "ひめん"
+      ],
+      "meaning_ko": "파면",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-227",
+      "display": "弾劾",
+      "reading": "だんがい",
+      "meaning": "탄핵",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "弾劾",
+      "primary_reading": "だんがい",
+      "accepted_readings": [
+        "だんがい"
+      ],
+      "meaning_ko": "탄핵",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-228",
+      "display": "糾弾",
+      "reading": "きゅうだん",
+      "meaning": "규탄",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "糾弾",
+      "primary_reading": "きゅうだん",
+      "accepted_readings": [
+        "きゅうだん"
+      ],
+      "meaning_ko": "규탄",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-229",
+      "display": "批准",
+      "reading": "ひじゅん",
+      "meaning": "비준",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "批准",
+      "primary_reading": "ひじゅん",
+      "accepted_readings": [
+        "ひじゅん"
+      ],
+      "meaning_ko": "비준",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-230",
+      "display": "懲戒",
+      "reading": "ちょうかい",
+      "meaning": "징계",
+      "category": "relationship",
+      "level": "general_n1",
+      "related": [],
+      "expression": "懲戒",
+      "primary_reading": "ちょうかい",
+      "accepted_readings": [
+        "ちょうかい"
+      ],
+      "meaning_ko": "징계",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-231",
+      "display": "横領",
+      "reading": "おうりょう",
+      "meaning": "횡령",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "横領",
+      "primary_reading": "おうりょう",
+      "accepted_readings": [
+        "おうりょう"
+      ],
+      "meaning_ko": "횡령",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-232",
+      "display": "賄賂",
+      "reading": "わいろ",
+      "meaning": "뇌물",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "賄賂",
+      "primary_reading": "わいろ",
+      "accepted_readings": [
+        "わいろ"
+      ],
+      "meaning_ko": "뇌물",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-233",
+      "display": "逸脱",
+      "reading": "いつだつ",
+      "meaning": "일탈, 벗어남",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "逸脱",
+      "primary_reading": "いつだつ",
+      "accepted_readings": [
+        "いつだつ"
+      ],
+      "meaning_ko": "일탈, 벗어남",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 69.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-234",
+      "display": "杞憂",
+      "reading": "きゆう",
+      "meaning": "기우",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "杞憂",
+      "primary_reading": "きゆう",
+      "accepted_readings": [
+        "きゆう"
+      ],
+      "meaning_ko": "기우",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-236",
+      "display": "拡充",
+      "reading": "かくじゅう",
+      "meaning": "확충",
+      "category": "coordination",
+      "level": "general_n1",
+      "related": [],
+      "expression": "拡充",
+      "primary_reading": "かくじゅう",
+      "accepted_readings": [
+        "かくじゅう"
+      ],
+      "meaning_ko": "확충",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-237",
+      "display": "衰退",
+      "reading": "すいたい",
+      "meaning": "쇠퇴",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "衰退",
+      "primary_reading": "すいたい",
+      "accepted_readings": [
+        "すいたい"
+      ],
+      "meaning_ko": "쇠퇴",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-240",
+      "display": "高騰",
+      "reading": "こうとう",
+      "meaning": "급등, 폭등",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "高騰",
+      "primary_reading": "こうとう",
+      "accepted_readings": [
+        "こうとう"
+      ],
+      "meaning_ko": "급등, 폭등",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-241",
+      "display": "暴落",
+      "reading": "ぼうらく",
+      "meaning": "폭락",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "暴落",
+      "primary_reading": "ぼうらく",
+      "accepted_readings": [
+        "ぼうらく"
+      ],
+      "meaning_ko": "폭락",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-242",
+      "display": "需給",
+      "reading": "じゅきゅう",
+      "meaning": "수급",
+      "category": "transaction",
+      "level": "general_n1",
+      "related": [],
+      "expression": "需給",
+      "primary_reading": "じゅきゅう",
+      "accepted_readings": [
+        "じゅきゅう"
+      ],
+      "meaning_ko": "수급",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-243",
+      "display": "閣僚",
+      "reading": "かくりょう",
+      "meaning": "각료",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "閣僚",
+      "primary_reading": "かくりょう",
+      "accepted_readings": [
+        "かくりょう"
+      ],
+      "meaning_ko": "각료",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 77.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-p3-244",
+      "display": "早計",
+      "reading": "そうけい",
+      "meaning": "성급한 판단, 조급함",
+      "category": "advanced",
+      "level": "general_n1",
+      "related": [],
+      "expression": "早計",
+      "primary_reading": "そうけい",
+      "accepted_readings": [
+        "そうけい"
+      ],
+      "meaning_ko": "성급한 판단, 조급함",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [
+        "general_n1"
+      ],
+      "item_type": "word",
+      "reading_type": "onyomi",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt",
+        "JMdict"
+      ]
+    },
+    {
+      "id": "claude-bjt-s-002",
+      "display": "納期について至急ご連絡ください。",
+      "reading": "のうきについてしきゅうごれんらくください",
+      "meaning": "납기에 대해 급히 연락 주세요.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "納期について至急ご連絡ください。",
+      "primary_reading": "のうきについてしきゅうごれんらくください",
+      "accepted_readings": [
+        "のうきについてしきゅうごれんらくください"
+      ],
+      "meaning_ko": "납기에 대해 급히 연락 주세요.",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "delivery-date",
+          "surface": "納期",
+          "reading_in_sentence": "のうき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-003",
+      "display": "会議の日程を調整いたします。",
+      "reading": "かいぎのにっていをちょうせいいたします",
+      "meaning": "회의 일정을 조정하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "会議の日程を調整いたします。",
+      "primary_reading": "かいぎのにっていをちょうせいいたします",
+      "accepted_readings": [
+        "かいぎのにっていをちょうせいいたします"
+      ],
+      "meaning_ko": "회의 일정을 조정하겠습니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "adjustment",
+          "surface": "調整",
+          "reading_in_sentence": "ちょうせい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-004",
+      "display": "ご依頼の件、確かに承りました。",
+      "reading": "ごいらいのけんたしかにうけたまわりました",
+      "meaning": "의뢰하신 건, 확실히 잘 받았습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご依頼の件、確かに承りました。",
+      "primary_reading": "ごいらいのけんたしかにうけたまわりました",
+      "accepted_readings": [
+        "ごいらいのけんたしかにうけたまわりました"
+      ],
+      "meaning_ko": "의뢰하신 건, 확실히 잘 받았습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-005",
+      "display": "会議資料を事前にお送りいたします。",
+      "reading": "かいぎしりょうをじぜんにおおくりいたします",
+      "meaning": "회의 자료를 사전에 보내 드리겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "会議資料を事前にお送りいたします。",
+      "primary_reading": "かいぎしりょうをじぜんにおおくりいたします",
+      "accepted_readings": [
+        "かいぎしりょうをじぜんにおおくりいたします"
+      ],
+      "meaning_ko": "회의 자료를 사전에 보내 드리겠습니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-006",
+      "display": "請求書の金額に誤りがございました。",
+      "reading": "せいきゅうしょのきんがくにあやまりがございました",
+      "meaning": "청구서 금액에 오류가 있었습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "請求書の金額に誤りがございました。",
+      "primary_reading": "せいきゅうしょのきんがくにあやまりがございました",
+      "accepted_readings": [
+        "せいきゅうしょのきんがくにあやまりがございました"
+      ],
+      "meaning_ko": "청구서 금액에 오류가 있었습니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "invoice",
+          "surface": "請求",
+          "reading_in_sentence": "せいきゅう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-007",
+      "display": "先月分の支払いが滞っております。",
+      "reading": "せんげつぶんのしはらいがとどこおっております",
+      "meaning": "지난달분 지불이 밀려 있습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "先月分の支払いが滞っております。",
+      "primary_reading": "せんげつぶんのしはらいがとどこおっております",
+      "accepted_readings": [
+        "せんげつぶんのしはらいがとどこおっております"
+      ],
+      "meaning_ko": "지난달분 지불이 밀려 있습니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-008",
+      "display": "契約書に押印のうえご返送ください。",
+      "reading": "けいやくしょにおういんのうえごへんそうください",
+      "meaning": "계약서에 날인하신 후 반송해 주세요.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "契約書に押印のうえご返送ください。",
+      "primary_reading": "けいやくしょにおういんのうえごへんそうください",
+      "accepted_readings": [
+        "けいやくしょにおういんのうえごへんそうください"
+      ],
+      "meaning_ko": "계약서에 날인하신 후 반송해 주세요.",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-009",
+      "display": "ご多忙のところ恐れ入ります。",
+      "reading": "ごたぼうのところおそれいります",
+      "meaning": "바쁘신 와중에 죄송합니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご多忙のところ恐れ入ります。",
+      "primary_reading": "ごたぼうのところおそれいります",
+      "accepted_readings": [
+        "ごたぼうのところおそれいります"
+      ],
+      "meaning_ko": "바쁘신 와중에 죄송합니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-a6dd3fc58e8a8a",
+          "surface": "多忙",
+          "reading_in_sentence": "たぼう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-010",
+      "display": "出席の可否をお知らせください。",
+      "reading": "しゅっせきのかひをおしらせください",
+      "meaning": "참석 가능 여부를 알려 주세요.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "出席の可否をお知らせください。",
+      "primary_reading": "しゅっせきのかひをおしらせください",
+      "accepted_readings": [
+        "しゅっせきのかひをおしらせください"
+      ],
+      "meaning_ko": "참석 가능 여부를 알려 주세요.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-011",
+      "display": "在庫の状況を確認しております。",
+      "reading": "ざいこのじょうきょうをかくにんしております",
+      "meaning": "재고 상황을 확인하고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "在庫の状況を確認しております。",
+      "primary_reading": "ざいこのじょうきょうをかくにんしております",
+      "accepted_readings": [
+        "ざいこのじょうきょうをかくにんしております"
+      ],
+      "meaning_ko": "재고 상황을 확인하고 있습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-39aa6e753b352b",
+          "surface": "在庫",
+          "reading_in_sentence": "ざいこ"
+        },
+        {
+          "word_id": "confirmation",
+          "surface": "確認",
+          "reading_in_sentence": "かくにん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-012",
+      "display": "仕様の変更点を共有いたします。",
+      "reading": "しようのへんこうてんをきょうゆういたします",
+      "meaning": "사양 변경 사항을 공유드립니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "仕様の変更点を共有いたします。",
+      "primary_reading": "しようのへんこうてんをきょうゆういたします",
+      "accepted_readings": [
+        "しようのへんこうてんをきょうゆういたします"
+      ],
+      "meaning_ko": "사양 변경 사항을 공유드립니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "sharing",
+          "surface": "共有",
+          "reading_in_sentence": "きょうゆう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-013",
+      "display": "先方の意向を伺ってまいります。",
+      "reading": "せんぽうのいこうをうかがってまいります",
+      "meaning": "상대측의 의향을 여쭤보고 오겠습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "先方の意向を伺ってまいります。",
+      "primary_reading": "せんぽうのいこうをうかがってまいります",
+      "accepted_readings": [
+        "せんぽうのいこうをうかがってまいります"
+      ],
+      "meaning_ko": "상대측의 의향을 여쭤보고 오겠습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-186c98a90fd7bc",
+          "surface": "意向",
+          "reading_in_sentence": "いこう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-014",
+      "display": "ご不便をおかけし申し訳ございません。",
+      "reading": "ごふべんをおかけしもうしわけございません",
+      "meaning": "불편을 끼쳐 드려 죄송합니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご不便をおかけし申し訳ございません。",
+      "primary_reading": "ごふべんをおかけしもうしわけございません",
+      "accepted_readings": [
+        "ごふべんをおかけしもうしわけございません"
+      ],
+      "meaning_ko": "불편을 끼쳐 드려 죄송합니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-98c10769385146",
+          "surface": "不便",
+          "reading_in_sentence": "ふびん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-015",
+      "display": "売上高は前年同期比で増加しました。",
+      "reading": "うりあげだかはぜんねんどうきひでぞうかしました",
+      "meaning": "매출액은 전년 동기 대비 증가했습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "売上高は前年同期比で増加しました。",
+      "primary_reading": "うりあげだかはぜんねんどうきひでぞうかしました",
+      "accepted_readings": [
+        "うりあげだかはぜんねんどうきひでぞうかしました"
+      ],
+      "meaning_ko": "매출액은 전년 동기 대비 증가했습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-016",
+      "display": "営業利益は横ばいで推移しています。",
+      "reading": "えいぎょうりえきはよこばいですいいしています",
+      "meaning": "영업이익은 보합세로 추이하고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "営業利益は横ばいで推移しています。",
+      "primary_reading": "えいぎょうりえきはよこばいですいいしています",
+      "accepted_readings": [
+        "えいぎょうりえきはよこばいですいいしています"
+      ],
+      "meaning_ko": "영업이익은 보합세로 추이하고 있습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "claude-bjt-p3-016",
+          "surface": "推移",
+          "reading_in_sentence": "すいい"
+        },
+        {
+          "word_id": "claude-bjt-p3-035",
+          "surface": "利益",
+          "reading_in_sentence": "りえき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-017",
+      "display": "受注件数が目標を下回りました。",
+      "reading": "じゅちゅうけんすうがもくひょうをしたまわりました",
+      "meaning": "수주 건수가 목표를 밑돌았습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "受注件数が目標を下回りました。",
+      "primary_reading": "じゅちゅうけんすうがもくひょうをしたまわりました",
+      "accepted_readings": [
+        "じゅちゅうけんすうがもくひょうをしたまわりました"
+      ],
+      "meaning_ko": "수주 건수가 목표를 밑돌았습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "receive-order",
+          "surface": "受注",
+          "reading_in_sentence": "じゅちゅう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-018",
+      "display": "今期の達成率は九割を超えました。",
+      "reading": "こんきのたっせいりつはきゅうわりをこえました",
+      "meaning": "이번 분기 달성률은 90%를 넘었습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "今期の達成率は九割を超えました。",
+      "primary_reading": "こんきのたっせいりつはきゅうわりをこえました",
+      "accepted_readings": [
+        "こんきのたっせいりつはきゅうわりをこえました"
+      ],
+      "meaning_ko": "이번 분기 달성률은 90%를 넘었습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-a2db4b9070e764",
+          "surface": "達成",
+          "reading_in_sentence": "たっせい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-019",
+      "display": "経費の精算を速やかにお願いします。",
+      "reading": "けいひのせいさんをすみやかにおねがいします",
+      "meaning": "경비 정산을 신속히 부탁드립니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "経費の精算を速やかにお願いします。",
+      "primary_reading": "けいひのせいさんをすみやかにおねがいします",
+      "accepted_readings": [
+        "けいひのせいさんをすみやかにおねがいします"
+      ],
+      "meaning_ko": "경비 정산을 신속히 부탁드립니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-483c13ec348155",
+          "surface": "経費",
+          "reading_in_sentence": "けいひ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-020",
+      "display": "担当者が不在のため、折り返しご連絡いたします。",
+      "reading": "たんとうしゃがふざいのためおりかえしごれんらくいたします",
+      "meaning": "담당자가 부재 중이라 다시 연락드리겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "担当者が不在のため、折り返しご連絡いたします。",
+      "primary_reading": "たんとうしゃがふざいのためおりかえしごれんらくいたします",
+      "accepted_readings": [
+        "たんとうしゃがふざいのためおりかえしごれんらくいたします"
+      ],
+      "meaning_ko": "담당자가 부재 중이라 다시 연락드리겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-0bc0ac00fe3d19",
+          "surface": "不在",
+          "reading_in_sentence": "ふざい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-021",
+      "display": "詳細は添付ファイルをご参照ください。",
+      "reading": "しょうさいはてんぷふぁいるをごさんしょうください",
+      "meaning": "자세한 내용은 첨부 파일을 참조해 주세요.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "詳細は添付ファイルをご参照ください。",
+      "primary_reading": "しょうさいはてんぷふぁいるをごさんしょうください",
+      "accepted_readings": [
+        "しょうさいはてんぷふぁいるをごさんしょうください"
+      ],
+      "meaning_ko": "자세한 내용은 첨부 파일을 참조해 주세요.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-133f79018c6ed8",
+          "surface": "詳細",
+          "reading_in_sentence": "しょうさい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-022",
+      "display": "ご提案の内容を前向きに検討いたします。",
+      "reading": "ごていあんのないようをまえむきにけんとういたします",
+      "meaning": "제안하신 내용을 긍정적으로 검토하겠습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご提案の内容を前向きに検討いたします。",
+      "primary_reading": "ごていあんのないようをまえむきにけんとういたします",
+      "accepted_readings": [
+        "ごていあんのないようをまえむきにけんとういたします"
+      ],
+      "meaning_ko": "제안하신 내용을 긍정적으로 검토하겠습니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "consideration",
+          "surface": "検討",
+          "reading_in_sentence": "けんとう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-023",
+      "display": "残念ながら今回は辞退いたします。",
+      "reading": "ざんねんながらこんかいはじたいいたします",
+      "meaning": "유감스럽지만 이번에는 사양하겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "残念ながら今回は辞退いたします。",
+      "primary_reading": "ざんねんながらこんかいはじたいいたします",
+      "accepted_readings": [
+        "ざんねんながらこんかいはじたいいたします"
+      ],
+      "meaning_ko": "유감스럽지만 이번에는 사양하겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-bfd3bbc5edda42",
+          "surface": "辞退",
+          "reading_in_sentence": "じたい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-024",
+      "display": "出荷の手配が遅れております。",
+      "reading": "しゅっかのてはいがおくれております",
+      "meaning": "출하 준비가 늦어지고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "出荷の手配が遅れております。",
+      "primary_reading": "しゅっかのてはいがおくれております",
+      "accepted_readings": [
+        "しゅっかのてはいがおくれております"
+      ],
+      "meaning_ko": "출하 준비가 늦어지고 있습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-13554b24186cd8",
+          "surface": "手配",
+          "reading_in_sentence": "てはい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-025",
+      "display": "不具合の原因を調査中です。",
+      "reading": "ふぐあいのげんいんをちょうさちゅうです",
+      "meaning": "결함의 원인을 조사 중입니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "不具合の原因を調査中です。",
+      "primary_reading": "ふぐあいのげんいんをちょうさちゅうです",
+      "accepted_readings": [
+        "ふぐあいのげんいんをちょうさちゅうです"
+      ],
+      "meaning_ko": "결함의 원인을 조사 중입니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-026",
+      "display": "再発防止策を早急に講じます。",
+      "reading": "さいはつぼうしさくをそうきゅうにこうじます",
+      "meaning": "재발 방지책을 조속히 강구하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "再発防止策を早急に講じます。",
+      "primary_reading": "さいはつぼうしさくをそうきゅうにこうじます",
+      "accepted_readings": [
+        "さいはつぼうしさくをそうきゅうにこうじます",
+        "さいはつぼうしさくをさっきゅうにこうじます"
+      ],
+      "meaning_ko": "재발 방지책을 조속히 강구하겠습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-3a4c689a3360ca",
+          "surface": "早急",
+          "reading_in_sentence": "さっきゅう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-027",
+      "display": "本日の議事録を共有いたします。",
+      "reading": "ほんじつのぎじろくをきょうゆういたします",
+      "meaning": "오늘 회의록을 공유드립니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "本日の議事録を共有いたします。",
+      "primary_reading": "ほんじつのぎじろくをきょうゆういたします",
+      "accepted_readings": [
+        "ほんじつのぎじろくをきょうゆういたします"
+      ],
+      "meaning_ko": "오늘 회의록을 공유드립니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "sharing",
+          "surface": "共有",
+          "reading_in_sentence": "きょうゆう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-028",
+      "display": "取引条件の見直しをご相談したく存じます。",
+      "reading": "とりひきじょうけんのみなおしをごそうだんしたくぞんじます",
+      "meaning": "거래 조건의 재검토를 상의드리고자 합니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "取引条件の見直しをご相談したく存じます。",
+      "primary_reading": "とりひきじょうけんのみなおしをごそうだんしたくぞんじます",
+      "accepted_readings": [
+        "とりひきじょうけんのみなおしをごそうだんしたくぞんじます"
+      ],
+      "meaning_ko": "거래 조건의 재검토를 상의드리고자 합니다.",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-029",
+      "display": "お見積もりの有効期限は今月末です。",
+      "reading": "おみつもりのゆうこうきげんはこんげつまつです",
+      "meaning": "견적 유효 기한은 이번 달 말입니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "お見積もりの有効期限は今月末です。",
+      "primary_reading": "おみつもりのゆうこうきげんはこんげつまつです",
+      "accepted_readings": [
+        "おみつもりのゆうこうきげんはこんげつまつです"
+      ],
+      "meaning_ko": "견적 유효 기한은 이번 달 말입니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "estimate",
+          "surface": "見積",
+          "reading_in_sentence": "みつもり"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-030",
+      "display": "恐縮ですが、ご返信をお待ちしております。",
+      "reading": "きょうしゅくですがごへんしんをおまちしております",
+      "meaning": "송구하지만 회신을 기다리고 있습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "恐縮ですが、ご返信をお待ちしております。",
+      "primary_reading": "きょうしゅくですがごへんしんをおまちしております",
+      "accepted_readings": [
+        "きょうしゅくですがごへんしんをおまちしております"
+      ],
+      "meaning_ko": "송구하지만 회신을 기다리고 있습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-031",
+      "display": "来月より担当を引き継ぐことになりました。",
+      "reading": "らいげつよりたんとうをひきつぐことになりました",
+      "meaning": "다음 달부터 담당을 인계받게 되었습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "来月より担当を引き継ぐことになりました。",
+      "primary_reading": "らいげつよりたんとうをひきつぐことになりました",
+      "accepted_readings": [
+        "らいげつよりたんとうをひきつぐことになりました"
+      ],
+      "meaning_ko": "다음 달부터 담당을 인계받게 되었습니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-032",
+      "display": "欠員の補充を検討しています。",
+      "reading": "けついんのほじゅうをけんとうしています",
+      "meaning": "결원 충원을 검토하고 있습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "欠員の補充を検討しています。",
+      "primary_reading": "けついんのほじゅうをけんとうしています",
+      "accepted_readings": [
+        "けついんのほじゅうをけんとうしています"
+      ],
+      "meaning_ko": "결원 충원을 검토하고 있습니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 40.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "consideration",
+          "surface": "検討",
+          "reading_in_sentence": "けんとう"
+        },
+        {
+          "word_id": "auto-66ccc93deac90e",
+          "surface": "補充",
+          "reading_in_sentence": "ほじゅう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-033",
+      "display": "不足分は次回の納品で補います。",
+      "reading": "ふそくぶんはじかいののうひんでおぎないます",
+      "meaning": "부족분은 다음 납품 때 보충하겠습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "不足分は次回の納品で補います。",
+      "primary_reading": "ふそくぶんはじかいののうひんでおぎないます",
+      "accepted_readings": [
+        "ふそくぶんはじかいののうひんでおぎないます"
+      ],
+      "meaning_ko": "부족분은 다음 납품 때 보충하겠습니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-034",
+      "display": "本件は一旦見合わせることにしました。",
+      "reading": "ほんけんはいったんみあわせることにしました",
+      "meaning": "본 건은 일단 보류하기로 했습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "本件は一旦見合わせることにしました。",
+      "primary_reading": "ほんけんはいったんみあわせることにしました",
+      "accepted_readings": [
+        "ほんけんはいったんみあわせることにしました"
+      ],
+      "meaning_ko": "본 건은 일단 보류하기로 했습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-035",
+      "display": "詳細なコメントは差し控えさせていただきます。",
+      "reading": "しょうさいなこめんとはさしひかえさせていただきます",
+      "meaning": "자세한 코멘트는 삼가겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "詳細なコメントは差し控えさせていただきます。",
+      "primary_reading": "しょうさいなこめんとはさしひかえさせていただきます",
+      "accepted_readings": [
+        "しょうさいなこめんとはさしひかえさせていただきます"
+      ],
+      "meaning_ko": "자세한 코멘트는 삼가겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-133f79018c6ed8",
+          "surface": "詳細",
+          "reading_in_sentence": "しょうさい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-036",
+      "display": "確認手順を一部省いて進めます。",
+      "reading": "かくにんてじゅんをいちぶはぶいてすすめます",
+      "meaning": "확인 절차를 일부 생략하고 진행하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "確認手順を一部省いて進めます。",
+      "primary_reading": "かくにんてじゅんをいちぶはぶいてすすめます",
+      "accepted_readings": [
+        "かくにんてじゅんをいちぶはぶいてすすめます"
+      ],
+      "meaning_ko": "확인 절차를 일부 생략하고 진행하겠습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 45.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "confirmation",
+          "surface": "確認",
+          "reading_in_sentence": "かくにん"
+        },
+        {
+          "word_id": "auto-6b2a662f661b68",
+          "surface": "手順",
+          "reading_in_sentence": "てじゅん"
+        },
+        {
+          "word_id": "auto-d91f344937f50d",
+          "surface": "一部",
+          "reading_in_sentence": "いちぶ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-037",
+      "display": "関係部署に早めの対応を促します。",
+      "reading": "かんけいぶしょにはやめのたいおうをうながします",
+      "meaning": "관계 부서에 빠른 대응을 촉구하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "関係部署に早めの対応を促します。",
+      "primary_reading": "かんけいぶしょにはやめのたいおうをうながします",
+      "accepted_readings": [
+        "かんけいぶしょにはやめのたいおうをうながします"
+      ],
+      "meaning_ko": "관계 부서에 빠른 대응을 촉구하겠습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "handling",
+          "surface": "対応",
+          "reading_in_sentence": "たいおう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-038",
+      "display": "事務所の移転に伴い、住所が変わります。",
+      "reading": "じむしょのいてんにともないじゅうしょがかわります",
+      "meaning": "사무소 이전에 따라 주소가 바뀝니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "事務所の移転に伴い、住所が変わります。",
+      "primary_reading": "じむしょのいてんにともないじゅうしょがかわります",
+      "accepted_readings": [
+        "じむしょのいてんにともないじゅうしょがかわります"
+      ],
+      "meaning_ko": "사무소 이전에 따라 주소가 바뀝니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-039",
+      "display": "ご都合のよい日時をお知らせください。",
+      "reading": "ごつごうのよいにちじをおしらせください",
+      "meaning": "편하신 일시를 알려 주세요.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご都合のよい日時をお知らせください。",
+      "primary_reading": "ごつごうのよいにちじをおしらせください",
+      "accepted_readings": [
+        "ごつごうのよいにちじをおしらせください"
+      ],
+      "meaning_ko": "편하신 일시를 알려 주세요.",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-040",
+      "display": "来期は増収増益を見込んでいます。",
+      "reading": "らいきはぞうしゅうぞうえきをみこんでいます",
+      "meaning": "다음 분기는 매출·이익 동반 증가를 예상하고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "来期は増収増益を見込んでいます。",
+      "primary_reading": "らいきはぞうしゅうぞうえきをみこんでいます",
+      "accepted_readings": [
+        "らいきはぞうしゅうぞうえきをみこんでいます"
+      ],
+      "meaning_ko": "다음 분기는 매출·이익 동반 증가를 예상하고 있습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-041",
+      "display": "差し支えなければご用件を伺えますか。",
+      "reading": "さしつかえなければごようけんをうかがえますか",
+      "meaning": "괜찮으시다면 용건을 여쭤봐도 될까요?",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "差し支えなければご用件を伺えますか。",
+      "primary_reading": "さしつかえなければごようけんをうかがえますか",
+      "accepted_readings": [
+        "さしつかえなければごようけんをうかがえますか"
+      ],
+      "meaning_ko": "괜찮으시다면 용건을 여쭤봐도 될까요?",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-90d3602ecbc1fb",
+          "surface": "用件",
+          "reading_in_sentence": "ようけん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-042",
+      "display": "納品物の検収をお願いいたします。",
+      "reading": "のうひんぶつのけんしゅうをおねがいいたします",
+      "meaning": "납품물 검수를 부탁드립니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "納品物の検収をお願いいたします。",
+      "primary_reading": "のうひんぶつのけんしゅうをおねがいいたします",
+      "accepted_readings": [
+        "のうひんぶつのけんしゅうをおねがいいたします"
+      ],
+      "meaning_ko": "납품물 검수를 부탁드립니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-043",
+      "display": "貴社のご要望に沿えるよう努めます。",
+      "reading": "きしゃのごようぼうにそえるようつとめます",
+      "meaning": "귀사의 요망에 부응할 수 있도록 노력하겠습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "貴社のご要望に沿えるよう努めます。",
+      "primary_reading": "きしゃのごようぼうにそえるようつとめます",
+      "accepted_readings": [
+        "きしゃのごようぼうにそえるようつとめます"
+      ],
+      "meaning_ko": "귀사의 요망에 부응할 수 있도록 노력하겠습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-b5636a49c67202",
+          "surface": "要望",
+          "reading_in_sentence": "ようぼう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-044",
+      "display": "決算の数値を精査しております。",
+      "reading": "けっさんのすうちをせいさしております",
+      "meaning": "결산 수치를 정밀 검토하고 있습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "決算の数値を精査しております。",
+      "primary_reading": "けっさんのすうちをせいさしております",
+      "accepted_readings": [
+        "けっさんのすうちをせいさしております"
+      ],
+      "meaning_ko": "결산 수치를 정밀 검토하고 있습니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-8a11b981e41266",
+          "surface": "決算",
+          "reading_in_sentence": "けっさん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-045",
+      "display": "採用面接の日程を調整中です。",
+      "reading": "さいようめんせつのにっていをちょうせいちゅうです",
+      "meaning": "채용 면접 일정을 조정 중입니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "採用面接の日程を調整中です。",
+      "primary_reading": "さいようめんせつのにっていをちょうせいちゅうです",
+      "accepted_readings": [
+        "さいようめんせつのにっていをちょうせいちゅうです"
+      ],
+      "meaning_ko": "채용 면접 일정을 조정 중입니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 40.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "adjustment",
+          "surface": "調整",
+          "reading_in_sentence": "ちょうせい"
+        },
+        {
+          "word_id": "auto-4d9147d798ea6d",
+          "surface": "採用",
+          "reading_in_sentence": "さいよう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-046",
+      "display": "ご指摘の点は真摯に受け止めます。",
+      "reading": "ごしてきのてんはしんしにうけとめます",
+      "meaning": "지적하신 점은 진지하게 받아들이겠습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご指摘の点は真摯に受け止めます。",
+      "primary_reading": "ごしてきのてんはしんしにうけとめます",
+      "accepted_readings": [
+        "ごしてきのてんはしんしにうけとめます"
+      ],
+      "meaning_ko": "지적하신 점은 진지하게 받아들이겠습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-2b1d0a83e827a5",
+          "surface": "指摘",
+          "reading_in_sentence": "してき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-047",
+      "display": "双方の認識に齟齬がございました。",
+      "reading": "そうほうのにんしきにそごがございました",
+      "meaning": "양측의 인식에 차이가 있었습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "双方の認識に齟齬がございました。",
+      "primary_reading": "そうほうのにんしきにそごがございました",
+      "accepted_readings": [
+        "そうほうのにんしきにそごがございました"
+      ],
+      "meaning_ko": "양측의 인식에 차이가 있었습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-b29c78a9f404fe",
+          "surface": "認識",
+          "reading_in_sentence": "にんしき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-048",
+      "display": "契約の更新時期が迫っています。",
+      "reading": "けいやくのこうしんじきがせまっています",
+      "meaning": "계약 갱신 시기가 다가오고 있습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "契約の更新時期が迫っています。",
+      "primary_reading": "けいやくのこうしんじきがせまっています",
+      "accepted_readings": [
+        "けいやくのこうしんじきがせまっています"
+      ],
+      "meaning_ko": "계약 갱신 시기가 다가오고 있습니다.",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-049",
+      "display": "原材料費の高騰が利益を圧迫しています。",
+      "reading": "げんざいりょうひのこうとうがりえきをあっぱくしています",
+      "meaning": "원자재비 급등이 이익을 압박하고 있습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "原材料費の高騰が利益を圧迫しています。",
+      "primary_reading": "げんざいりょうひのこうとうがりえきをあっぱくしています",
+      "accepted_readings": [
+        "げんざいりょうひのこうとうがりえきをあっぱくしています"
+      ],
+      "meaning_ko": "원자재비 급등이 이익을 압박하고 있습니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "claude-bjt-p3-035",
+          "surface": "利益",
+          "reading_in_sentence": "りえき"
+        },
+        {
+          "word_id": "claude-bjt-p3-240",
+          "surface": "高騰",
+          "reading_in_sentence": "こうとう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-050",
+      "display": "進捗は週次で報告いたします。",
+      "reading": "しんちょくはしゅうじでほうこくいたします",
+      "meaning": "진척 상황은 주 단위로 보고드리겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "進捗は週次で報告いたします。",
+      "primary_reading": "しんちょくはしゅうじでほうこくいたします",
+      "accepted_readings": [
+        "しんちょくはしゅうじでほうこくいたします"
+      ],
+      "meaning_ko": "진척 상황은 주 단위로 보고드리겠습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "progress",
+          "surface": "進捗",
+          "reading_in_sentence": "しんちょく"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-051",
+      "display": "社内で慎重に検討したうえで、改めてご回答申し上げます。",
+      "reading": "しゃないでしんちょうにけんとうしたうえであらためてごかいとうもうしあげます",
+      "meaning": "사내에서 신중히 검토한 후 다시 회답드리겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "社内で慎重に検討したうえで、改めてご回答申し上げます。",
+      "primary_reading": "しゃないでしんちょうにけんとうしたうえであらためてごかいとうもうしあげます",
+      "accepted_readings": [
+        "しゃないでしんちょうにけんとうしたうえであらためてごかいとうもうしあげます"
+      ],
+      "meaning_ko": "사내에서 신중히 검토한 후 다시 회답드리겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "anew",
+          "surface": "改めて",
+          "reading_in_sentence": "あらためて"
+        },
+        {
+          "word_id": "consideration",
+          "surface": "検討",
+          "reading_in_sentence": "けんとう"
+        },
+        {
+          "word_id": "response",
+          "surface": "回答",
+          "reading_in_sentence": "かいとう"
+        },
+        {
+          "word_id": "internal-company",
+          "surface": "社内",
+          "reading_in_sentence": "しゃない"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-052",
+      "display": "状況のいかんにかかわらず、説明会は予定どおり実施いたします。",
+      "reading": "じょうきょうのいかんにかかわらずせつめいかいはよていどおりじっしいたします",
+      "meaning": "상황 여하에 관계없이 설명회는 예정대로 실시하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "状況のいかんにかかわらず、説明会は予定どおり実施いたします。",
+      "primary_reading": "じょうきょうのいかんにかかわらずせつめいかいはよていどおりじっしいたします",
+      "accepted_readings": [
+        "じょうきょうのいかんにかかわらずせつめいかいはよていどおりじっしいたします"
+      ],
+      "meaning_ko": "상황 여하에 관계없이 설명회는 예정대로 실시하겠습니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "implementation",
+          "surface": "実施",
+          "reading_in_sentence": "じっし"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-053",
+      "display": "先方より納期の前倒しについて相談がありましたので、ご報告いたします。",
+      "reading": "せんぽうよりのうきのまえだおしについてそうだんがありましたのでごほうこくいたします",
+      "meaning": "상대측으로부터 납기 앞당기기에 대한 상담이 있어 보고드립니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "先方より納期の前倒しについて相談がありましたので、ご報告いたします。",
+      "primary_reading": "せんぽうよりのうきのまえだおしについてそうだんがありましたのでごほうこくいたします",
+      "accepted_readings": [
+        "せんぽうよりのうきのまえだおしについてそうだんがありましたのでごほうこくいたします"
+      ],
+      "meaning_ko": "상대측으로부터 납기 앞당기기에 대한 상담이 있어 보고드립니다.",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "advance-schedule",
+          "surface": "前倒し",
+          "reading_in_sentence": "まえだおし"
+        },
+        {
+          "word_id": "delivery-date",
+          "surface": "納期",
+          "reading_in_sentence": "のうき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-054",
+      "display": "前回のお打ち合わせの内容を踏まえて、修正案を作成いたしました。",
+      "reading": "ぜんかいのおうちあわせのないようをふまえてしゅうせいあんをさくせいいたしました",
+      "meaning": "지난번 협의 내용을 바탕으로 수정안을 작성했습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "前回のお打ち合わせの内容を踏まえて、修正案を作成いたしました。",
+      "primary_reading": "ぜんかいのおうちあわせのないようをふまえてしゅうせいあんをさくせいいたしました",
+      "accepted_readings": [
+        "ぜんかいのおうちあわせのないようをふまえてしゅうせいあんをさくせいいたしました"
+      ],
+      "meaning_ko": "지난번 협의 내용을 바탕으로 수정안을 작성했습니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-055",
+      "display": "新製品の発売に先立ち、販売代理店向けの説明会を開催いたします。",
+      "reading": "しんせいひんのはつばいにさきだちはんばいだいりてんむけのせつめいかいをかいさいいたします",
+      "meaning": "신제품 발매에 앞서 판매 대리점 대상 설명회를 개최합니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "新製品の発売に先立ち、販売代理店向けの説明会を開催いたします。",
+      "primary_reading": "しんせいひんのはつばいにさきだちはんばいだいりてんむけのせつめいかいをかいさいいたします",
+      "accepted_readings": [
+        "しんせいひんのはつばいにさきだちはんばいだいりてんむけのせつめいかいをかいさいいたします"
+      ],
+      "meaning_ko": "신제품 발매에 앞서 판매 대리점 대상 설명회를 개최합니다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-c739a9f825f01b",
+          "surface": "開催",
+          "reading_in_sentence": "かいさい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-056",
+      "display": "システム点検につき、本日は終日サービスを停止いたします。",
+      "reading": "しすてむてんけんにつきほんじつはしゅうじつさーびすをていしいたします",
+      "meaning": "시스템 점검으로 인해 오늘은 종일 서비스를 중지합니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "システム点検につき、本日は終日サービスを停止いたします。",
+      "primary_reading": "しすてむてんけんにつきほんじつはしゅうじつさーびすをていしいたします",
+      "accepted_readings": [
+        "しすてむてんけんにつきほんじつはしゅうじつさーびすをていしいたします"
+      ],
+      "meaning_ko": "시스템 점검으로 인해 오늘은 종일 서비스를 중지합니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-c2142f04febcac",
+          "surface": "点検",
+          "reading_in_sentence": "てんけん"
+        },
+        {
+          "word_id": "auto-f29c931a7b5ea9",
+          "surface": "終日",
+          "reading_in_sentence": "しゅうじつ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-057",
+      "display": "詳細が確定次第、改めて担当者よりご連絡差し上げます。",
+      "reading": "しょうさいがかくていしだいあらためてたんとうしゃよりごれんらくさしあげます",
+      "meaning": "세부 사항이 확정되는 대로 다시 담당자가 연락드리겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "詳細が確定次第、改めて担当者よりご連絡差し上げます。",
+      "primary_reading": "しょうさいがかくていしだいあらためてたんとうしゃよりごれんらくさしあげます",
+      "accepted_readings": [
+        "しょうさいがかくていしだいあらためてたんとうしゃよりごれんらくさしあげます"
+      ],
+      "meaning_ko": "세부 사항이 확정되는 대로 다시 담당자가 연락드리겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "anew",
+          "surface": "改めて",
+          "reading_in_sentence": "あらためて"
+        },
+        {
+          "word_id": "auto-c70aa0ac7f4da0",
+          "surface": "確定",
+          "reading_in_sentence": "かくてい"
+        },
+        {
+          "word_id": "auto-133f79018c6ed8",
+          "surface": "詳細",
+          "reading_in_sentence": "しょうさい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-058",
+      "display": "誠に勝手ながら、本サービスは今月末をもって終了させていただきます。",
+      "reading": "まことにかってながらほんさーびすはこんげつまつをもってしゅうりょうさせていただきます",
+      "meaning": "대단히 죄송하지만 본 서비스는 이달 말로 종료하겠습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "誠に勝手ながら、本サービスは今月末をもって終了させていただきます。",
+      "primary_reading": "まことにかってながらほんさーびすはこんげつまつをもってしゅうりょうさせていただきます",
+      "accepted_readings": [
+        "まことにかってながらほんさーびすはこんげつまつをもってしゅうりょうさせていただきます"
+      ],
+      "meaning_ko": "대단히 죄송하지만 본 서비스는 이달 말로 종료하겠습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-059",
+      "display": "契約の締結に際して、必要書類を事前にご提出いただけますでしょうか。",
+      "reading": "けいやくのていけつにさいしてひつようしょるいをじぜんにごていしゅついただけますでしょうか",
+      "meaning": "계약 체결 시 필요 서류를 사전에 제출해 주실 수 있을까요?",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "契約の締結に際して、必要書類を事前にご提出いただけますでしょうか。",
+      "primary_reading": "けいやくのていけつにさいしてひつようしょるいをじぜんにごていしゅついただけますでしょうか",
+      "accepted_readings": [
+        "けいやくのていけつにさいしてひつようしょるいをじぜんにごていしゅついただけますでしょうか"
+      ],
+      "meaning_ko": "계약 체결 시 필요 서류를 사전에 제출해 주실 수 있을까요?",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "submission",
+          "surface": "提出",
+          "reading_in_sentence": "ていしゅつ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-060",
+      "display": "繁忙期とはいえ、品質管理を疎かにするわけにはまいりません。",
+      "reading": "はんぼうきとはいえひんしつかんりをおろそかにするわけにはまいりません",
+      "meaning": "성수기라고는 해도 품질 관리를 소홀히 할 수는 없습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "繁忙期とはいえ、品質管理を疎かにするわけにはまいりません。",
+      "primary_reading": "はんぼうきとはいえひんしつかんりをおろそかにするわけにはまいりません",
+      "accepted_readings": [
+        "はんぼうきとはいえひんしつかんりをおろそかにするわけにはまいりません"
+      ],
+      "meaning_ko": "성수기라고는 해도 품질 관리를 소홀히 할 수는 없습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-e26550892c80b7",
+          "surface": "品質",
+          "reading_in_sentence": "ひんしつ"
+        },
+        {
+          "word_id": "claude-bjt-p3-097",
+          "surface": "繁忙",
+          "reading_in_sentence": "はんぼう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-061",
+      "display": "売上高は目標を上回ったものの、営業利益は前年同期比で減少いたしました。",
+      "reading": "うりあげだかはもくひょうをうわまわったもののえいぎょうりえきはぜんねんどうきひでげんしょういたしました",
+      "meaning": "매출액은 목표를 웃돌았지만 영업이익은 전년 동기 대비 감소했습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "売上高は目標を上回ったものの、営業利益は前年同期比で減少いたしました。",
+      "primary_reading": "うりあげだかはもくひょうをうわまわったもののえいぎょうりえきはぜんねんどうきひでげんしょういたしました",
+      "accepted_readings": [
+        "うりあげだかはもくひょうをうわまわったもののえいぎょうりえきはぜんねんどうきひでげんしょういたしました"
+      ],
+      "meaning_ko": "매출액은 목표를 웃돌았지만 영업이익은 전년 동기 대비 감소했습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "claude-bjt-p3-035",
+          "surface": "利益",
+          "reading_in_sentence": "りえき"
+        },
+        {
+          "word_id": "auto-d7c494874115a0",
+          "surface": "減少",
+          "reading_in_sentence": "げんしょう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-062",
+      "display": "彼は営業部の業務のかたわら、新規事業の立ち上げにも携わっております。",
+      "reading": "かれはえいぎょうぶのぎょうむのかたわらしんきじぎょうのたちあげにもたずさわっております",
+      "meaning": "그는 영업부 업무를 하는 한편 신규 사업 착수에도 관여하고 있습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "彼は営業部の業務のかたわら、新規事業の立ち上げにも携わっております。",
+      "primary_reading": "かれはえいぎょうぶのぎょうむのかたわらしんきじぎょうのたちあげにもたずさわっております",
+      "accepted_readings": [
+        "かれはえいぎょうぶのぎょうむのかたわらしんきじぎょうのたちあげにもたずさわっております"
+      ],
+      "meaning_ko": "그는 영업부 업무를 하는 한편 신규 사업 착수에도 관여하고 있습니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 50.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-51f2eae11e7c7e",
+          "surface": "業務",
+          "reading_in_sentence": "ぎょうむ"
+        },
+        {
+          "word_id": "auto-0cd20bbeca81d9",
+          "surface": "事業",
+          "reading_in_sentence": "じぎょう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-063",
+      "display": "部品供給の遅延により、生産計画の見直しを余儀なくされました。",
+      "reading": "ぶひんきょうきゅうのちえんによりせいさんけいかくのみなおしをよぎなくされました",
+      "meaning": "부품 공급 지연으로 생산 계획을 부득이 재검토하게 되었습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "部品供給の遅延により、生産計画の見直しを余儀なくされました。",
+      "primary_reading": "ぶひんきょうきゅうのちえんによりせいさんけいかくのみなおしをよぎなくされました",
+      "accepted_readings": [
+        "ぶひんきょうきゅうのちえんによりせいさんけいかくのみなおしをよぎなくされました"
+      ],
+      "meaning_ko": "부품 공급 지연으로 생산 계획을 부득이 재검토하게 되었습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-064",
+      "display": "社内規程に即して、経費精算の手続きを進めてください。",
+      "reading": "しゃないきていにそくしてけいひせいさんのてつづきをすすめてください",
+      "meaning": "사내 규정에 입각하여 경비 정산 절차를 진행해 주세요.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "社内規程に即して、経費精算の手続きを進めてください。",
+      "primary_reading": "しゃないきていにそくしてけいひせいさんのてつづきをすすめてください",
+      "accepted_readings": [
+        "しゃないきていにそくしてけいひせいさんのてつづきをすすめてください"
+      ],
+      "meaning_ko": "사내 규정에 입각하여 경비 정산 절차를 진행해 주세요.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-483c13ec348155",
+          "surface": "経費",
+          "reading_in_sentence": "けいひ"
+        },
+        {
+          "word_id": "internal-company",
+          "surface": "社内",
+          "reading_in_sentence": "しゃない"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-065",
+      "display": "契約条件をめぐって、両社の間で協議が続いております。",
+      "reading": "けいやくじょうけんをめぐってりょうしゃのあいだできょうぎがつづいております",
+      "meaning": "계약 조건을 둘러싸고 양사 간에 협의가 계속되고 있습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "契約条件をめぐって、両社の間で協議が続いております。",
+      "primary_reading": "けいやくじょうけんをめぐってりょうしゃのあいだできょうぎがつづいております",
+      "accepted_readings": [
+        "けいやくじょうけんをめぐってりょうしゃのあいだできょうぎがつづいております"
+      ],
+      "meaning_ko": "계약 조건을 둘러싸고 양사 간에 협의가 계속되고 있습니다.",
+      "categories": [
+        "contract",
+        "compliance"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-9e4adede3d6bf8",
+          "surface": "協議",
+          "reading_in_sentence": "きょうぎ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-066",
+      "display": "今回の成果は、現場の皆様の地道な努力の賜物にほかなりません。",
+      "reading": "こんかいのせいかはげんばのみなさまのじみちなどりょくのたまものにほかなりません",
+      "meaning": "이번 성과는 다름 아닌 현장 여러분의 꾸준한 노력의 결실입니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "今回の成果は、現場の皆様の地道な努力の賜物にほかなりません。",
+      "primary_reading": "こんかいのせいかはげんばのみなさまのじみちなどりょくのたまものにほかなりません",
+      "accepted_readings": [
+        "こんかいのせいかはげんばのみなさまのじみちなどりょくのたまものにほかなりません"
+      ],
+      "meaning_ko": "이번 성과는 다름 아닌 현장 여러분의 꾸준한 노력의 결실입니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 50.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-ff3e56f790c1a1",
+          "surface": "現場",
+          "reading_in_sentence": "げんじょう"
+        },
+        {
+          "word_id": "auto-57d248537dcfd9",
+          "surface": "成果",
+          "reading_in_sentence": "せいか"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-067",
+      "display": "ご注文の数量にかかわらず、送料は一律で当社が負担いたします。",
+      "reading": "ごちゅうもんのすうりょうにかかわらずそうりょうはいちりつでとうしゃがふたんいたします",
+      "meaning": "주문 수량에 관계없이 배송비는 일률적으로 당사가 부담합니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご注文の数量にかかわらず、送料は一律で当社が負担いたします。",
+      "primary_reading": "ごちゅうもんのすうりょうにかかわらずそうりょうはいちりつでとうしゃがふたんいたします",
+      "accepted_readings": [
+        "ごちゅうもんのすうりょうにかかわらずそうりょうはいちりつでとうしゃがふたんいたします"
+      ],
+      "meaning_ko": "주문 수량에 관계없이 배송비는 일률적으로 당사가 부담합니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-068",
+      "display": "審査結果のいかんによらず、申込金は返金いたしかねますのでご了承ください。",
+      "reading": "しんさけっかのいかんによらずもうしこみきんはへんきんいたしかねますのでごりょうしょうください",
+      "meaning": "심사 결과 여하에 관계없이 신청금은 환불해 드리기 어려우니 양해 바랍니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "審査結果のいかんによらず、申込金は返金いたしかねますのでご了承ください。",
+      "primary_reading": "しんさけっかのいかんによらずもうしこみきんはへんきんいたしかねますのでごりょうしょうください",
+      "accepted_readings": [
+        "しんさけっかのいかんによらずもうしこみきんはへんきんいたしかねますのでごりょうしょうください"
+      ],
+      "meaning_ko": "심사 결과 여하에 관계없이 신청금은 환불해 드리기 어려우니 양해 바랍니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "consent",
+          "surface": "了承",
+          "reading_in_sentence": "りょうしょう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-069",
+      "display": "人事異動に伴い、来月から担当者が変更となりますのでお知らせいたします。",
+      "reading": "じんじいどうにともないらいげつからたんとうしゃがへんこうとなりますのでおしらせいたします",
+      "meaning": "인사이동에 따라 다음 달부터 담당자가 변경되므로 알려 드립니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "人事異動に伴い、来月から担当者が変更となりますのでお知らせいたします。",
+      "primary_reading": "じんじいどうにともないらいげつからたんとうしゃがへんこうとなりますのでおしらせいたします",
+      "accepted_readings": [
+        "じんじいどうにともないらいげつからたんとうしゃがへんこうとなりますのでおしらせいたします"
+      ],
+      "meaning_ko": "인사이동에 따라 다음 달부터 담당자가 변경되므로 알려 드립니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-8bcf61eca006fd",
+          "surface": "異動",
+          "reading_in_sentence": "いどう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-070",
+      "display": "納品が遅れましたこと、関係者一同深くお詫び申し上げます。",
+      "reading": "のうひんがおくれましたことかんけいしゃいちどうふかくおわびもうしあげます",
+      "meaning": "납품이 늦어진 점, 관계자 일동 깊이 사과드립니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "納品が遅れましたこと、関係者一同深くお詫び申し上げます。",
+      "primary_reading": "のうひんがおくれましたことかんけいしゃいちどうふかくおわびもうしあげます",
+      "accepted_readings": [
+        "のうひんがおくれましたことかんけいしゃいちどうふかくおわびもうしあげます"
+      ],
+      "meaning_ko": "납품이 늦어진 점, 관계자 일동 깊이 사과드립니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-4f1fb9df686e7a",
+          "surface": "一同",
+          "reading_in_sentence": "いちどう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-071",
+      "display": "お忙しいところ恐縮ですが、今週中にご返信いただけますと幸いです。",
+      "reading": "おいそがしいところきょうしゅくですがこんしゅうちゅうにごへんしんいただけますとさいわいです",
+      "meaning": "바쁘신 와중에 송구하지만 이번 주 중으로 회신 주시면 감사하겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "お忙しいところ恐縮ですが、今週中にご返信いただけますと幸いです。",
+      "primary_reading": "おいそがしいところきょうしゅくですがこんしゅうちゅうにごへんしんいただけますとさいわいです",
+      "accepted_readings": [
+        "おいそがしいところきょうしゅくですがこんしゅうちゅうにごへんしんいただけますとさいわいです",
+        "おいそがしいところきょうしゅくですがこんしゅうじゅうにごへんしんいただけますとさいわいです"
+      ],
+      "meaning_ko": "바쁘신 와중에 송구하지만 이번 주 중으로 회신 주시면 감사하겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-072",
+      "display": "先日お願いしておりました資料の件、その後いかがでしょうか。",
+      "reading": "せんじつおねがいしておりましたしりょうのけんそのごいかがでしょうか",
+      "meaning": "일전에 부탁드렸던 자료 건은 그 후 어떻게 되었을까요?",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "先日お願いしておりました資料の件、その後いかがでしょうか。",
+      "primary_reading": "せんじつおねがいしておりましたしりょうのけんそのごいかがでしょうか",
+      "accepted_readings": [
+        "せんじつおねがいしておりましたしりょうのけんそのごいかがでしょうか",
+        "せんじつおねがいしておりましたしりょうのけんそのあといかがでしょうか"
+      ],
+      "meaning_ko": "일전에 부탁드렸던 자료 건은 그 후 어떻게 되었을까요?",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-073",
+      "display": "大変心苦しいのですが、今回はご提案を見送らせていただきます。",
+      "reading": "たいへんこころぐるしいのですがこんかいはごていあんをみおくらせていただきます",
+      "meaning": "대단히 송구하지만 이번에는 제안을 보류하겠습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "大変心苦しいのですが、今回はご提案を見送らせていただきます。",
+      "primary_reading": "たいへんこころぐるしいのですがこんかいはごていあんをみおくらせていただきます",
+      "accepted_readings": [
+        "たいへんこころぐるしいのですがこんかいはごていあんをみおくらせていただきます"
+      ],
+      "meaning_ko": "대단히 송구하지만 이번에는 제안을 보류하겠습니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-074",
+      "display": "価格面でもう少しご配慮いただけないか、ご相談させてください。",
+      "reading": "かかくめんでもうすこしごはいりょいただけないかごそうだんさせてください",
+      "meaning": "가격 면에서 조금 더 배려해 주실 수 없을지 상의드리고 싶습니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "価格面でもう少しご配慮いただけないか、ご相談させてください。",
+      "primary_reading": "かかくめんでもうすこしごはいりょいただけないかごそうだんさせてください",
+      "accepted_readings": [
+        "かかくめんでもうすこしごはいりょいただけないかごそうだんさせてください"
+      ],
+      "meaning_ko": "가격 면에서 조금 더 배려해 주실 수 없을지 상의드리고 싶습니다.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-ffa29edc88b9e0",
+          "surface": "配慮",
+          "reading_in_sentence": "はいりょ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-075",
+      "display": "業務効率化の一環として、承認手続きの電子化をご提案いたします。",
+      "reading": "ぎょうむこうりつかのいっかんとしてしょうにんてつづきのでんしかをごていあんいたします",
+      "meaning": "업무 효율화의 일환으로 승인 절차의 전자화를 제안드립니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "業務効率化の一環として、承認手続きの電子化をご提案いたします。",
+      "primary_reading": "ぎょうむこうりつかのいっかんとしてしょうにんてつづきのでんしかをごていあんいたします",
+      "accepted_readings": [
+        "ぎょうむこうりつかのいっかんとしてしょうにんてつづきのでんしかをごていあんいたします"
+      ],
+      "meaning_ko": "업무 효율화의 일환으로 승인 절차의 전자화를 제안드립니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-51f2eae11e7c7e",
+          "surface": "業務",
+          "reading_in_sentence": "ぎょうむ"
+        },
+        {
+          "word_id": "claude-bjt-p3-026",
+          "surface": "一環",
+          "reading_in_sentence": "いっかん"
+        },
+        {
+          "word_id": "approval",
+          "surface": "承認",
+          "reading_in_sentence": "しょうにん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-076",
+      "display": "来週の定例会議ですが、先方のご都合により木曜日に変更となりました。",
+      "reading": "らいしゅうのていれいかいぎですがせんぽうのごつごうによりもくようびにへんこうとなりました",
+      "meaning": "다음 주 정례 회의는 상대측 사정으로 목요일로 변경되었습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "来週の定例会議ですが、先方のご都合により木曜日に変更となりました。",
+      "primary_reading": "らいしゅうのていれいかいぎですがせんぽうのごつごうによりもくようびにへんこうとなりました",
+      "accepted_readings": [
+        "らいしゅうのていれいかいぎですがせんぽうのごつごうによりもくようびにへんこうとなりました"
+      ],
+      "meaning_ko": "다음 주 정례 회의는 상대측 사정으로 목요일로 변경되었습니다.",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-077",
+      "display": "現在、全体の工程のうち約八割が完了しており、概ね計画どおり進んでおります。",
+      "reading": "げんざいぜんたいのこうていのうちやくはちわりがかんりょうしておりおおむねけいかくどおりすすんでおります",
+      "meaning": "현재 전체 공정 중 약 80%가 완료되어 대체로 계획대로 진행되고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "現在、全体の工程のうち約八割が完了しており、概ね計画どおり進んでおります。",
+      "primary_reading": "げんざいぜんたいのこうていのうちやくはちわりがかんりょうしておりおおむねけいかくどおりすすんでおります",
+      "accepted_readings": [
+        "げんざいぜんたいのこうていのうちやくはちわりがかんりょうしておりおおむねけいかくどおりすすんでおります"
+      ],
+      "meaning_ko": "현재 전체 공정 중 약 80%가 완료되어 대체로 계획대로 진행되고 있습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-078",
+      "display": "本番環境で障害が発生したため、現在復旧作業にあたっております。",
+      "reading": "ほんばんかんきょうでしょうがいがはっせいしたためげんざいふっきゅうさぎょうにあたっております",
+      "meaning": "운영 환경에서 장애가 발생하여 현재 복구 작업 중입니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "本番環境で障害が発生したため、現在復旧作業にあたっております。",
+      "primary_reading": "ほんばんかんきょうでしょうがいがはっせいしたためげんざいふっきゅうさぎょうにあたっております",
+      "accepted_readings": [
+        "ほんばんかんきょうでしょうがいがはっせいしたためげんざいふっきゅうさぎょうにあたっております"
+      ],
+      "meaning_ko": "운영 환경에서 장애가 발생하여 현재 복구 작업 중입니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-079",
+      "display": "お客様からのご指摘を受け、該当商品の出荷を一時停止しております。",
+      "reading": "おきゃくさまからのごしてきをうけがいとうしょうひんのしゅっかをいちじていししております",
+      "meaning": "고객님의 지적을 받아 해당 상품의 출하를 일시 중지하고 있습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "お客様からのご指摘を受け、該当商品の出荷を一時停止しております。",
+      "primary_reading": "おきゃくさまからのごしてきをうけがいとうしょうひんのしゅっかをいちじていししております",
+      "accepted_readings": [
+        "おきゃくさまからのごしてきをうけがいとうしょうひんのしゅっかをいちじていししております"
+      ],
+      "meaning_ko": "고객님의 지적을 받아 해당 상품의 출하를 일시 중지하고 있습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-07059c0d47fbf7",
+          "surface": "該当",
+          "reading_in_sentence": "がいとう"
+        },
+        {
+          "word_id": "auto-2b1d0a83e827a5",
+          "surface": "指摘",
+          "reading_in_sentence": "してき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-080",
+      "display": "部材の調達が滞っているため、納期を一週間ほど延ばしていただけますか。",
+      "reading": "ぶざいのちょうたつがとどこおっているためのうきをいっしゅうかんほどのばしていただけますか",
+      "meaning": "부자재 조달이 지연되고 있어 납기를 일주일 정도 늦춰 주실 수 있을까요?",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "部材の調達が滞っているため、納期を一週間ほど延ばしていただけますか。",
+      "primary_reading": "ぶざいのちょうたつがとどこおっているためのうきをいっしゅうかんほどのばしていただけますか",
+      "accepted_readings": [
+        "ぶざいのちょうたつがとどこおっているためのうきをいっしゅうかんほどのばしていただけますか"
+      ],
+      "meaning_ko": "부자재 조달이 지연되고 있어 납기를 일주일 정도 늦춰 주실 수 있을까요?",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "delivery-date",
+          "surface": "納期",
+          "reading_in_sentence": "のうき"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-081",
+      "display": "お客様のご要望を受け、画面の仕様を一部変更することになりました。",
+      "reading": "おきゃくさまのごようぼうをうけがめんのしようをいちぶへんこうすることになりました",
+      "meaning": "고객님의 요청에 따라 화면 사양을 일부 변경하게 되었습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "お客様のご要望を受け、画面の仕様を一部変更することになりました。",
+      "primary_reading": "おきゃくさまのごようぼうをうけがめんのしようをいちぶへんこうすることになりました",
+      "accepted_readings": [
+        "おきゃくさまのごようぼうをうけがめんのしようをいちぶへんこうすることになりました"
+      ],
+      "meaning_ko": "고객님의 요청에 따라 화면 사양을 일부 변경하게 되었습니다.",
+      "categories": [
+        "internal_process",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-b5636a49c67202",
+          "surface": "要望",
+          "reading_in_sentence": "ようぼう"
+        },
+        {
+          "word_id": "auto-d91f344937f50d",
+          "surface": "一部",
+          "reading_in_sentence": "いちぶ"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-082",
+      "display": "仕様の解釈に食い違いが生じないよう、決定事項は書面で残しておきましょう。",
+      "reading": "しようのかいしゃくにくいちがいがしょうじないようけっていじこうはしょめんでのこしておきましょう",
+      "meaning": "사양 해석에 차이가 생기지 않도록 결정 사항은 서면으로 남겨 둡시다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "仕様の解釈に食い違いが生じないよう、決定事項は書面で残しておきましょう。",
+      "primary_reading": "しようのかいしゃくにくいちがいがしょうじないようけっていじこうはしょめんでのこしておきましょう",
+      "accepted_readings": [
+        "しようのかいしゃくにくいちがいがしょうじないようけっていじこうはしょめんでのこしておきましょう"
+      ],
+      "meaning_ko": "사양 해석에 차이가 생기지 않도록 결정 사항은 서면으로 남겨 둡시다.",
+      "categories": [
+        "meeting",
+        "decision"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-083",
+      "display": "今回の不備を受け、チェック体制を見直し、再発防止に万全を期してまいります。",
+      "reading": "こんかいのふびをうけちぇっくたいせいをみなおしさいはつぼうしにばんぜんをきしてまいります",
+      "meaning": "이번 미비점을 계기로 점검 체제를 재검토하여 재발 방지에 만전을 기하겠습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "今回の不備を受け、チェック体制を見直し、再発防止に万全を期してまいります。",
+      "primary_reading": "こんかいのふびをうけちぇっくたいせいをみなおしさいはつぼうしにばんぜんをきしてまいります",
+      "accepted_readings": [
+        "こんかいのふびをうけちぇっくたいせいをみなおしさいはつぼうしにばんぜんをきしてまいります"
+      ],
+      "meaning_ko": "이번 미비점을 계기로 점검 체제를 재검토하여 재발 방지에 만전을 기하겠습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-084",
+      "display": "第三四半期の売上高は前年同期比で約一割増加し、過去最高を更新しました。",
+      "reading": "だいさんしはんきのうりあげだかはぜんねんどうきひでやくいちわりぞうかしかこさいこうをこうしんしました",
+      "meaning": "3분기 매출액은 전년 동기 대비 약 10% 증가하여 사상 최고치를 경신했습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "第三四半期の売上高は前年同期比で約一割増加し、過去最高を更新しました。",
+      "primary_reading": "だいさんしはんきのうりあげだかはぜんねんどうきひでやくいちわりぞうかしかこさいこうをこうしんしました",
+      "accepted_readings": [
+        "だいさんしはんきのうりあげだかはぜんねんどうきひでやくいちわりぞうかしかこさいこうをこうしんしました"
+      ],
+      "meaning_ko": "3분기 매출액은 전년 동기 대비 약 10% 증가하여 사상 최고치를 경신했습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 56.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-085",
+      "display": "広告費を抑えた結果、販売管理費は前年並みの横ばいで推移しております。",
+      "reading": "こうこくひをおさえたけっかはんばいかんりひはぜんねんなみのよこばいですいいしております",
+      "meaning": "광고비를 억제한 결과 판매관리비는 전년 수준의 보합세로 추이하고 있습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "広告費を抑えた結果、販売管理費は前年並みの横ばいで推移しております。",
+      "primary_reading": "こうこくひをおさえたけっかはんばいかんりひはぜんねんなみのよこばいですいいしております",
+      "accepted_readings": [
+        "こうこくひをおさえたけっかはんばいかんりひはぜんねんなみのよこばいですいいしております"
+      ],
+      "meaning_ko": "광고비를 억제한 결과 판매관리비는 전년 수준의 보합세로 추이하고 있습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "claude-bjt-p3-016",
+          "surface": "推移",
+          "reading_in_sentence": "すいい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-086",
+      "display": "新規顧客の獲得数は見込みを下回りましたが、解約率は改善傾向にあります。",
+      "reading": "しんきこきゃくのかくとくすうはみこみをしたまわりましたがかいやくりつはかいぜんけいこうにあります",
+      "meaning": "신규 고객 획득 수는 예상을 밑돌았지만 해지율은 개선 추세입니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "新規顧客の獲得数は見込みを下回りましたが、解約率は改善傾向にあります。",
+      "primary_reading": "しんきこきゃくのかくとくすうはみこみをしたまわりましたがかいやくりつはかいぜんけいこうにあります",
+      "accepted_readings": [
+        "しんきこきゃくのかくとくすうはみこみをしたまわりましたがかいやくりつはかいぜんけいこうにあります"
+      ],
+      "meaning_ko": "신규 고객 획득 수는 예상을 밑돌았지만 해지율은 개선 추세입니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-fdef2cfef7e347",
+          "surface": "獲得",
+          "reading_in_sentence": "かくとく"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-087",
+      "display": "前期の実績を勘案し、今期の販売目標を上方修正いたします。",
+      "reading": "ぜんきのじっせきをかんあんしこんきのはんばいもくひょうをじょうほうしゅうせいいたします",
+      "meaning": "전기 실적을 감안하여 이번 기의 판매 목표를 상향 조정합니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "前期の実績を勘案し、今期の販売目標を上方修正いたします。",
+      "primary_reading": "ぜんきのじっせきをかんあんしこんきのはんばいもくひょうをじょうほうしゅうせいいたします",
+      "accepted_readings": [
+        "ぜんきのじっせきをかんあんしこんきのはんばいもくひょうをじょうほうしゅうせいいたします"
+      ],
+      "meaning_ko": "전기 실적을 감안하여 이번 기의 판매 목표를 상향 조정합니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-088",
+      "display": "達成率が伸び悩んでいる要因について、各部署で分析をお願いいたします。",
+      "reading": "たっせいりつがのびなやんでいるよういんについてかくぶしょでぶんせきをおねがいいたします",
+      "meaning": "달성률이 정체된 요인에 대해 각 부서에서 분석을 부탁드립니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "達成率が伸び悩んでいる要因について、各部署で分析をお願いいたします。",
+      "primary_reading": "たっせいりつがのびなやんでいるよういんについてかくぶしょでぶんせきをおねがいいたします",
+      "accepted_readings": [
+        "たっせいりつがのびなやんでいるよういんについてかくぶしょでぶんせきをおねがいいたします"
+      ],
+      "meaning_ko": "달성률이 정체된 요인에 대해 각 부서에서 분석을 부탁드립니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-a2db4b9070e764",
+          "surface": "達成",
+          "reading_in_sentence": "たっせい"
+        },
+        {
+          "word_id": "auto-e58a4665518852",
+          "surface": "要因",
+          "reading_in_sentence": "よういん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-089",
+      "display": "人件費の増加に伴い、来期の利益率は若干低下する見込みです。",
+      "reading": "じんけんひのぞうかにともないらいきのりえきりつはじゃっかんていかするみこみです",
+      "meaning": "인건비 증가에 따라 다음 분기 이익률은 다소 하락할 전망입니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "人件費の増加に伴い、来期の利益率は若干低下する見込みです。",
+      "primary_reading": "じんけんひのぞうかにともないらいきのりえきりつはじゃっかんていかするみこみです",
+      "accepted_readings": [
+        "じんけんひのぞうかにともないらいきのりえきりつはじゃっかんていかするみこみです"
+      ],
+      "meaning_ko": "인건비 증가에 따라 다음 분기 이익률은 다소 하락할 전망입니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "claude-bjt-p3-035",
+          "surface": "利益",
+          "reading_in_sentence": "りえき"
+        },
+        {
+          "word_id": "auto-c9fc5d2357fcc4",
+          "surface": "若干",
+          "reading_in_sentence": "じゃっかん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-090",
+      "display": "恐れ入りますが、ご来社の際は受付にてお名前をお申し付けください。",
+      "reading": "おそれいりますがごらいしゃのさいはうけつけにておなまえをおもうしつけください",
+      "meaning": "죄송하지만 내방 시에는 접수처에서 성함을 말씀해 주세요.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "恐れ入りますが、ご来社の際は受付にてお名前をお申し付けください。",
+      "primary_reading": "おそれいりますがごらいしゃのさいはうけつけにておなまえをおもうしつけください",
+      "accepted_readings": [
+        "おそれいりますがごらいしゃのさいはうけつけにておなまえをおもうしつけください"
+      ],
+      "meaning_ko": "죄송하지만 내방 시에는 접수처에서 성함을 말씀해 주세요.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 58.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-091",
+      "display": "ご契約内容に関するお問い合わせは、平日の営業時間内に承っております。",
+      "reading": "ごけいやくないようにかんするおといあわせはへいじつのえいぎょうじかんないにうけたまわっております",
+      "meaning": "계약 내용에 관한 문의는 평일 영업시간 내에 받고 있습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご契約内容に関するお問い合わせは、平日の営業時間内に承っております。",
+      "primary_reading": "ごけいやくないようにかんするおといあわせはへいじつのえいぎょうじかんないにうけたまわっております",
+      "accepted_readings": [
+        "ごけいやくないようにかんするおといあわせはへいじつのえいぎょうじかんないにうけたまわっております"
+      ],
+      "meaning_ko": "계약 내용에 관한 문의는 평일 영업시간 내에 받고 있습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-092",
+      "display": "予算の制約もございますので、導入範囲を段階的に広げることをご検討ください。",
+      "reading": "よさんのせいやくもございますのでどうにゅうはんいをだんかいてきにひろげることをごけんとうください",
+      "meaning": "예산 제약도 있으니 도입 범위를 단계적으로 넓히는 것을 검토해 주세요.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "予算の制約もございますので、導入範囲を段階的に広げることをご検討ください。",
+      "primary_reading": "よさんのせいやくもございますのでどうにゅうはんいをだんかいてきにひろげることをごけんとうください",
+      "accepted_readings": [
+        "よさんのせいやくもございますのでどうにゅうはんいをだんかいてきにひろげることをごけんとうください"
+      ],
+      "meaning_ko": "예산 제약도 있으니 도입 범위를 단계적으로 넓히는 것을 검토해 주세요.",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-769b941851d51d",
+          "surface": "制約",
+          "reading_in_sentence": "せいやく"
+        },
+        {
+          "word_id": "auto-41a6daf9e26017",
+          "surface": "導入",
+          "reading_in_sentence": "どうにゅう"
+        },
+        {
+          "word_id": "consideration",
+          "surface": "検討",
+          "reading_in_sentence": "けんとう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-093",
+      "display": "急な変更で大変恐縮ですが、打ち合わせの開始時刻を一時間繰り下げさせてください。",
+      "reading": "きゅうなへんこうでたいへんきょうしゅくですがうちあわせのかいしじこくをいちじかんくりさげさせてください",
+      "meaning": "급한 변경으로 대단히 송구하지만 협의 시작 시각을 한 시간 늦추게 해 주세요.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "急な変更で大変恐縮ですが、打ち合わせの開始時刻を一時間繰り下げさせてください。",
+      "primary_reading": "きゅうなへんこうでたいへんきょうしゅくですがうちあわせのかいしじこくをいちじかんくりさげさせてください",
+      "accepted_readings": [
+        "きゅうなへんこうでたいへんきょうしゅくですがうちあわせのかいしじこくをいちじかんくりさげさせてください"
+      ],
+      "meaning_ko": "급한 변경으로 대단히 송구하지만 협의 시작 시각을 한 시간 늦추게 해 주세요.",
+      "categories": [
+        "schedule",
+        "project_management"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-094",
+      "display": "差し支えなければ、今後の取引拡大に向けて一度お打ち合わせの機会をいただけませんか。",
+      "reading": "さしつかえなければこんごのとりひきかくだいにむけていちどおうちあわせのきかいをいただけませんか",
+      "meaning": "괜찮으시다면 향후 거래 확대를 위해 한번 협의할 기회를 주실 수 없을까요?",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "差し支えなければ、今後の取引拡大に向けて一度お打ち合わせの機会をいただけませんか。",
+      "primary_reading": "さしつかえなければこんごのとりひきかくだいにむけていちどおうちあわせのきかいをいただけませんか",
+      "accepted_readings": [
+        "さしつかえなければこんごのとりひきかくだいにむけていちどおうちあわせのきかいをいただけませんか"
+      ],
+      "meaning_ko": "괜찮으시다면 향후 거래 확대를 위해 한번 협의할 기회를 주실 수 없을까요?",
+      "categories": [
+        "transaction",
+        "sales"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 61.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": []
+    },
+    {
+      "id": "claude-bjt-s-095",
+      "display": "お客様にご迷惑をおかけしないよう、代替品の手配を急いでおります。",
+      "reading": "おきゃくさまにごめいわくをおかけしないようだいたいひんのてはいをいそいでおります",
+      "meaning": "고객님께 폐를 끼치지 않도록 대체품 준비를 서두르고 있습니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "お客様にご迷惑をおかけしないよう、代替品の手配を急いでおります。",
+      "primary_reading": "おきゃくさまにごめいわくをおかけしないようだいたいひんのてはいをいそいでおります",
+      "accepted_readings": [
+        "おきゃくさまにごめいわくをおかけしないようだいたいひんのてはいをいそいでおります"
+      ],
+      "meaning_ko": "고객님께 폐를 끼치지 않도록 대체품 준비를 서두르고 있습니다.",
+      "categories": [
+        "customer_support",
+        "service"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 48.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-13554b24186cd8",
+          "surface": "手配",
+          "reading_in_sentence": "てはい"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-096",
+      "display": "本件は私の一存では決めかねますので、上長と相談のうえご回答いたします。",
+      "reading": "ほんけんはわたくしのいちぞんではきめかねますのでじょうちょうとそうだんのうえごかいとういたします",
+      "meaning": "본 건은 제 독단으로는 결정하기 어려우니 상사와 상의한 후 회답드리겠습니다.",
+      "category": "advanced",
+      "level": "sentence",
+      "related": [],
+      "expression": "本件は私の一存では決めかねますので、上長と相談のうえご回答いたします。",
+      "primary_reading": "ほんけんはわたくしのいちぞんではきめかねますのでじょうちょうとそうだんのうえごかいとういたします",
+      "accepted_readings": [
+        "ほんけんはわたくしのいちぞんではきめかねますのでじょうちょうとそうだんのうえごかいとういたします",
+        "ほんけんはわたしのいちぞんではきめかねますのでじょうちょうとそうだんのうえごかいとういたします"
+      ],
+      "meaning_ko": "본 건은 제 독단으로는 결정하기 어려우니 상사와 상의한 후 회답드리겠습니다.",
+      "categories": [
+        "general_vocabulary"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 66.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "response",
+          "surface": "回答",
+          "reading_in_sentence": "かいとう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-097",
+      "display": "賞与の支給額は、個人の業績評価と会社の業績を総合的に判断して決定されます。",
+      "reading": "しょうよのしきゅうがくはこじんのぎょうせきひょうかとかいしゃのぎょうせきをそうごうてきにはんだんしてけっていされます",
+      "meaning": "상여 지급액은 개인 업적 평가와 회사 실적을 종합적으로 판단하여 결정됩니다.",
+      "category": "relationship",
+      "level": "sentence",
+      "related": [],
+      "expression": "賞与の支給額は、個人の業績評価と会社の業績を総合的に判断して決定されます。",
+      "primary_reading": "しょうよのしきゅうがくはこじんのぎょうせきひょうかとかいしゃのぎょうせきをそうごうてきにはんだんしてけっていされます",
+      "accepted_readings": [
+        "しょうよのしきゅうがくはこじんのぎょうせきひょうかとかいしゃのぎょうせきをそうごうてきにはんだんしてけっていされます"
+      ],
+      "meaning_ko": "상여 지급액은 개인 업적 평가와 회사 실적을 종합적으로 판단하여 결정됩니다.",
+      "categories": [
+        "hr",
+        "organization"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 40.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-c101e6203db81a",
+          "surface": "業績",
+          "reading_in_sentence": "ぎょうせき"
+        },
+        {
+          "word_id": "judgment",
+          "surface": "判断",
+          "reading_in_sentence": "はんだん"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-098",
+      "display": "ご請求金額に相違がある場合は、お手数ですが経理部までお申し出ください。",
+      "reading": "ごせいきゅうきんがくにそういがあるばあいはおてすうですがけいりぶまでおもうしでください",
+      "meaning": "청구 금액에 차이가 있는 경우 번거로우시겠지만 경리부로 말씀해 주세요.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "ご請求金額に相違がある場合は、お手数ですが経理部までお申し出ください。",
+      "primary_reading": "ごせいきゅうきんがくにそういがあるばあいはおてすうですがけいりぶまでおもうしでください",
+      "accepted_readings": [
+        "ごせいきゅうきんがくにそういがあるばあいはおてすうですがけいりぶまでおもうしでください"
+      ],
+      "meaning_ko": "청구 금액에 차이가 있는 경우 번거로우시겠지만 경리부로 말씀해 주세요.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "invoice",
+          "surface": "請求",
+          "reading_in_sentence": "せいきゅう"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-099",
+      "display": "監査での指摘事項については、期日までに是正措置を講じる必要があります。",
+      "reading": "かんさでのしてきじこうについてはきじつまでにぜせいそちをこうじるひつようがあります",
+      "meaning": "감사에서의 지적 사항에 대해서는 기일까지 시정 조치를 강구해야 합니다.",
+      "category": "transaction",
+      "level": "sentence",
+      "related": [],
+      "expression": "監査での指摘事項については、期日までに是正措置を講じる必要があります。",
+      "primary_reading": "かんさでのしてきじこうについてはきじつまでにぜせいそちをこうじるひつようがあります",
+      "accepted_readings": [
+        "かんさでのしてきじこうについてはきじつまでにぜせいそちをこうじるひつようがあります",
+        "かんさでのしてきじこうについてはきにちまでにぜせいそちをこうじるひつようがあります"
+      ],
+      "meaning_ko": "감사에서의 지적 사항에 대해서는 기일까지 시정 조치를 강구해야 합니다.",
+      "categories": [
+        "finance",
+        "accounting"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 50.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-ce551757a1c318",
+          "surface": "期日",
+          "reading_in_sentence": "きじつ"
+        },
+        {
+          "word_id": "auto-2b1d0a83e827a5",
+          "surface": "指摘",
+          "reading_in_sentence": "してき"
+        },
+        {
+          "word_id": "auto-5e2c1dd81def6c",
+          "surface": "是正",
+          "reading_in_sentence": "ぜせい"
+        },
+        {
+          "word_id": "auto-2c36acf6324ce3",
+          "surface": "措置",
+          "reading_in_sentence": "そち"
+        }
+      ]
+    },
+    {
+      "id": "claude-bjt-s-100",
+      "display": "市場の動向を注視しつつ、引き続き慎重に事業計画を進めてまいります。",
+      "reading": "しじょうのどうこうをちゅうししつつひきつづきしんちょうにじぎょうけいかくをすすめてまいります",
+      "meaning": "시장 동향을 주시하면서 계속해서 신중하게 사업 계획을 추진하겠습니다.",
+      "category": "coordination",
+      "level": "sentence",
+      "related": [],
+      "expression": "市場の動向を注視しつつ、引き続き慎重に事業計画を進めてまいります。",
+      "primary_reading": "しじょうのどうこうをちゅうししつつひきつづきしんちょうにじぎょうけいかくをすすめてまいります",
+      "accepted_readings": [
+        "しじょうのどうこうをちゅうししつつひきつづきしんちょうにじぎょうけいかくをすすめてまいります"
+      ],
+      "meaning_ko": "시장 동향을 주시하면서 계속해서 신중하게 사업 계획을 추진하겠습니다.",
+      "categories": [
+        "report",
+        "communication"
+      ],
+      "study_tracks": [],
+      "item_type": "sentence",
+      "reading_type": "sentence",
+      "learning_priority": 53.0,
+      "sources": [
+        "claude_bjt"
+      ],
+      "type": "sentence",
+      "word_links": [
+        {
+          "word_id": "auto-0cd20bbeca81d9",
+          "surface": "事業",
+          "reading_in_sentence": "じぎょう"
+        },
+        {
+          "word_id": "auto-9aaa6e62d5f68a",
+          "surface": "動向",
+          "reading_in_sentence": "どうこう"
+        }
       ]
     }
   ]
