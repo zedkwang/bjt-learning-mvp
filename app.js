@@ -427,7 +427,7 @@
 
   function defaultState() {
     return {
-      version: 3,
+      version: 4,
       xp: 0,
       totalCorrect: 0,
       totalAttempts: 0,
@@ -437,6 +437,7 @@
       longestCombo: 0,
       progress: {},
       manualReview: {},
+      reviewNotes: {},
       logs: [],
       achievements: [],
       boss: { completedWeek: null },
@@ -453,11 +454,15 @@
       const hydrated = {
         ...defaultState(),
         ...currentState,
-        version: 3,
+        version: 4,
         progress: parsed.progress || {},
         manualReview:
           parsed.manualReview && typeof parsed.manualReview === "object" && !Array.isArray(parsed.manualReview)
             ? parsed.manualReview
+            : {},
+        reviewNotes:
+          parsed.reviewNotes && typeof parsed.reviewNotes === "object" && !Array.isArray(parsed.reviewNotes)
+            ? parsed.reviewNotes
             : {},
         logs: Array.isArray(parsed.logs) ? parsed.logs : [],
         achievements: Array.isArray(parsed.achievements) ? parsed.achievements : [],
@@ -468,6 +473,17 @@
           ? parsed.totalAttempts
           : hydrated.logs.filter((log) => !log.hintUsed).length;
       }
+      Object.entries(hydrated.manualReview).forEach(([itemId, reviewEntry]) => {
+        const item = ITEM_BY_ID.get(itemId);
+        if (!item) return;
+        const existingHistory = hydrated.reviewNotes[itemId]?.history;
+        if (Array.isArray(existingHistory) && existingHistory.length) return;
+        const addedAt = Number(reviewEntry?.addedAt) || Date.now();
+        hydrated.reviewNotes[itemId] = {
+          updatedAt: Number(reviewEntry?.updatedAt) || addedAt,
+          history: [legacyReviewNote(item, reviewEntry, addedAt)],
+        };
+      });
       return hydrated;
     } catch (error) {
       console.warn("학습 기록을 불러오지 못했습니다.", error);
@@ -521,6 +537,95 @@
     return !isSentenceItem(item) && item?.studyTracks?.includes("general_n1");
   }
 
+  const REVIEW_REASON_LABELS = {
+    unknown: "모름",
+    wrong: "오답",
+    soft: "표기 주의",
+    hint: "뜻 힌트 사용",
+    sentence: "문장에서 발견",
+    direct: "직접 추가",
+    legacy: "기존 복습 항목",
+  };
+
+  function legacyReviewNote(item, reviewEntry, at) {
+    const source = String(reviewEntry?.addedFrom || "legacy");
+    let reasons = ["legacy"];
+    if (source === "hinted") reasons = ["hint"];
+    else if (source === "wrong") reasons = ["wrong"];
+    else if (source === "soft") reasons = ["soft"];
+    else if (source.startsWith("sentence:")) reasons = ["sentence"];
+    else if (["wordbook", "manual", "correct", "sentence-self"].includes(source)) reasons = ["direct"];
+    return {
+      at,
+      reasons,
+      answer: "",
+      correct: item.reading,
+      meaning: item.meaning,
+      source,
+      sourceSentenceId: source.startsWith("sentence:") ? source.slice("sentence:".length) : "",
+      sourceSentence: "",
+    };
+  }
+
+  function attemptReviewNote(item, grade, hintUsed, source = "learning") {
+    const reasons = [];
+    if (grade?.unknown) reasons.push("unknown");
+    else if (grade?.kind === "soft") reasons.push("soft");
+    else if (grade?.kind === "wrong") reasons.push("wrong");
+    if (hintUsed) reasons.push("hint");
+    if (!reasons.length) reasons.push("direct");
+    return {
+      at: Date.now(),
+      reasons,
+      answer: grade?.unknown ? "" : String(grade?.rawAnswer || "").trim(),
+      correct: item.reading,
+      meaning: item.meaning,
+      source,
+      sourceSentenceId: "",
+      sourceSentence: "",
+    };
+  }
+
+  function directReviewNote(item, addedFrom = "manual", sourceSentence = null) {
+    const fromSentence = String(addedFrom).startsWith("sentence:");
+    return {
+      at: Date.now(),
+      reasons: [fromSentence ? "sentence" : "direct"],
+      answer: "",
+      correct: item.reading,
+      meaning: item.meaning,
+      source: addedFrom,
+      sourceSentenceId: sourceSentence?.id || (fromSentence ? String(addedFrom).slice("sentence:".length) : ""),
+      sourceSentence: sourceSentence?.display || "",
+    };
+  }
+
+  function appendReviewNote(item, note) {
+    if (!item || !note) return;
+    const existing = state.reviewNotes[item.id];
+    const history = Array.isArray(existing?.history) ? existing.history : [];
+    const normalized = {
+      at: Number(note.at) || Date.now(),
+      reasons: Array.from(new Set((Array.isArray(note.reasons) ? note.reasons : ["direct"]).filter(Boolean))),
+      answer: String(note.answer || "").trim(),
+      correct: String(note.correct || item.reading || "").trim(),
+      meaning: String(note.meaning || item.meaning || "").trim(),
+      source: String(note.source || "manual"),
+      sourceSentenceId: String(note.sourceSentenceId || ""),
+      sourceSentence: String(note.sourceSentence || ""),
+    };
+    state.reviewNotes[item.id] = {
+      updatedAt: normalized.at,
+      history: [...history, normalized],
+    };
+    if (state.manualReview[item.id]) state.manualReview[item.id].updatedAt = normalized.at;
+  }
+
+  function getReviewHistory(itemId) {
+    const history = state.reviewNotes[itemId]?.history;
+    return Array.isArray(history) ? [...history].sort((first, second) => second.at - first.at) : [];
+  }
+
   function matchesStudyKind(item, kind = "all") {
     if (kind === "word") return !isSentenceItem(item);
     if (kind === "sentence") return isSentenceItem(item);
@@ -536,23 +641,24 @@
 
   function getManualReviewItems(kind = "all") {
     return ITEMS.filter((item) => isInManualReview(item.id) && matchesStudyKind(item, kind)).sort((first, second) => {
-      const firstAddedAt = Number(state.manualReview[first.id]?.addedAt) || 0;
-      const secondAddedAt = Number(state.manualReview[second.id]?.addedAt) || 0;
+      const firstAddedAt = Number(state.reviewNotes[first.id]?.updatedAt || state.manualReview[first.id]?.addedAt) || 0;
+      const secondAddedAt = Number(state.reviewNotes[second.id]?.updatedAt || state.manualReview[second.id]?.addedAt) || 0;
       return secondAddedAt - firstAddedAt;
     });
   }
 
-  function toggleManualReview(item, addedFrom = "manual") {
+  function toggleManualReview(item, addedFrom = "manual", note = null) {
     if (isInManualReview(item.id)) {
       delete state.manualReview[item.id];
       saveState();
-      showToast("복습 보관함에서 뺐습니다.");
+      showToast("오답노트에서 뺐습니다. 이전 기록은 보존됩니다.");
       return false;
     }
     const now = Date.now();
     state.manualReview[item.id] = { addedAt: now, addedFrom, updatedAt: now };
+    appendReviewNote(item, note || directReviewNote(item, addedFrom));
     saveState();
-    showToast("복습 보관함에 넣었습니다.");
+    showToast("오답노트에 넣고 사유를 기록했습니다.");
     return true;
   }
 
@@ -985,7 +1091,7 @@
         <section class="panel section-panel" aria-labelledby="map-title">
           <div class="section-heading">
             <div><h2 id="map-title">단어 읽기 역량 맵</h2><p>단어·복합어의 정확도와 누적 연결 기록이 반영됩니다.</p></div>
-            <button class="ghost-button" type="button" data-view="review">복습 보관함 보기</button>
+            <button class="ghost-button" type="button" data-view="review">오답노트 보기</button>
           </div>
           <div class="category-list">${categoryRows}</div>
         </section>
@@ -1062,7 +1168,7 @@
         </section>
         <section class="quick-stats" aria-label="${label} 학습 안내">
           <article class="panel stat-panel"><p>새 ${label}</p><strong>${unseen.length}</strong><small>원하는 만큼 계속</small></article>
-          <article class="panel stat-panel"><p>${label} 보관함</p><strong>${manualReview.length}</strong><small>직접 선택한 표현</small></article>
+          <article class="panel stat-panel"><p>${label} 오답노트</p><strong>${manualReview.length}</strong><small>직접 선택한 표현</small></article>
           <article class="panel stat-panel"><p>READING XP</p><strong>${state.xp.toLocaleString("ko-KR")}</strong><small>${rankForXP(state.xp).name}</small></article>
         </section>
       </div>
@@ -1075,7 +1181,7 @@
             isSentence
               ? "답안을 확인한 뒤 문장 안의 핵심 단어마다 단어 복습에 넣을 수 있습니다. 문장 자체도 별도로 보관할 수 있습니다."
               : isN1
-                ? "N1 트랙에서 헷갈린 표현도 같은 단어 복습 보관함에 직접 넣을 수 있습니다."
+                ? "N1 트랙에서 헷갈린 표현도 같은 단어 오답노트에 직접 넣을 수 있습니다."
                 : "문장 안에서 막힌 단어는 문장 학습 피드백에서 단어 복습으로 보낼 수 있습니다."
           }</p>
         </section>
@@ -1083,7 +1189,7 @@
           <p class="eyebrow">REVIEW PRINCIPLE</p>
           <h2>필요할 때 꺼내고,<br />확실해지면 비우기</h2>
           <p class="page-lede">정답·오답과 관계없이 직접 넣고 뺍니다. 자동 재출제나 시간 대기는 없습니다.</p>
-          <button class="ghost-button" type="button" data-view="review">복습 보관함 보기</button>
+          <button class="ghost-button" type="button" data-view="review">오답노트 보기</button>
         </section>
       </div>
     `;
@@ -1153,7 +1259,7 @@
             <small>${seen ? `${seen}회 시도` : "기록 없음"}</small>
           </div>
           <button class="ghost-button wordbook-review-toggle ${inReview ? "is-active" : ""}" type="button" data-book-review="${escapeHTML(item.id)}" aria-pressed="${inReview}">
-            ${inReview ? "복습에서 빼기" : "복습에 넣기"}
+            ${inReview ? "노트에서 빼기" : "노트에 넣기"}
           </button>
         </article>
       `;
@@ -1164,7 +1270,7 @@
         <div>
           <p class="eyebrow">VOCABULARY INDEX</p>
           <h1 class="page-title">단어장</h1>
-          <p class="page-lede">표기·읽기·한국어 뜻으로 찾고, 헷갈리는 표현은 바로 복습 보관함에 넣을 수 있습니다.</p>
+          <p class="page-lede">표기·읽기·한국어 뜻으로 찾고, 헷갈리는 표현은 바로 오답노트에 넣을 수 있습니다.</p>
         </div>
         <span class="date-chip">검색 결과 ${filtered.length}개</span>
       </header>
@@ -1184,7 +1290,7 @@
             <option value="all" ${wordbookState.status === "all" ? "selected" : ""}>전체</option>
             <option value="new" ${wordbookState.status === "new" ? "selected" : ""}>미학습</option>
             <option value="learned" ${wordbookState.status === "learned" ? "selected" : ""}>학습함</option>
-            <option value="review" ${wordbookState.status === "review" ? "selected" : ""}>복습 보관함</option>
+            <option value="review" ${wordbookState.status === "review" ? "selected" : ""}>오답노트</option>
           </select></label>
           <label class="meaning-switch"><input id="wordbook-meaning" type="checkbox" ${wordbookState.showMeaning ? "checked" : ""} /><span>뜻 보기</span></label>
         </div>
@@ -1236,6 +1342,58 @@
     });
   }
 
+  function formatReviewNoteTime(timestamp) {
+    const date = new Date(Number(timestamp));
+    if (Number.isNaN(date.getTime())) return "기록 시각 없음";
+    return new Intl.DateTimeFormat("ko-KR", {
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(date);
+  }
+
+  function reviewReasonBadges(note) {
+    return (note?.reasons || ["direct"])
+      .map((reason) => `<span class="review-reason is-${escapeHTML(reason)}">${REVIEW_REASON_LABELS[reason] || "직접 추가"}</span>`)
+      .join("");
+  }
+
+  function reviewAnswerMarkup(note) {
+    if (!note) return "";
+    const isUnknown = note.reasons?.includes("unknown");
+    const answer = isUnknown ? "입력 없음" : note.answer || "기록 없음";
+    const sourceSentence = note.sourceSentence
+      ? `<p class="review-source-sentence">문장: <span lang="ja">${escapeHTML(note.sourceSentence)}</span></p>`
+      : "";
+    return `
+      <div class="review-answer-pair">
+        <span>내 답 <b class="${isUnknown || !note.answer ? "is-empty" : ""}" lang="ja">${escapeHTML(answer)}</b></span>
+        <i aria-hidden="true">→</i>
+        <span>정답 <b lang="ja">${escapeHTML(note.correct || "—")}</b></span>
+      </div>
+      ${sourceSentence}
+    `;
+  }
+
+  function reviewHistoryMarkup(history) {
+    if (!history.length) return "";
+    const rows = history
+      .map((note) => `
+        <li>
+          <div class="review-history-meta"><time>${formatReviewNoteTime(note.at)}</time><span>${reviewReasonBadges(note)}</span></div>
+          ${reviewAnswerMarkup(note)}
+        </li>
+      `)
+      .join("");
+    return `
+      <details class="review-history">
+        <summary>기록 ${history.length}개 보기</summary>
+        <ol>${rows}</ol>
+      </details>
+    `;
+  }
+
   function renderReview() {
     stopTimer();
     activeView = "review";
@@ -1246,15 +1404,29 @@
     const kind = activeReviewKind;
     const label = studyKindLabel(kind);
     const manualReview = kind === "sentence" ? sentenceReview : wordReview;
+    const noteCount = manualReview.reduce((sum, item) => sum + getReviewHistory(item.id).length, 0);
     const rows = manualReview
       .map((item) => {
         const progress = state.progress[item.id] || {};
         const retryCount = (progress.wrong || 0) + (progress.soft || 0) + (progress.hinted || 0);
+        const history = getReviewHistory(item.id);
+        const latest = history[0];
         return `
-          <article class="review-row">
-            <div><b>${escapeHTML(item.display)}</b><p>${CATEGORY_LABELS[item.category]} · ${kind === "sentence" ? "문장 읽기" : "단어 읽기"}</p></div>
-            <div><p>최근 기록</p><strong>정답 ${progress.correct || 0} · 헷갈림 ${retryCount}</strong></div>
-            <div class="review-actions"><span class="pill">직접 선택</span><button class="ghost-button review-remove" type="button" data-remove-review="${escapeHTML(item.id)}">빼기</button></div>
+          <article class="review-note-card">
+            <div class="review-note-head">
+              <div>
+                <p class="review-note-type">${CATEGORY_LABELS[item.category]} · ${kind === "sentence" ? "문장 읽기" : isGeneralN1Item(item) ? "일반 N1" : "비즈니스 단어"}</p>
+                <h3 lang="ja">${escapeHTML(item.display)}</h3>
+                <p class="review-note-meaning">${escapeHTML(item.meaning)}</p>
+              </div>
+              <button class="ghost-button review-remove" type="button" data-remove-review="${escapeHTML(item.id)}">노트에서 빼기</button>
+            </div>
+            <div class="review-note-latest">
+              <div class="review-note-status"><span>${reviewReasonBadges(latest)}</span><time>${formatReviewNoteTime(latest?.at)}</time></div>
+              ${reviewAnswerMarkup(latest)}
+            </div>
+            <div class="review-note-stats"><span>정답 ${progress.correct || 0}</span><span>헷갈림 ${retryCount}</span></div>
+            ${reviewHistoryMarkup(history)}
           </article>
         `;
       })
@@ -1263,16 +1435,16 @@
     viewRoot.innerHTML = `
       <header class="page-header">
         <div>
-          <p class="eyebrow">REVIEW INBOX</p>
-          <h1 class="page-title">내가 다시 읽고 싶은 표현</h1>
-          <p class="page-lede">단어와 문장을 분리해, 필요할 때 원하는 보관함만 다시 읽습니다.</p>
+          <p class="eyebrow">REVIEW NOTES</p>
+          <h1 class="page-title">오답·복습 노트</h1>
+          <p class="page-lede">왜 다시 보기로 했는지, 어떤 답을 썼는지까지 함께 남깁니다.</p>
         </div>
         <span class="date-chip">단어 ${wordReview.length} · 문장 ${sentenceReview.length}</span>
       </header>
       <div class="review-grid">
         <section class="panel section-panel">
           <div class="section-heading review-heading">
-            <div><h2>${label} 복습 목록</h2><p>시간 제한 없이, 직접 넣은 ${label}만 다시 출제합니다.</p></div>
+            <div><h2>${label} 오답노트</h2><p>최근 사유부터 확인하고, 시간 제한 없이 다시 출제합니다.</p></div>
             <button class="primary-button" id="start-review" type="button" ${manualReview.length ? "" : "disabled"}>${label} 복습 시작</button>
           </div>
           <div class="review-filter-tabs" role="group" aria-label="복습 유형 선택">
@@ -1281,21 +1453,21 @@
           </div>
           ${manualReview.length ? `<div class="review-list">${rows}</div>` : `
             <div class="empty-state">
-              <div><strong>아직 직접 넣은 ${label}이 없습니다</strong>${
+              <div><strong>아직 기록한 ${label}이 없습니다</strong>${
                 kind === "sentence"
-                  ? "문장 답안을 확인한 뒤, 문장 자체를 복습 보관함에 넣어 보세요."
+                  ? "문장 답안을 확인한 뒤, 문장 자체를 오답노트에 넣어 보세요."
                   : "문장 답안을 확인한 뒤, 익히고 싶은 핵심 단어를 단어 복습에 넣어 보세요."
               }</div>
             </div>
           `}
         </section>
         <aside class="panel section-panel">
-          <p class="eyebrow">REVIEW PRINCIPLE</p>
-          <h2>단어는 단어대로,<br />문장은 문장대로</h2>
-          <p class="page-lede">문장에서 고른 단어는 단어 보관함으로, 문장 자체는 문장 보관함으로 들어갑니다.</p>
+          <p class="eyebrow">NOTE PRINCIPLE</p>
+          <h2>틀린 이유와 답을,<br />함께 기억하기</h2>
+          <p class="page-lede">모름·오답·표기 주의·뜻 힌트 사용을 구분합니다. 노트에서 빼도 이전 기록은 보존됩니다.</p>
           <div class="mission-mini-list">
             <div class="mission-mini"><span>완료한 복습</span><b>${state.reviewCorrect}개</b></div>
-            <div class="mission-mini"><span>보관함 기준</span><b>내가 선택</b></div>
+            <div class="mission-mini"><span>누적 사유 기록</span><b>${noteCount}개</b></div>
           </div>
         </aside>
       </div>
@@ -1531,6 +1703,9 @@
       isReview: isManualReview,
     });
     state.logs = state.logs.slice(0, 180);
+    if (isInManualReview(entry.item.id) && (grade.kind !== "correct" || hintViewed)) {
+      appendReviewNote(entry.item, attemptReviewNote(entry.item, grade, hintViewed, entry.source));
+    }
     return previousBest;
   }
 
@@ -1545,7 +1720,7 @@
         className: "is-wrong",
         statusClass: "is-wrong",
         label: "모름",
-        copy: `입력 없이 확인해 정답과 뜻을 바로 공개했습니다. XP는 오르지 않으며, 필요하면 이 ${reviewObject} 복습 보관함에 넣어 주세요.${sentenceLinkGuide}`,
+        copy: `입력 없이 확인해 정답과 뜻을 바로 공개했습니다. XP는 오르지 않으며, 필요하면 이 ${reviewObject} 오답노트에 넣어 주세요.${sentenceLinkGuide}`,
         xp: 0,
       };
     }
@@ -1571,7 +1746,7 @@
           ? `이전 최고 기록보다 ${(previousBest - seconds).toFixed(1)}초 빨랐습니다. 자동화 단계에 가까워졌습니다.`
           : focusLost
             ? "탭 이탈 시간은 기록에서 제외했습니다. 다음에도 정확하게 연결해 보세요."
-            : `정확한 연결을 기록했습니다. 필요하면 이 ${reviewObject} 직접 복습 보관함에 넣을 수 있습니다.${sentenceLinkGuide}`,
+            : `정확한 연결을 기록했습니다. 필요하면 이 ${reviewObject} 직접 오답노트에 넣을 수 있습니다.${sentenceLinkGuide}`,
         xp,
       };
     }
@@ -1762,7 +1937,7 @@
           <section class="panel rail-card">
             <p class="eyebrow">REVIEW RULE</p>
             <h3>직접 고른 표현만 복습</h3>
-            <p>틀렸거나 헷갈린 표현은 답을 확인한 뒤 직접 보관함에 넣습니다. 정답이어도 직접 선택할 수 있습니다.</p>
+            <p>틀렸거나 헷갈린 표현은 답을 확인한 뒤 직접 오답노트에 넣습니다. 정답이어도 직접 선택할 수 있습니다.</p>
           </section>
         </aside>
       </div>
@@ -1797,8 +1972,13 @@
       const nextButton = document.getElementById("next-question");
       nextButton?.addEventListener("click", goToNextQuestion);
       document.getElementById("toggle-manual-review")?.addEventListener("click", () => {
+        if (isInManualReview(item.id)) return;
         const addedFrom = isSentence ? "sentence-self" : feedback.hintUsed ? "hinted" : feedback.grade.kind;
-        toggleManualReview(item, addedFrom);
+        toggleManualReview(
+          item,
+          addedFrom,
+          attemptReviewNote(item, feedback.grade, feedback.hintUsed, entry.source)
+        );
         renderQuiz();
         window.setTimeout(() => document.getElementById("toggle-manual-review")?.focus(), 0);
       });
@@ -1807,7 +1987,11 @@
           const wordId = button.dataset.toggleLinkedWord;
           const word = ITEM_BY_ID.get(wordId);
           if (!word) return;
-          toggleManualReview(word, `sentence:${item.id}`);
+          toggleManualReview(
+            word,
+            `sentence:${item.id}`,
+            directReviewNote(word, `sentence:${item.id}`, item)
+          );
           renderQuiz();
           window.setTimeout(() => {
             viewRoot.querySelector(`[data-toggle-linked-word="${wordId}"]`)?.focus();
@@ -1953,8 +2137,8 @@
     const inManualReview = isInManualReview(item.id);
     const reviewTarget = isSentenceItem(item) ? "문장" : "단어";
     const manualReviewText = inManualReview
-      ? `${reviewTarget} 복습에서 빼기`
-      : `${reviewTarget} 복습에 넣기`;
+      ? "오답노트에 기록됨"
+      : `${reviewTarget} 오답노트에 넣기`;
     const sentenceWordLinks = sentenceWordLinksMarkup(item);
     return `
       <section class="feedback-card ${feedback.className}">
@@ -1972,7 +2156,7 @@
         <div class="feedback-footer">
           <div class="feedback-actions">
             <span class="xp-gain">${feedback.xp ? "+" + feedback.xp + " XP" : "XP 없음"}</span>
-            <button class="ghost-button review-toggle ${inManualReview ? "is-active" : ""}" id="toggle-manual-review" type="button" aria-pressed="${inManualReview}">${manualReviewText}</button>
+            <button class="ghost-button review-toggle ${inManualReview ? "is-active" : ""}" id="toggle-manual-review" type="button" aria-pressed="${inManualReview}" ${inManualReview ? "disabled" : ""}>${manualReviewText}</button>
           </div>
           <button class="primary-button" id="next-question" type="button">${retryText} <span aria-hidden="true">&nbsp;→</span></button>
         </div>
@@ -1986,7 +2170,7 @@
     const rows = links
       .map((link) => {
         const inManualReview = isInManualReview(link.word.id);
-        const buttonText = inManualReview ? "단어 복습에서 빼기" : "단어 복습에 넣기";
+        const buttonText = inManualReview ? "단어 노트에서 빼기" : "단어 노트에 넣기";
         return `
           <article class="sentence-word-link">
             <div>
@@ -2063,7 +2247,7 @@
     const lede =
       accuracy >= 80
         ? "정확한 연결이 쌓이고 있습니다. 원할 때 다시 이어서 반응 시간을 더 줄여 보세요."
-        : "틀린 표현은 자동으로 다시 나오지 않습니다. 다시 보고 싶은 표현은 답안 확인 뒤 직접 복습 보관함에 넣을 수 있습니다.";
+        : "틀린 표현은 자동으로 다시 나오지 않습니다. 다시 보고 싶은 표현은 답안 확인 뒤 직접 오답노트에 넣을 수 있습니다.";
 
     viewRoot.innerHTML = `
       <section class="panel result-panel">
@@ -2080,7 +2264,7 @@
         ${session.bonusXP ? `<p class="xp-gain">주간 라운드 보너스 +${session.bonusXP} XP가 반영되었습니다.</p>` : ""}
         <div class="result-actions">
           <button class="primary-button" id="go-dashboard" type="button">학습 선택으로 돌아가기</button>
-          <button class="secondary-button" id="go-review" type="button">복습 보관함 보기</button>
+          <button class="secondary-button" id="go-review" type="button">오답노트 보기</button>
         </div>
       </section>
     `;
